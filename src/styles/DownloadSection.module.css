@@ -1,0 +1,94 @@
+.sectionWrap {
+    padding: 6%;
+    background: var(--P700);
+}
+
+.formWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 2% 4%;
+    border-radius: 200px;
+    height: 200px;
+    box-shadow: 0 0 20px #ffffff5f;
+}
+
+.logo {
+    height: 80%;
+    width: 20%;
+    object-fit: contain;
+}
+
+.center {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.center h2 {
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.inputWrapper {
+    display: flex;
+    gap: 4%;
+    width: 80%;
+    margin-top: 4%;
+}
+
+.inputWrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.lable {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.input {
+    background: #EBEBEB;
+    border: none;
+    padding: 4%;
+    margin-top: 5%;
+    border-radius: 6px;
+}
+
+.buttonWrap {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btn {
+    background: var(--P500);
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s ease-in-out;
+}
+
+.btn:hover {
+    background: var(--P700);
+    cursor: pointer;
+}
+.btn:hover .arrowIcon{
+    color: var(--P500);
+    transform: scale(1.5);
+}
+
+.arrowIcon {
+    font-size: 60px;
+    color: var(--P700);
+    transition: .4s ease-in-out;
+}

@@ -1,96 +1,43 @@
-.head {
-    background: url('../../public/assets/heroBg.png');
-    background-size: cover;
-    height: 400px;
-    padding: 0% 8%;
-    padding-right: 0;
-    display: flex;
-}
-
-.leftContent {
-    font-weight: 400;
-    font-size: 44px;
-    line-height: 64px;
-    color: #fff;
-    width: 70%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.knowMore {
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding-bottom: 30px;
-}
-
-.knowMore p {
-    /* writing-mode: vertical-rl; */
-    color: #fff;
-    margin: 50px -30px;
-    -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    width: 100px;
-    text-align: center;
-}
-
-.arrowIcon {
-    color: #fff;
-    font-size: 25px;
-    margin-right: 5px;
-}
-
-
-
 .reviewCardSection {
-    padding: 8% 8%;
-    color: var(--P700);
+    padding: 8% 0%;
+    background-image: url('/assets/heroBg.png');
+    background-size: cover;
+    color: #fff;
+}
+
+.reviewCardSection h1 {
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 65px;
+    padding-left: 3%;
 }
 
 .reviewCards {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    justify-content: flex-start;
     gap: 20px;
     margin-top: 2%;
+    padding: 0 2%;
+
 }
 
-.reviewCards h1 {
-    font-weight: 500;
-    font-size: 40px;
-    text-align: center;
+.reviewCards::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
 }
 
 .reviewCard {
-    width: 360px;
-    min-width: 280px;
-    box-shadow: 0 0 4px #b3b3b3;
-    border-radius: 20px;
+    min-width: 400px;
+    border-radius: 10px;
     transition: 0.4s ease-in-out;
     padding: 6% 2%;
     position: relative;
     overflow: hidden;
-}
-
-.reviewCard:hover {
-    box-shadow: 0 0 10px #b3b3b3;
-}
-
-.reviewCard:hover .quote {
-    background: #b388eb5b;
-    color: #fff;
-    padding: 3%;
-    border-radius: 100px;
-    top: -18px;
-    right: -18px;
-    transform: rotate(30deg) scale(1.1);
-}
-
-.reviewCard:hover .reviewer p {
-    color: var(--P500);
+    color: #000;
+    background: #fff;
 }
 
 .ratingSection {
@@ -101,11 +48,7 @@
     width: 60%;
 }
 
-.ratingSection .right {
-    width: 40%;
-    display: flex;
-    justify-content: flex-end;
-}
+
 
 .quote {
     width: max-content;
@@ -135,11 +78,27 @@
 }
 
 .reviewer {
-    margin-top: 4%;
+    margin-top: 6%;
 }
 
 .reviewer h3 {
     font-weight: 400;
-    font-size: 29px;
-    line-height: 44px;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.scrollBtn {
+    margin-top: 4%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 6%;
+}
+.arrow{
+    font-size: 40px;
+    margin-left: 2%;
+    transition: 0.4s;
+}
+.arrow:hover{
+    cursor: pointer;
+    transform: scale(1.1);
 }

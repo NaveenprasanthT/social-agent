@@ -6,7 +6,7 @@ const Services = () => {
         <div className={styles.sectionWrap}>
             <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
             <div className={styles.serviceCards}>
-                
+                        
             </div>
         </div>
     )

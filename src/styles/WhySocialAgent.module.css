@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Praise&display=swap');
+
+
+
+.sectionWrap {
+    padding: 6% 0%;
+}
+
+.praise {
+    font-family: 'Praise';
+    color: var(--P500);
+    font-size: 120px;
+    margin-right: 1%;
+}
+
+
+
+.cardsWrap {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 6%;
+    gap: 20px;
+}
+
+.card {
+    width: 400px;
+}
+
+.title {
+    font-weight: 400;
+    font-size: 38px;
+}
+
+.content {
+    font-weight: 300;
+    font-size: 18px;
+    margin-top: 5%;
+}

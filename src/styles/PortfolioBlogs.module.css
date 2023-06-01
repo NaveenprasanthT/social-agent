@@ -1,0 +1,23 @@
+.sectionWrap {
+    padding: 6% 4%;
+    display: flex;
+}
+
+.hashSection {
+    width: 50%;
+}
+
+.RightContent {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 80px;
+}
+
+.RightContent h2 {
+    font-weight: 700;
+    font-size: 60px;
+}
+.RightContent p{
+    padding: 6% 0;
+}

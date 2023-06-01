@@ -1,7 +1,87 @@
-.sectionWrap{
-    height: 400px;
+.heroSection {
+    height: 100vh;
+    background-image: url('/assets/heroBg.png');
+    background-size: cover;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    padding-left: 4%;
+    color: #fff;
+    position: relative;
+}
+
+.heroSection h1 {
+    font-weight: 600;
+    font-size: 4vw;
+    line-height: 160px;
+}
+
+.heroSection p {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 42px;
+    width: 60vw;
+    margin-bottom: 2%;
+    margin-top: 1%;
+}
+
+.emailWrap {
+    font-size: 18px;
+}
+
+.emailWrap a {
+    text-decoration: none;
+    color: var(--P300);
+}
+
+.bannerHash {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 50%;
+    object-fit: contain;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
     padding: 4%;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card {
+    width: 280px;
+    height: 300px;
+    padding: 2%;
+    border: 2px solid var(--P700);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+}
+
+.desc {
+    font-weight: 400;
+    font-size: 13.1683px;
+    line-height: 20px;
+    margin-top: 6%;
+}
+
+.bottomWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.codeIcon {
+    font-size: 100px;
+    color: #0000005d;
 }

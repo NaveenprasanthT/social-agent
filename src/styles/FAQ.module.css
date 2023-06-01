@@ -1,0 +1,84 @@
+.FaqFormWrap {
+    padding: 2% 0%;
+    display: flex;
+    padding: 8% 0;
+}
+
+.mainSection {
+    display: flex;
+}
+
+.left {
+    width: 45%;
+}
+
+
+.left h1 {
+    font-weight: 400;
+    font-size: 50px;
+    padding: 0 10%;
+    padding-right: 0;
+}
+.left button{
+    margin: 2% 10%;
+    margin-right: 0;
+}
+.right {
+    width: 55%;
+    padding: 0 4%;
+}
+
+/* Query Section*/
+.queryWrap {
+    padding: 8% 8%;
+    /* background-image: url('../../public/assets/faqDoc.png'); */
+    background-size: cover;
+    background-position: top right;
+}
+
+.queryWrap h2 {
+    font-weight: 500;
+    font-size: 48px;
+}
+
+.red {
+    color: var(--secondary-color);
+}
+
+.call {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    margin-top: 4%;
+}
+
+@media screen and (max-width: 750px) {
+    .bannerContent {
+        font-size: 42px;
+        line-height: 46px;
+    }
+
+    .FaqFormWrap {
+        flex-direction: column;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .right {
+        width: 100%;
+        padding: 0;
+    }
+
+    .queryWrap h2 {
+        font-size: 32px;
+    }
+
+    .call h2 {
+        display: flex;
+        flex-direction: column;
+        font-size: 28px;
+    }
+}

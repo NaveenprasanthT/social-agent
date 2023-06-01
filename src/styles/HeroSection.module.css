@@ -1,38 +1,44 @@
 .sectionWrap {
-    height: 140vh;
+    height: 120vh;
     background-image: url('../../public/assets/heroBg.png');
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 4%;
+    padding-top: 4%;
 }
 
 .main {
     color: #fff;
     display: flex;
     align-items: center;
-    padding: 0 6%;
-    padding-left: 8%;
+    padding: 0 0%;
+    padding-left: 10%;
 }
 
 .left {
     width: 40%;
+    padding-bottom: 8%;
 }
 
 
 .left h1 {
     font-style: normal;
     font-weight: 500;
-    font-size: 38px;
+    font-size: 34px;
     line-height: 54px;
+    display: flex;
 }
+
 
 .left p {
     font-style: normal;
     font-weight: 300;
-    font-size: 23px;
+    font-size: 21px;
     margin-top: 6%;
+    margin-bottom: 6%;
 }
 
 .right {
@@ -40,10 +46,29 @@
 }
 
 .img {
-    width: 100%;
+    width: 95%;
     height: 100%;
 }
-.icon{
+
+.icon {
     width: max-content;
     height: 40px;
+}
+
+
+/* Text Animation */
+
+.fadeInText {
+    color: var(--P500);
+    animation: fadeInAnimation 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

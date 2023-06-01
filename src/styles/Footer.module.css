@@ -1,0 +1,69 @@
+.footerWrap {
+    background-image: url('../../public/assets/heroBg.png');
+    background-size: cover;
+}
+
+.contentWrap {
+    display: flex;
+    padding: 4% 0;
+
+}
+
+.left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 60%;
+    height: 50%;
+    object-fit: contain;
+    margin-left: 10%;
+}
+
+.iconWrap {
+    width: 50%;
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon {
+    font-size: 30px;
+    color: #fff;
+}
+
+.right {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.linkLeft {
+    display: flex;
+    flex-direction: column;
+}
+
+.linkRight {
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 60px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.rights {
+    font-weight: 350;
+    font-size: 22px;
+    color: #fff;
+    padding: 1.5% 5%;
+    margin: 0 2%;
+    border-top: 1px solid;
+}
