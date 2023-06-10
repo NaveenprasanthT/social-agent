@@ -6,8 +6,10 @@ import Button from '../Button'
 import { RiMenuFill } from 'react-icons/ri'
 import { HoverContext, SliderContext } from '../../../Context'
 import Typewriter from 'typewriter-effect';
+import { useRouter } from 'next/router'
 
 const Navbar = () => {
+    const { push } = useRouter();
     const { setSliderActive } = useContext(SliderContext);
     const { hoverActive } = useContext(HoverContext);
     return (
@@ -31,7 +33,7 @@ const Navbar = () => {
 
                                 }}
                             />
-                            : <Image className={styles.logo} src={logo} alt='logo' />
+                            : <Image onClick={() => push('/')} className={styles.logo} src={logo} alt='logo' />
 
 
                     }

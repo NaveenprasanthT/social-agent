@@ -1,12 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react'
-import styles from '@/styles/HeroSection.module.css'
-import img from '../../public/assets/heroImage.png'
+import styles from '@/styles/Home/HeroSection.module.css'
+import img from '../../../public/assets/heroImage.png'
 import Image from 'next/image'
-import icon from '../../public/assets/scrolldown.png'
-import bgimg from '../../public/assets/heroBg.png'
-import Button from './Button'
+import icon from '../../../public/assets/scrolldown.png'
+import Button from '../Button'
 import TextTransition, { presets } from 'react-text-transition';
-import { HoverContext } from '../../Context'
+import { HoverContext } from '../../../Context'
 
 const HeroSection = () => {
     const { setHoverActive } = useContext(HoverContext);

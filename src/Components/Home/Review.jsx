@@ -1,9 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
-import styles from '@/styles/Review.module.css'
+import styles from '@/styles/Home/Review.module.css'
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
-import Image from 'next/image'
-import quoteImg from '../../public/assets/quote.png'
-import { IoMdQuote } from 'react-icons/io'
 
 const Review = () => {
     const data = [
@@ -53,7 +50,7 @@ const Review = () => {
     return (
         <div className={styles.sectionWrap}>
             <div className={styles.reviewCardSection}>
-                <h1>What our Customers are <br></br>saying</h1>
+                <h1>Hear From Our Happy Clients</h1>
                 <div className={styles.scrollBtn}>
                     <BsArrowLeft className={styles.arrow} onClick={() => slide(-700)} />
                     <BsArrowRight className={styles.arrow} onClick={() => slide(+700)} />

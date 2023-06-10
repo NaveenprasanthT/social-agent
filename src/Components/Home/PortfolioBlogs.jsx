@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from '@/styles/PortfolioBlogs.module.css'
+import styles from '@/styles/Home/PortfolioBlogs.module.css'
 import Image from 'next/image'
-import Button from './Button'
+import Button from '../Button'
 
 const PortfolioBlogs = () => {
     return (

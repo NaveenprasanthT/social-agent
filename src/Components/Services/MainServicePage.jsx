@@ -1,17 +1,20 @@
 import React from 'react'
-import styles from '@/styles/Services.module.css'
+import styles from '@/styles/ServicesPage/Services.module.css'
 import Image from 'next/image'
 import bannerHash from '../../../public/assets/hash.png'
 import Button from '../Button'
 import { CgCodeSlash } from 'react-icons/cg'
+import Link from 'next/link'
+
 
 const MainServicePage = () => {
+
     const data = [
         {
             id: '01',
             title: 'Lorem ipsum dolor sit amet consectetur.',
             desc: 'Lorem ipsum dolor sit amet consectetur. Condimentum ultrices aliquam adipiscing pellentesque.',
-            url: '/',
+            url: '/Services/SocialMediaMarketing',
         },
         {
             id: '02',
@@ -78,7 +81,9 @@ const MainServicePage = () => {
                                 <div className={styles.desc}>{item.desc}</div>
                             </div>
                             <div className={styles.bottomWrap}>
-                                <Button value='Know more' bg='var(--P700)' color='#fff' />
+                                <Link href={item.url}>
+                                    <Button value='Know more' bg='var(--P700)' color='#fff' />
+                                </Link>
                                 <CgCodeSlash className={styles.codeIcon} />
                             </div>
                         </div>

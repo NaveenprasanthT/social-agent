@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react'
 import styles from '@/styles/HashBanner.module.css'
-import { BsArrowDownCircle } from 'react-icons/bs'
 import Image from 'next/image'
 import hashImg from '../../public/assets/hash.png'
 import styled from 'styled-components'
 import { useInView } from 'react-intersection-observer'
 
-const Img = styled(Image)`
+const ImageWrap = styled.div`
         position: absolute;
         top: 0;
         left: 0;
@@ -23,7 +22,7 @@ const HashBanner = ({ p, h1 }) => {
 
     const { ref, inView } = useInView({
         threshold: 0,
-        // triggerOnce: true
+        triggerOnce: true
     });
 
 
@@ -34,7 +33,10 @@ const HashBanner = ({ p, h1 }) => {
                     <p>{p}</p>
                     <h1>{h1}</h1>
                 </div>
-                <Img inView={inView} className={styles.hashImg} src={hashImg} alt='hash' />
+                <ImageWrap inView={inView}>
+
+                    <Image className={styles.hashImg} src={hashImg} alt='hash' />
+                </ImageWrap>
             </div>
         </>
     )

@@ -1,6 +1,6 @@
 .sectionWrap {
     height: 120vh;
-    background-image: url('../../public/assets/heroBg.png');
+    background-image: url('../../../public/assets/heroBg.png');
     background-size: cover;
     display: flex;
     flex-direction: column;

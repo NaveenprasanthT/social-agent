@@ -1,13 +1,10 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '@/styles/Home.module.css'
-import HeroSection from '@/Components/HeroSection'
-import Services from '@/Components/Services'
-import Review from '@/Components/Review'
-import WhySocialAgent from '@/Components/WhySocialAgent'
+import HeroSection from '@/Components/Home/HeroSection'
+import Review from '@/Components/Home/Review'
+import WhySocialAgent from '@/Components/Home/WhySocialAgent'
 import HashBanner from '@/Components/HashBanner'
 import DownloadSection from '@/Components/DownloadSection'
-import PortfolioBlogs from '@/Components/PortfolioBlogs'
+import PortfolioBlogs from '@/Components/Home/PortfolioBlogs'
 import { useEffect, useState } from 'react'
 import Faq from '../Components/Faq'
 
@@ -33,7 +30,6 @@ export default function Home() {
       <>
         <HeroSection />
         <WhySocialAgent />
-        <Services />
         <HashBanner p='Your Digital Bridge To' h1='SUCCESS' />
         <PortfolioBlogs />
         <Review />

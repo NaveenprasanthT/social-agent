@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '@/styles/AboutUs.module.css'
+import styles from '@/styles/AboutUs/AboutUs.module.css'
 import Image from 'next/image'
 import teamPic from '../../../public/assets/teamPic.png'
 

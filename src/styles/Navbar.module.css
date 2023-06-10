@@ -18,7 +18,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #ffffff59;
+    background: #ffffff4e;
     backdrop-filter: blur(10px);
     z-index: 10;
 }
@@ -32,6 +32,7 @@
     width: 200px;
     height: 100%;
     object-fit: contain;
+    cursor: pointer;
 }
 
 .logoTxt {
