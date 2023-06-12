@@ -7,7 +7,6 @@ import DownloadSection from '@/Components/DownloadSection'
 import PortfolioBlogs from '@/Components/Home/PortfolioBlogs'
 import { useEffect, useState } from 'react'
 import Faq from '../Components/Faq'
-import Index from '@/Components/Test'
 
 
 export default function Home() {
@@ -30,7 +29,6 @@ export default function Home() {
       </Head>
       <>
         <HeroSection />
-        {/* <Index /> */}
         <WhySocialAgent />
         <HashBanner p='Your Digital Bridge To' h1='SUCCESS' />
         <PortfolioBlogs />
