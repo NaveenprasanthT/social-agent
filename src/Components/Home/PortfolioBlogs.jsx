@@ -7,7 +7,7 @@ const PortfolioBlogs = () => {
     return (
         <div className={styles.sectionWrap}>
             <div className={styles.hashSection}>
-                <Image src='' alt='hash' />
+                {/* <Image src='' alt='hash' /> */}
             </div>
             <div className={styles.RightContent}>
                 <div className={styles.portfolioWrap}>

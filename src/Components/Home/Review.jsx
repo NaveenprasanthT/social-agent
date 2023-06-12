@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styles from '@/styles/Home/Review.module.css'
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
+import Image from 'next/image'
+import ratingImg from '../../../public/assets/rating.png'
 
 const Review = () => {
     const data = [
@@ -50,7 +52,7 @@ const Review = () => {
     return (
         <div className={styles.sectionWrap}>
             <div className={styles.reviewCardSection}>
-                <h1>Hear From Our Happy Clients</h1>
+                <h1>Hear From Our<span style={{ color: 'var(--P500)' }}> Happy Clients</span></h1>
                 <div className={styles.scrollBtn}>
                     <BsArrowLeft className={styles.arrow} onClick={() => slide(-700)} />
                     <BsArrowRight className={styles.arrow} onClick={() => slide(+700)} />
@@ -59,10 +61,12 @@ const Review = () => {
                     {
                         data.map((item, key) => (
                             <div className={styles.reviewCard} key={key}>
-                                <div className={styles.ratingSection}>
-                                    <div className={styles.left}>
-                                        <p>Rating</p>
-                                    </div>
+                                <div className={styles.ratingWrap}>
+                                    <Image className={styles.ratingImg} src={ratingImg} alt='hash1' />
+                                    <Image className={styles.ratingImg} src={ratingImg} alt='hash2' />
+                                    <Image className={styles.ratingImg} src={ratingImg} alt='hash3' />
+                                    <Image className={styles.ratingImg} src={ratingImg} alt='hash4' />
+                                    <Image className={styles.ratingImg} src={ratingImg} alt='hash5' />
                                 </div>
                                 <div className={styles.reviewContent}>
                                     <div className={styles.review}>

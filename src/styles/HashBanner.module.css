@@ -1,7 +1,7 @@
 .banner {
-    background: url('../../public/assets/heroBg.png');
+    background: url('../../public/assets/heroBg.webp');
     background-size: cover;
-    height: 70vh;
+    height: 60vh;
     padding: 0% 19%;
     padding-right: 0;
     display: flex;

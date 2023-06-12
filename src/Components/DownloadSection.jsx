@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import styles from '@/styles/DownloadSection.module.css'
 import { FiArrowUpRight } from 'react-icons/fi'
-import hashLogo from '../../public/assets/hashLogo.png'
+import hashLogo from '../../public/assets/hashLogo.webp'
 
 const DownloadSection = () => {
   return (

@@ -19,7 +19,7 @@ const AccordionItem = styled.div`
   justify-content: space-between;
   align-items: center;
   font-weight: 550;
-  font-size: 28px;
+  font-size: 22px;
   padding: 10px;
   cursor: pointer;
  
@@ -47,24 +47,39 @@ const Faq = () => {
         }
     }
     const items = [
-        { title: 'Lorem ipsum dolor sit amet consectetur.', content: 'Lorem ipsum dolor sit amet consectetur. Ultricies lectus tempor risus est scelerisque risus sit. Quis suspendisse porta eleifend ac ultricies donec mauris vestibulum.' },
-        { title: 'Lorem ipsum dolor sit amet consectetur.', content: 'Lorem ipsum dolor sit amet consectetur. Ultricies lectus tempor risus est scelerisque risus sit. Quis suspendisse porta eleifend ac ultricies donec mauris vestibulum.' },
-        { title: 'Lorem ipsum dolor sit amet consectetur.', content: 'Lorem ipsum dolor sit amet consectetur. Ultricies lectus tempor risus est scelerisque risus sit. Quis suspendisse porta eleifend ac ultricies donec mauris vestibulum.' },
-        { title: 'Lorem ipsum dolor sit amet consectetur.', content: 'Lorem ipsum dolor sit amet consectetur. Ultricies lectus tempor risus est scelerisque risus sit. Quis suspendisse porta eleifend ac ultricies donec mauris vestibulum.' },
-        { title: 'Lorem ipsum dolor sit amet consectetur.', content: 'Lorem ipsum dolor sit amet consectetur. Ultricies lectus tempor risus est scelerisque risus sit. Quis suspendisse porta eleifend ac ultricies donec mauris vestibulum.' },
-        { title: 'Lorem ipsum dolor sit amet consectetur.', content: 'Lorem ipsum dolor sit amet consectetur. Ultricies lectus tempor risus est scelerisque risus sit. Quis suspendisse porta eleifend ac ultricies donec mauris vestibulum.' },
+        {
+            title: 'Why do businesses need digital marketing services in Bangalore?',
+            content: 'Lorem ipsum dolor sit amet consectetur. Ultricies lectus tempor risus est scelerisque risus sit. Quis suspendisse porta eleifend ac ultricies donec mauris vestibulum.'
+        },
+        {
+            title: 'Lorem ipsum dolor sit amet consectetur.',
+            content: 'Lorem ipsum dolor sit amet consectetur. Ultricies lectus tempor risus est scelerisque risus sit. Quis suspendisse porta eleifend ac ultricies donec mauris vestibulum.'
+        },
+        {
+            title: 'Lorem ipsum dolor sit amet consectetur.',
+            content: 'Lorem ipsum dolor sit amet consectetur. Ultricies lectus tempor risus est scelerisque risus sit. Quis suspendisse porta eleifend ac ultricies donec mauris vestibulum.'
+        },
+        {
+            title: 'Lorem ipsum dolor sit amet consectetur.',
+            content: 'Lorem ipsum dolor sit amet consectetur. Ultricies lectus tempor risus est scelerisque risus sit. Quis suspendisse porta eleifend ac ultricies donec mauris vestibulum.'
+        },
+        {
+            title: 'Lorem ipsum dolor sit amet consectetur.',
+            content: 'Lorem ipsum dolor sit amet consectetur. Ultricies lectus tempor risus est scelerisque risus sit. Quis suspendisse porta eleifend ac ultricies donec mauris vestibulum.'
+        },
+        {
+            title: 'Lorem ipsum dolor sit amet consectetur.',
+            content: 'Lorem ipsum dolor sit amet consectetur. Ultricies lectus tempor risus est scelerisque risus sit. Quis suspendisse porta eleifend ac ultricies donec mauris vestibulum.'
+        },
     ];
 
     return (
 
         <div className={styles.FaqFormWrap} >
-            <div className={styles.left}>
-                <h1>Got any questions?<br></br>
-                    <span style={{ color: 'var(--P500)' }} >We have the right
-                        answers</span></h1>
-                <Button color='#fff' value='Discover FAQ' bg='var(--P700)' />
+            <div className={styles.header}>
+                <h1>Curious? <span style={{ color: 'var(--P500)' }} >We've Got the Answers!</span></h1>
             </div>
-            <div className={styles.right}>
+            <div className={styles.body}>
                 <div>
                     {items.map((item, index) => (
                         <AccordionContainer key={index}  >
@@ -80,6 +95,9 @@ const Faq = () => {
                     ))}
 
                 </div>
+            </div>
+            <div className="btnWrap">
+                <Button value='Discover' bg='var(--P700)' color='#fff' />
             </div>
         </div>
     )

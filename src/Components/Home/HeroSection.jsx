@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import styles from '@/styles/Home/HeroSection.module.css'
-import img from '../../../public/assets/heroImage.png'
+import img from '../../../public/assets/heroImage.webp'
 import Image from 'next/image'
 import icon from '../../../public/assets/scrolldown.png'
 import Button from '../Button'
@@ -41,7 +41,7 @@ const HeroSection = () => {
                         style={{ width: 'max-content' }}
                         onMouseEnter={() => setHoverActive(true)}
                         onMouseLeave={() => setHoverActive(false)} >
-                        <Button value='Start a project' color='var(--P700)' bg='#fff' />
+                        <Button   value={<>Book <span style={{ color: 'var(--P500)' }}>Free</span> Consultation</>} color='var(--P700)' bg='#fff' />
                     </div>
                 </div>
                 <div className={styles.right}>

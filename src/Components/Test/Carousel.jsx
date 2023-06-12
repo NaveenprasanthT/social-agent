@@ -1,95 +1,41 @@
-// Carousel
-// /assets/tempImg.png
-import { useState } from 'react';
 
-export default function Home() {
-  const [activeIndex, setActiveIndex] = useState(2); // Starting index of the center slide
+// import Carousel from "react-spring-3d-carousel";
+import dynamic from "next/dynamic";
+import { useState, useEffect } from "react";
+import { config } from "react-spring";
 
-  const handleSlideChange = (index) => {
-    setActiveIndex(index);
-  };
+export default function Caroussel(props) {
+  const table = props.cards.map((element, index) => {
+    return { ...element, onClick: () => setGoToSlide(index) };
+  });
 
-  const renderSlides = () => {
-    const slideData = [
-      { src: '/assets/tempImg.png', alt: 'Slide 1' },
-      { src: '/assets/tempImg.png', alt: 'Slide 2' },
-      { src: '/assets/tempImg.png', alt: 'Slide 3' },
-      { src: '/assets/tempImg.png', alt: 'Slide 4' },
-      { src: '/assets/tempImg.png', alt: 'Slide 5' },
-      { src: '/assets/tempImg.png', alt: 'Slide 6' },
-    ];
+  const [offsetRadius, setOffsetRadius] = useState(2);
+  const [showArrows, setShowArrows] = useState(false);
+  const [goToSlide, setGoToSlide] = useState(null);
+  const [cards] = useState(table);
 
-    return slideData.map((slide, index) => (
-      <div
-        key={index}
-        className={`slide ${index === activeIndex ? 'active' : ''}`}
-      >
-        <img style={{width: '100px'}} src={slide.src} alt={slide.alt} />
-      </div>
-    ));
-  };
+
+  useEffect(() => {
+
+    setOffsetRadius(props.offset);
+    setShowArrows(props.showArrows);
+  }, [props.offset, props.showArrows]);
+  const Carousel = dynamic(() => import('react-spring-3d-carousel'), {
+    ssr: false
+  });
+
 
   return (
-    <div className="carousel-wrapper">
-      <div className="carousel">
-        {renderSlides()}
-      </div>
-      <div className="indicators">
-        {Array.from({ length: 6 }).map((_, index) => (
-          <div
-            key={index}
-            className={`indicator ${index === activeIndex ? 'active' : ''}`}
-            onClick={() => handleSlideChange(index)}
-          />
-        ))}
-      </div>
-      <style jsx>{`
-        .carousel-wrapper {
-          max-width: 400px;
-          margin: 0 auto;
-        }
-        
-        .carousel {
-          display: flex;
-          overflow: hidden;
-          width: 100%;
-          height: 300px;
-          position: relative;
-        }
-        
-        .slide {
-          flex: 0 0 33.33%;
-          transition: transform 0.3s;
-        }
-        
-        .slide.active {
-          transform: scale(1.2);
-        }
-        
-        .slide img {
-          width: 100%;
-          height: auto;
-        }
-        
-        .indicators {
-          display: flex;
-          justify-content: center;
-          margin-top: 10px;
-        }
-        
-        .indicator {
-          width: 10px;
-          height: 10px;
-          background: #ccc;
-          margin: 0 5px;
-          border-radius: 50%;
-          cursor: pointer;
-        }
-        
-        .indicator.active {
-          background: #333;
-        }
-      `}</style>
+    <div
+      style={{ width: props.width, height: props.height, margin: props.margin }}
+    >
+      <Carousel
+        slides={cards}
+        goToSlide={goToSlide}
+        offsetRadius={offsetRadius}
+        showNavigation={showArrows}
+        animationConfig={config.gentle}
+      />
     </div>
   );
 }

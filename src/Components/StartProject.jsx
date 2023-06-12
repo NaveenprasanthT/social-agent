@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '@/styles/StartProject.module.css'
 import Image from 'next/image'
-import img from '../../public/assets/heroImage.png'
+import img from '../../public/assets/heroImage.webp'
 
 const StartProject = () => {
   return (

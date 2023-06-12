@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '@/styles/ServicesPage/Services.module.css'
 import Image from 'next/image'
-import bannerHash from '../../../public/assets/hash.png'
+import bannerHash from '../../../public/assets/hash.webp'
 import Button from '../Button'
 import { CgCodeSlash } from 'react-icons/cg'
 import Link from 'next/link'

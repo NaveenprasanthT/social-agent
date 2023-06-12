@@ -48,11 +48,8 @@ const WhySocialAgent = () => {
             <div className={styles.cardsWrap}>
                 {
                     data.map((item, key) => (
-                        <div  key={key} className={styles.card}>
-                            <div className={styles.number}>
-                                <h3>{item.id}</h3>
-                            </div>
-                            <div className={styles.rightContent}>
+                        <div key={key} className={styles.card}>
+                            <div className={styles.contentWrap}>
                                 <div className={styles.title}>
                                     {item.title}
                                 </div>

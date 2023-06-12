@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '@/styles/AboutUs/AboutUs.module.css'
 import Image from 'next/image'
-import teamPic from '../../../public/assets/teamPic.png'
+import teamPic from '../../../public/assets/teamPic.webp'
 
 const HeroSection = () => {
   return (

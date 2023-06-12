@@ -1,6 +1,6 @@
 .sectionWrap {
     height: 120vh;
-    background-image: url('../../../public/assets/heroBg.png');
+    background-image: url('../../../public/assets/heroBg.webp');
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -39,6 +39,9 @@
     font-size: 21px;
     margin-top: 6%;
     margin-bottom: 6%;
+}
+.left button{
+    font-size: 18px;
 }
 
 .right {

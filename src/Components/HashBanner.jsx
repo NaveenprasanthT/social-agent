@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import styles from '@/styles/HashBanner.module.css'
 import Image from 'next/image'
-import hashImg from '../../public/assets/hash.png'
+import hashImg from '../../public/assets/hash.webp'
 import styled from 'styled-components'
 import { useInView } from 'react-intersection-observer'
 
@@ -35,7 +35,7 @@ const HashBanner = ({ p, h1 }) => {
                 </div>
                 <ImageWrap inView={inView}>
 
-                    <Image className={styles.hashImg} src={hashImg} alt='hash' />
+                    <Image src={hashImg} className={styles.hashImg}  alt='hash' />
                 </ImageWrap>
             </div>
         </>
