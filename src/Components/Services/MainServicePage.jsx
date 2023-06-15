@@ -5,7 +5,7 @@ import bannerHash from '../../../public/assets/hash.webp'
 import Button from '../Button'
 import { CgCodeSlash } from 'react-icons/cg'
 import Link from 'next/link'
-
+import Work from './OurWork'
 
 const MainServicePage = () => {
 
@@ -91,6 +91,7 @@ const MainServicePage = () => {
                 }
 
             </div>
+            <Work/>
         </>
     )
 }
