@@ -7,6 +7,7 @@ import DownloadSection from '@/Components/DownloadSection'
 import PortfolioBlogs from '@/Components/Home/PortfolioBlogs'
 import { useEffect, useState } from 'react'
 import Faq from '../Components/Faq'
+import StartAProjectSection from '@/Components/StartAProjectSection'
 
 
 export default function Home() {
@@ -34,6 +35,7 @@ export default function Home() {
         <PortfolioBlogs />
         <Review />
         <DownloadSection />
+        <StartAProjectSection />
         <Faq />
       </>
     </>

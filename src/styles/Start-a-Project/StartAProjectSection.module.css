@@ -1,0 +1,50 @@
+.sectionWrap {
+    display: flex;
+    padding: 5% 3%;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(360deg, #F1E7FF 0%, rgba(179, 136, 235, 0) 100%);
+}
+
+.left {
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.img {
+    width: 85%;
+    height: max-content;
+}
+
+.badge {
+    position: absolute;
+    bottom: 8%;
+    right: 3%;
+    background: var(--P500);
+    width: 200px;
+    padding: 6% 5%;
+    font-style: italic;
+    font-size: 28px;
+    text-align: center;
+    color: #fff;
+    border-radius: 15px 15px 15px 0px;
+}
+
+.right {
+    width: 40%;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.desc {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 8% 0;
+}
