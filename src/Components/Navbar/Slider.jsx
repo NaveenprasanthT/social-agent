@@ -26,9 +26,9 @@ const Slider = () => {
             </div>
             <div className={styles.menuWrap}>
                 <div className={styles.navLinks}>
-                    <Link href='/' className={styles.navLink}>Home</Link>
+                    <Link href='/' onClick={() => setSliderActive(false)} className={styles.navLink}>Home</Link>
                     <Link href='/Services' onClick={() => setSliderActive(false)} className={styles.navLink}>Services</Link>
-                    <Link href='/' className={styles.navLink}>Portfolio</Link>
+                    <Link href='/Portfolio' onClick={() => setSliderActive(false)} className={styles.navLink}>Portfolio</Link>
                     <Link href='/AboutUs' onClick={() => setSliderActive(false)} className={styles.navLink}>About Us</Link>
                     <Link href='/' className={styles.navLink}>Contact us</Link>
                 </div>

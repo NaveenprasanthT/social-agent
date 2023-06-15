@@ -1,0 +1,30 @@
+.AllServiceContainer{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 1rem 2rem;
+    color: #1E1E1E;
+}
+
+.ServiceText{
+    display: flex;
+    flex-direction: column;
+}
+
+.ServiceText h1{
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.ServiceText p{
+    margin: 1rem 0rem;   
+}
+
+.ServiceText button{
+    width: max-content;
+    font-weight: 500;
+    padding: .7rem 2.5rem;
+    background-color: transparent;
+    outline: none;
+    border: 1.5px solid #1E1E1E;
+    border-radius: 50px;
+}
