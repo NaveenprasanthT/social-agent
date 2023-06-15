@@ -1,4 +1,5 @@
 import Image from "next/image";
+import styles from '@/styles/Blog/BlogContent.module.css'
 
 const BlogContent = () => {
 
@@ -13,7 +14,7 @@ const BlogContent = () => {
         },
 
         {
-            key:1,
+            key:2,
             text1:'The right time to hire a Digital Marketing agency for your brand is ',
             text2:'“right now”!',
             text3:'',
@@ -22,7 +23,7 @@ const BlogContent = () => {
         },
 
         {
-            key:1,
+            key:3,
             text1:'The right time to hire a Digital Marketing agency for your brand is ',
             text2:'“right now”!',
             text3:'',
@@ -32,14 +33,14 @@ const BlogContent = () => {
     ];
 
     return (
-        <div className="">
+        <div className={styles.BlogContentContainer}>
             {blogData.map((item) => (
-                <div className="">
+                <div className={styles.BlogContent}>
                     <Image 
                         src={item.image} 
                         alt='' width={300} 
                         height={300}
-                        className=""
+                        className={styles.BlogContentImage}
                     />
                     <h3>
                         {item.text1}
