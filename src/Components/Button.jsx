@@ -4,33 +4,23 @@ import styled from 'styled-components'
 const Btn = styled.button`
         color: ${({ color }) => (color)};
         background: ${({ bg }) => (bg)};
-        border: ${({border}) => (border ? border : 'none')};
+        border: none;
         width: max-content;
         height: max-content;
-        padding: ${({padding}) => (padding ? padding : '15px 30px')};
-        border-radius: ${({borderRadius}) => (borderRadius ? borderRadius : '40px')};
-        font-weight: ${({fontWeight}) => (fontWeight ? fontWeight : 500)};
-        font-size: ${({fontSize}) => (fontSize ? fontSize : '16px')};
+        padding: 15px 30px;
+        border-radius: 40px;
+        font-weight: 500;
+        font-size: 16px;
 
         &:hover{
             cursor: pointer;
         }
     `;
 
-const Button = ({ value, color, bg, border, borderRadius,fontSize,padding,fontWeight}) => {
+const Button = ({ value, color, bg, border }) => {
 
     return (
-        <Btn 
-            color={color} 
-            bg={bg} 
-            border={border}
-            borderRadius={borderRadius} 
-            fontSize={fontSize}
-            padding={padding}
-            fontWeight={fontWeight}
-        >
-            {value}
-        </Btn>
+        <Btn color={color} bg={bg} border={border}>{value}</Btn>
     )
 }
 

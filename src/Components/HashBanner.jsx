@@ -34,6 +34,7 @@ const HashBanner = ({ p, h1 }) => {
                     <h1>{h1}</h1>
                 </div>
                 <ImageWrap inView={inView}>
+
                     <Image src={hashImg} className={styles.hashImg}  alt='hash' />
                 </ImageWrap>
             </div>
