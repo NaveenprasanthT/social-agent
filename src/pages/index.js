@@ -29,15 +29,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <>
-        <HeroSection />
-        {/* <Index /> */}
-        <AllServices />
+        <HeroSection />       
+        
         <WhySocialAgent />
         <HashBanner p='Your Digital Bridge To' h1='SUCCESS' />
-        {/*<PortfolioBlogs />*/}
+        
         <Review />
         <DownloadSection />
-        <Consultation/>
+       
         <Faq />
       </>
     </>

@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import Card from './Card';
 import Carousel from "./Carousel";
-import portfolio1 from '../../../../public/assets/portfolio1.png';
-import portfolio2 from '../../../../public/assets/portfolio2.png';
-import portfolio3 from '../../../../public/assets/portfolio3.png';
 
 const Portfolio = () => {
 
