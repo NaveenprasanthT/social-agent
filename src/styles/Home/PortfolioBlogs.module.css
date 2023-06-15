@@ -1,50 +1,23 @@
 .sectionWrap {
-    padding: 2% 4%;
+    padding: 6% 4%;
     display: flex;
-    gap: 3rem;
 }
 
 .hashSection {
-    position: sticky;
-    top: 200px;
-    width: 400px;
-    height: max-content;
+    width: 50%;
 }
 
-
 .RightContent {
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     row-gap: 80px;
-    height: 500px;
-    overflow-y: scroll;
 }
-
-.RightContent::-webkit-scrollbar {
-    display: none;
-  }
 
 .RightContent h2 {
     font-weight: 700;
     font-size: 60px;
-    margin: 0%;
 }
 .RightContent p{
     padding: 6% 0;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
-  justify-content: center;
-  width: 16rem;
-  height: fit-content;
-  border-radius: 10px;
-}
-
-.card img {
-  width: 100%;
-  border-radius: 10px;
 }
