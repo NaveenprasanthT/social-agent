@@ -51,7 +51,7 @@
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
-    transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out; 
 }
 
 .card:hover{
