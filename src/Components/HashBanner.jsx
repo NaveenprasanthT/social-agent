@@ -17,7 +17,7 @@ const ImageWrap = styled.div`
        
     `;
 
-const HashBanner = ({ p, h1 }) => {
+const HashBanner = ({ p, h1, H1fontSize, pfontSize}) => {
 
 
     const { ref, inView } = useInView({
@@ -30,8 +30,8 @@ const HashBanner = ({ p, h1 }) => {
         <>
             <div ref={ref} className={styles.banner}>
                 <div className={styles.leftContent}>
-                    <p>{p}</p>
-                    <h1>{h1}</h1>
+                    <p style={{fontSize:pfontSize ? pfontSize : ""}}>{p}</p>
+                    <h1 style={{fontSize:H1fontSize ? H1fontSize : ""}}>{h1}</h1>
                 </div>
                 <ImageWrap inView={inView}>
                     <Image src={hashImg} className={styles.hashImg}  alt='hash' />

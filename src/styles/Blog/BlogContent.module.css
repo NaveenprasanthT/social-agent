@@ -24,7 +24,7 @@
 }
 
 .BlogContent h3 span{
-    color: var(--P300);
+    color: var(--P500);
 }
 
 .BlogContent p{
@@ -51,4 +51,5 @@
 .BlogContent div span:nth-child(2){
     font-size: 16px;
     padding: 2px 0px 0px 5px;
+    color: var(--P500);
 }

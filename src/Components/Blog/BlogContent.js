@@ -71,6 +71,22 @@ const BlogContent = () => {
             desc:`In today's digital world, the success of your business hinges on your ability to effectively navigate the online landscape. To stand out from the competition and reach your target audience, it's crucial to leverage the expertise of a digital marketing agency. But when is the optimal time to make that move? The answer is simple: the right time is "right now." Here's why:`,
             image:'/assets/Blog/img8.png',
         },
+        {
+            key:'blog9',
+            text3:' pick the right one!',
+            text2:'We are here to help you',
+            text1:'Are you a new business looking for the Social Media Marketing agency? ',
+            desc:`Social media marketing is crucial for the success of new businesses in today’s world. However, navigating the complex world of social media can be overwhelming. Choosing the right social media marketing agency is vital to effectively reach your target audience and achieve your business goals. Here are some essential factors to consider when selecting the perfect agency for your new venture.`,
+            image:'/assets/Blog/blog9.png',
+        },
+        {
+            key:'blog10',
+            text3:' will take time, but is it worth the effort?',
+            text2:'Search Engine Optimization (SEO)',
+            text1:'',
+            desc:`Search Engine Optimization (SEO) is a fundamental digital marketing strategy aimed at improving a website's visibility and organic search rankings. However, many businesses may question whether investing in SEO truly delivers results. In this blog, we will explore the effectiveness of SEO and its ability to generate tangible outcomes for businesses.`,
+            image:'/assets/Blog/blog10.png',
+        },
     ];
     return (
         <div className={styles.BlogContentContainer}>
@@ -92,7 +108,7 @@ const BlogContent = () => {
                     </h3>
                     <p>{item.desc}</p>
                     <div>
-                    <Link href={`/${item.key}`} style={{color: 'var(--P300)', textDecoration:'none'}}>
+                    <Link href={`/blog/${item.key}`} style={{color: 'var(--P300)', textDecoration:'none'}}>
                         <span>Read</span>
                         <span><FiArrowDownRight/></span>
                     </Link>
