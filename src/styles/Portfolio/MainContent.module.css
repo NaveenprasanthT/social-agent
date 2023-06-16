@@ -29,6 +29,7 @@
 .MainContainerItem p{
     font-size: 14px;
     width: 90%;
+    text-align: justify;
 }
 
 .MainContainerImage{

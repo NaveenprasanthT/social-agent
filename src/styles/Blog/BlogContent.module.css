@@ -1,12 +1,54 @@
 .BlogContentContainer{
-    padding: 6% 2%;
+    padding: 6% 3%;
     display: grid;
     grid-template-columns: 50% 50%;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .BlogContent{
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    justify-content: space-between;
+}
+
+.BlogContentImage {
+    width: 100%;
+    height: 330px;
+}
+
+.BlogContent h3{
+    font-size: 22px;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.BlogContent h3 span{
+    color: var(--P300);
+}
+
+.BlogContent p{
+    font-size: 11px;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.BlogContent div{
+    width: max-content;
+    display: flex;
+    text-align: center;
+    border-bottom: 1px solid #000000;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.BlogContent div span:nth-child(1){
+    color: #000000;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.BlogContent div span:nth-child(2){
+    font-size: 16px;
+    padding: 2px 0px 0px 5px;
 }

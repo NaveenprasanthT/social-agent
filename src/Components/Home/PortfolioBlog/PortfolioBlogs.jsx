@@ -2,8 +2,9 @@ import React, { useRef } from 'react'
 import styles from '@/styles/Home/PortfolioBlogs.module.css'
 import Image from 'next/image'
 import Button from '../../Button'
-import Blog from './Blog.jsx'
-import Portfolio from './Portfolio.jsx'
+import Carousel from './Carousel'
+import Carousell from './Carousell'
+import Link from 'next/link'
 
 const PortfolioBlogs = () => {
 
@@ -26,13 +27,17 @@ const PortfolioBlogs = () => {
             <div className={styles.RightContent} ref={rightDivRef}>
                 <div className={styles.blogWrap}>
                     <h2>Our Projects</h2>
-                        <Portfolio/>
-                    <Button color='#fff' bg='var(--P700)' value='Know more' />
+                    <Carousel/>
+                    <Link href='/Portfolio'>
+                        <Button color='#fff' bg='var(--P700)' value='Know more' />
+                    </Link>
                 </div>
                 <div className={styles.blogWrap}>
                     <h2>Our Blog</h2>
-                        <Blog/>
-                    <Button color='#fff' bg='var(--P700)' value='Know more' />
+                    <Carousell/>
+                    <Link href='/blog'>
+                        <Button color='#fff' bg='var(--P700)' value='Know more' />
+                    </Link>
                 </div>
             </div>
         </div>

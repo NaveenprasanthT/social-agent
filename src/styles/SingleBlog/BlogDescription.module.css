@@ -1,0 +1,93 @@
+.BlogDescriptionContainer{
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    gap: 1rem;
+}
+
+.BlogDescriptionLeft{
+    padding: 0 6%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    height: 1050px;
+    overflow-y: scroll;
+}
+
+.BlogDescriptionLeft::-webkit-scrollbar {
+    display: none;
+  }
+
+.BlogDescriptionLeft p{
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.BlogDescriptionLeft p span{
+    color: var(--P500);
+}
+
+.BlogLeftContent{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.BlogLeftContent h3{
+    width: max-content;
+    font-size: 22px;
+    font-weight: 500;
+    border-bottom: 3px solid var(--P500);
+    padding: 0 30px 10px 10px;
+}
+
+.BlogLeftContent p{
+    font-size: 17px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.BlogDescriptionRight{
+    padding: 3%;
+    display: grid;
+    grid-template-rows: 45% 45%;
+    gap: 3rem;
+}
+
+.BlogRight{
+    padding: 8% 6%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--P400);
+    border-radius: 5px;
+}
+
+.BlogRight h3{
+    font-size: 20px;
+    font-weight: 600;
+    width: 85%;
+}
+
+.BlogRight h3 span{
+    background-color: #fff;
+}
+
+.BlogRight p{
+    width: 80%;
+}
+
+.BlogRight button{
+    outline: none;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: #3a3d4a;
+    background-color: #ffffff;
+    padding: 13px 50px;
+    border-radius: 50px;
+}
+.BlogRight button span{
+    color: var(--P400);
+}
