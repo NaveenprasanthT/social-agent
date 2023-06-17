@@ -32,7 +32,7 @@
     position: absolute;
     bottom: -10%;
     right: 15%;
-    animation: MessageIcon 10s infinite;
+    animation: MessageIcon 7s infinite;
 }
 
 @keyframes MessageIcon {
@@ -62,7 +62,7 @@
     bottom: 15%;
     right: 35%;
     transform: scale(.4);
-    animation: HeartBeat 10s infinite;
+    animation: HeartBeat 6.5s infinite;
 }
 
 @keyframes HeartBeat {
@@ -71,7 +71,7 @@
         right: 35%;
     }
     35% {
-        bottom:45%;
+        bottom:35%;
         right: 5%;
         transform: scale(.6);
     }
@@ -92,7 +92,7 @@
     bottom: 28%;
     right: 47%;
     transform: scale(.4);
-    animation: Twitter 10s infinite;
+    animation: Twitter 9s infinite;
 }
 
 @keyframes Twitter {
@@ -122,7 +122,7 @@
     bottom: 2%;
     left: 20%;
     transform: scale(1);
-    animation: Youtube 10s infinite;
+    animation: Youtube 7s infinite;
 }
 
 @keyframes Youtube {
@@ -136,7 +136,7 @@
         transform: scale(.7);
     }
     50%{
-        bottom:95%;
+        bottom:75%;
         left: 30%;
         transform: scale(.7);
     }
@@ -152,7 +152,7 @@
     bottom: 35%;
     left: 0%;
     transform: scale(.6);
-    animation: LinkedIn 10s infinite;
+    animation: LinkedIn 7s infinite;
 }
 
 @keyframes LinkedIn {
@@ -161,8 +161,8 @@
         left: 0%;
     }
     25% {
-        bottom:95%;
-        left: 25%;
+        bottom:75%;
+        left: 20%;
         transform: scale(.75);
     }
     50%{
@@ -177,3 +177,62 @@
     }
   }
   
+  .ShareIcon{
+    position: absolute;
+    top: 8%;
+    left:5%;
+    transform: scale(1);
+    animation: Share 10s infinite;
+}
+
+@keyframes Share {
+    0% {
+        top: 8%;
+        left:5%;
+    }
+    25% {
+        top: 80%;
+        left:25%;
+        transform: scale(1.3);
+    }
+    50%{
+        top: 65%;
+        left:60%;
+        transform: scale(.85);
+    }
+    100%{
+        top: 8%;
+        left:5%;
+        transform: scale(1);
+    }
+  }
+  
+  .InstagramIcon{
+    position: absolute;
+    top: 20%;
+    right: -2%;
+    transform: scale(.6);
+    animation: Instagram 7s infinite;
+}
+
+@keyframes Instagram {
+    0% {
+        top: 20%;
+        right: -2%;
+    }
+    25% {
+        top: 14%;
+        right: 30%;
+        transform: scale(.9);
+    }
+    50%{
+        top: 80%;
+        right: 3%;
+        transform: scale(.4);
+    }
+    100%{
+        top: 20%;
+        right: -2%;
+        transform: scale(.6);
+    }
+  }

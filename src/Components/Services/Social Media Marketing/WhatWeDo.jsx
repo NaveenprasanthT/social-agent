@@ -53,8 +53,13 @@ const WhatWeDo = () => {
 
     return (
         <div className={styles.WhatWeDoWrap}>
-            <h3>What We Do</h3>
-            <div className={styles.cards}>
+            <h3>How do we build your online community</h3>
+            <div className={styles.TempCard}>
+                <img src='/assets/SMM/SMMLeft.png' className={styles.TempCardImage1}/>
+                <img src='/assets/SMM/SMMCenter.png' className={styles.TempCardImage2}/>
+                <img src='/assets/SMM/SMMRight.png' className={styles.TempCardImage3}/>
+            </div>
+            {/*<div className={styles.cards}>
                 {
                     data.map((item, key) => (
                         <div key={key} onMouseEnter={() => setHover(item.id)} onMouseLeave={() => setHover(false)} className={styles.card}>
@@ -67,8 +72,7 @@ const WhatWeDo = () => {
                         </div>
                     ))
                 }
-
-            </div>
+            </div>*/}
         </div>
     )
 }

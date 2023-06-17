@@ -40,6 +40,18 @@ const HeroSection = () => {
                 height={100}
                 className={styles.LinkedInIcon}     
             />
+            <Image 
+                src='/assets/SMM/SMMBG6.png' 
+                width={100} 
+                height={100}
+                className={styles.InstagramIcon}     
+            />
+            <Image 
+                src='/assets/SMM/SMMBG7.png' 
+                width={100} 
+                height={100}
+                className={styles.ShareIcon}     
+            />
         </div>
     )
 }
