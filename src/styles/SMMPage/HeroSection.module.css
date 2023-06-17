@@ -1,4 +1,5 @@
 .sectionWrap {
+    position: relative;
     height: 100vh;
     background-image: url('../../../public/assets/heroBg.webp');
     background-size: cover;
@@ -6,8 +7,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 4%;
+    padding-top: 1%;
     color: #fff;
+    overflow: hidden;
 }
 
 .sectionWrap h1 {
@@ -17,12 +19,40 @@
 }
 
 .sectionWrap p {
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 34px;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 22px;
     text-align: center;
     width: 55vw;
     margin-bottom: 2%;
     margin-top: 1%;
 }
 
+.MessageIcon{
+    position: absolute;
+    bottom: -10%;
+    right: 15%;
+    animation: MessageIcon 5s infinite;
+}
+
+@keyframes MessageIcon {
+    0%{
+        bottom: -10%;
+        right: 15%;
+    }
+    25% {
+        right: 0%;
+        bottom: 55%;
+        transform: scale(0.7);
+    }
+    50% {
+        right: 10%;
+        bottom: 70%;
+        transform: scale(0.5);
+    }
+    100%{
+        bottom: -10%;
+        right: 15%;
+        transform: scale(1);
+    }
+  }

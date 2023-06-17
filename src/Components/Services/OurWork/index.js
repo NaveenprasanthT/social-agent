@@ -6,7 +6,9 @@ import Influencer from '../../../../public/assets/Influencer.png';
 import Social from '../../../../public/assets/Social.png';
 import UX from '../../../../public/assets/UX.png';
 import Website from '../../../../public/assets/Website.png';
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Button from "@/Components/Button";
+import Link from "next/link";
 
 function Work() {
   const [img1, setImg1] = useState(Search);
@@ -15,104 +17,154 @@ function Work() {
   const [img4, setImg4] = useState(UX);
   const [img5, setImg5] = useState(Website);
 
-  const handleClick1 = () => {
-    const temp = img5;
-    setImg5(img4);
-    setImg4(img3);
-    setImg3(img2);
-    setImg2(img1);
-    setImg1(temp);
+  const [isMouseEntered, setIsMouseEntered] = useState(false);
 
-    const delayedFunction = () => {
-      const temp = img4;
-      setImg5(img3);
-      setImg4(img2);
-      setImg3(img1);
-      setImg2(img5);
-      setImg1(temp);
+  const handleMouseEnter = () => {
+    setIsMouseEntered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsMouseEntered(false);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+        if (!isMouseEntered) {
+        const temp = img5;
+        setImg5(img4);
+        setImg4(img3);
+        setImg3(img2);
+        setImg2(img1);
+        setImg1(temp);
+        }
+    }, 3000);
+
+    return () => {
+      clearInterval(interval);
     };
+  });
 
-    const delay = 1000;
+  // const handleClick1 = () => {
+  //   const temp = img5;
+  //   setImg5(img4);
+  //   setImg4(img3);
+  //   setImg3(img2);
+  //   setImg2(img1);
+  //   setImg1(temp);
 
-    const timeoutId = setTimeout(delayedFunction, delay);
+  //   const delayedFunction = () => {
+  //     const temp = img4;
+  //     setImg5(img3);
+  //     setImg4(img2);
+  //     setImg3(img1);
+  //     setImg2(img5);
+  //     setImg1(temp);
+  //   };
 
-    return () => clearTimeout(timeoutId);
-  }
+  //   const delay = 1000;
 
-  const handleClick2 = () => {
-    const delayedFunction = () => {
-      const temp = img5;
-      setImg5(img4);
-      setImg4(img3);
-      setImg3(img2);
-      setImg2(img1);
-      setImg1(temp);
-    };
+  //   const timeoutId = setTimeout(delayedFunction, delay);
 
-    const delay = 300;
+  //   return () => clearTimeout(timeoutId);
+  // }
 
-    const timeoutId = setTimeout(delayedFunction, delay);
-    return () => clearTimeout(timeoutId);
-  }
+  // const handleClick2 = () => {
+  //   const delayedFunction = () => {
+  //     const temp = img5;
+  //     setImg5(img4);
+  //     setImg4(img3);
+  //     setImg3(img2);
+  //     setImg2(img1);
+  //     setImg1(temp);
+  //   };
 
-  const handleClick4 = () => {
-    const delayedFunction = () => {
-      const temp = img1;
-      setImg5(temp);
-      setImg4(img5);
-      setImg3(img4);
-      setImg2(img3);
-      setImg1(img2);
-    };
+  //   const delay = 300;
 
-    const delay = 300;
+  //   const timeoutId = setTimeout(delayedFunction, delay);
+  //   return () => clearTimeout(timeoutId);
+  // }
 
-    const timeoutId = setTimeout(delayedFunction, delay);
-    return () => clearTimeout(timeoutId);
-  }
+  // const handleClick4 = () => {
+  //   const delayedFunction = () => {
+  //     const temp = img1;
+  //     setImg5(temp);
+  //     setImg4(img5);
+  //     setImg3(img4);
+  //     setImg2(img3);
+  //     setImg1(img2);
+  //   };
 
-  const handleClick5 = () => {
-    const temp = img1;
-      setImg5(temp);
-      setImg4(img5);
-      setImg3(img4);
-      setImg2(img3);
-      setImg1(img2);
-    const delayedFunction = () => {
-      const temp = img3;
-      setImg5(img2);
-      setImg4(img1);
-      setImg3(img5);
-      setImg2(img4);
-      setImg1(temp);
-    };
+  //   const delay = 300;
 
-    const delay = 1000;
+  //   const timeoutId = setTimeout(delayedFunction, delay);
+  //   return () => clearTimeout(timeoutId);
+  // }
 
-    const timeoutId = setTimeout(delayedFunction, delay);
-    return () => clearTimeout(timeoutId);
-  }
+  // const handleClick5 = () => {
+  //   const temp = img1;
+  //     setImg5(temp);
+  //     setImg4(img5);
+  //     setImg3(img4);
+  //     setImg2(img3);
+  //     setImg1(img2);
+  //   const delayedFunction = () => {
+  //     const temp = img3;
+  //     setImg5(img2);
+  //     setImg4(img1);
+  //     setImg3(img5);
+  //     setImg2(img4);
+  //     setImg1(temp);
+  //   };
+
+  //   const delay = 1000;
+
+  //   const timeoutId = setTimeout(delayedFunction, delay);
+  //   return () => clearTimeout(timeoutId);
+  // }
   
   return (
     <div className={styles.mainContent}>
       <h1>Our Works</h1>
       <div className={styles.container}>
-        <div onClick={handleClick1}>
+        <div 
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
           <Image src={img1} alt=""/>
         </div>
-        <div onClick={handleClick2}>
+        <div
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
           <Image src={img2} alt=""/>
         </div>
-        <div>
+        <div
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+        >
           <Image src={img3} alt=""/>
         </div>
-        <div onClick={handleClick4}>
+        <div
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+        >
           <Image src={img4} alt=""/>
         </div>
-        <div onClick={handleClick5}>
+        <div
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
           <Image src={img5} alt=""/>
         </div>
       </div>
+      <Link href="/Portfolio">
+      <Button
+        value="View More"
+        color="#ffffff"
+        bg='var(--P700)'
+        className={styles.OurWorkButton}
+      />
+      </Link>
     </div>
   );
 }

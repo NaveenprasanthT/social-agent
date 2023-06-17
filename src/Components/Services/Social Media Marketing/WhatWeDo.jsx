@@ -20,7 +20,7 @@ const Content = styled.div`
     position: absolute;
     bottom: 10px;
     left: 4px;
-    transition: 0.7s;
+    transition:all 2s ease-in-out;
     opacity: ${({ hover, id }) => (hover === id ? '100%' : '0')};
 
     
