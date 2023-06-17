@@ -17,10 +17,28 @@ const HeroSection = () => {
                 className={styles.MessageIcon}    
             />
             <Image 
-                src='/assets/SMM/SMMBG1.png' 
+                src='/assets/SMM/SMMBG2.png' 
                 width={100} 
                 height={100}
-                className={styles.MessageIcon}    
+                className={styles.HeartbeatIcon}     
+            />
+            <Image 
+                src='/assets/SMM/SMMBG3.png' 
+                width={100} 
+                height={100}
+                className={styles.TwitterIcon}     
+            />
+            <Image 
+                src='/assets/SMM/SMMBG4.png' 
+                width={100} 
+                height={100}
+                className={styles.YoutubeIcon}     
+            />
+            <Image 
+                src='/assets/SMM/SMMBG5.png' 
+                width={100} 
+                height={100}
+                className={styles.LinkedInIcon}     
             />
         </div>
     )

@@ -32,7 +32,7 @@
     position: absolute;
     bottom: -10%;
     right: 15%;
-    animation: MessageIcon 5s infinite;
+    animation: MessageIcon 10s infinite;
 }
 
 @keyframes MessageIcon {
@@ -42,7 +42,7 @@
     }
     25% {
         right: 0%;
-        bottom: 55%;
+        bottom: 45%;
         transform: scale(0.7);
     }
     50% {
@@ -56,3 +56,124 @@
         transform: scale(1);
     }
   }
+
+  .HeartbeatIcon{
+    position: absolute;
+    bottom: 15%;
+    right: 35%;
+    transform: scale(.4);
+    animation: HeartBeat 10s infinite;
+}
+
+@keyframes HeartBeat {
+    0% {
+        bottom: 15%;
+        right: 35%;
+    }
+    35% {
+        bottom:45%;
+        right: 5%;
+        transform: scale(.6);
+    }
+    50%{
+        bottom:5%;
+        right: 35%;
+        transform: scale(.9);
+    }
+    100%{
+        bottom: 15%;
+        right: 35%;
+        transform: scale(.4);
+    }
+  }
+
+  .TwitterIcon{
+    position: absolute;
+    bottom: 28%;
+    right: 47%;
+    transform: scale(.4);
+    animation: Twitter 10s infinite;
+}
+
+@keyframes Twitter {
+    0% {
+        bottom: 28%;
+        right: 47%;
+    }
+    25% {
+        bottom:5%;
+        right: 25%;
+        transform: scale(.9);
+    }
+    50%{
+        bottom:45%;
+        right: 90%;
+        transform: scale(.7);
+    }
+    100%{
+        bottom: 28%;
+        right: 47%;
+        transform: scale(.4);
+    }
+  }
+
+  .YoutubeIcon{
+    position: absolute;
+    bottom: 2%;
+    left: 20%;
+    transform: scale(1);
+    animation: Youtube 10s infinite;
+}
+
+@keyframes Youtube {
+    0% {
+        bottom: 2%;
+        left: 20%;
+    }
+    25% {
+        bottom:45%;
+        left: 0%;
+        transform: scale(.7);
+    }
+    50%{
+        bottom:95%;
+        left: 30%;
+        transform: scale(.7);
+    }
+    100%{
+        bottom: 2%;
+        left: 20%;
+        transform: scale(1);
+    }
+  }
+
+  .LinkedInIcon{
+    position: absolute;
+    bottom: 35%;
+    left: 0%;
+    transform: scale(.6);
+    animation: LinkedIn 10s infinite;
+}
+
+@keyframes LinkedIn {
+    0% {
+        bottom: 35%;
+        left: 0%;
+    }
+    25% {
+        bottom:95%;
+        left: 25%;
+        transform: scale(.75);
+    }
+    50%{
+        bottom:2%;
+        left: 20%;
+        transform: scale(.85);
+    }
+    100%{
+        bottom: 35%;
+        left: 0%;
+        transform: scale(.6);
+    }
+  }
+  
