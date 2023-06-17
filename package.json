@@ -9,12 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "babel-plugin-styled-components": "^2.1.1",
     "framer-motion": "^10.12.16",
     "next": "13.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.8.0",
+    "react-icons": "^4.9.0",
     "react-intersection-observer": "^9.4.3",
     "react-responsive-carousel": "^3.2.23",
     "react-spring": "^9.7.1",

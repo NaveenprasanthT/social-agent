@@ -1,8 +1,9 @@
 .heroSection {
-    height: 100vh;
+    height: 90vh;
     background-image: url('/assets/heroBg.webp');
     background-size: cover;
     display: flex;
+    gap:1rem;
     flex-direction: column;
     justify-content: center;
     padding-left: 4%;
@@ -11,77 +12,74 @@
 }
 
 .heroSection h1 {
-    font-weight: 600;
-    font-size: 4vw;
-    line-height: 160px;
+    font-weight: 500;
+    font-size: 56px;
 }
 
 .heroSection p {
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 42px;
-    width: 60vw;
-    margin-bottom: 2%;
-    margin-top: 1%;
-}
-
-.emailWrap {
-    font-size: 18px;
-}
-
-.emailWrap a {
-    text-decoration: none;
-    color: var(--P300);
+    font-weight: 200;
+    font-size: 20px;
+    width: 55%;
+    margin-bottom: 4%;
 }
 
 .bannerHash {
     position: absolute;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 50%;
+    top: 10%;
+    right: 5%;
+    height: 80vh;
+    width: 45%;
     object-fit: contain;
 }
 
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 4%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 3%;
     justify-content: center;
     gap: 10px;
 }
 
 .card {
-    width: 280px;
-    height: 300px;
-    padding: 2%;
+    background-image: none;
+    color: var(--P700);
+    height: 210px;
+    padding: 10%;
     border: 2px solid var(--P700);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: hidden;
+    transition: all 1s ease-in-out; 
+}
+
+.card:hover{
+    color: #fff;
+    background-image: url('../../../public/assets/heroBg.webp');
+    background-size: cover;
+    transition: all 1s ease-in-out;
 }
 
 .title {
-    font-weight: 500;
-    font-size: 24px;
+    font-weight: 600;
+    font-size: 16px;
     line-height: 33px;
 }
 
 .desc {
     font-weight: 400;
-    font-size: 13.1683px;
-    line-height: 20px;
+    font-size: 10px;
     margin-top: 6%;
 }
 
 .bottomWrap {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: first baseline;
 }
 
-.codeIcon {
-    font-size: 100px;
-    color: #0000005d;
+.cardImage {
+    width: 100px;
+    height: 100px;
 }
