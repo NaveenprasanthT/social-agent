@@ -5,8 +5,7 @@ import bannerHash from '../../../public/assets/serviceBg.png'
 import Button from '../Button'
 import { CgCodeSlash } from 'react-icons/cg'
 import Link from 'next/link'
-import Work from './OurWork'
-import HashBanner from '../HashBanner'
+
 
 const MainServicePage = () => {
 
@@ -141,8 +140,6 @@ const MainServicePage = () => {
                     ))
                 }
             </div>
-            <HashBanner p='Let Us Be Your' h1=' SOCIAL AGENT' H1fontSize='80px' pfontSize='32px'/>
-            <Work/>
         </>
     )
 }

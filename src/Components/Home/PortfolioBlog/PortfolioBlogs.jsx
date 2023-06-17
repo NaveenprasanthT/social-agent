@@ -43,5 +43,3 @@ const PortfolioBlogs = () => {
         </div>
     )
 }
-
-export default PortfolioBlogs;

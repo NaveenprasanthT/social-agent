@@ -4,11 +4,11 @@ import Review from '@/Components/Home/Review'
 import WhySocialAgent from '@/Components/Home/WhySocialAgent'
 import HashBanner from '@/Components/HashBanner'
 import DownloadSection from '@/Components/DownloadSection'
-import PortfolioBlogs from '@/Components/Home/PortfolioBlog/PortfolioBlogs'
+import PortfolioBlogs from '@/Components/Home/PortfolioBlogs'
 import { useEffect, useState } from 'react'
 import Faq from '../Components/Faq'
-import AllServices from '@/Components/Home/AllServices'
-import Consultation from '@/Components/Consultation'
+import StartAProjectSection from '@/Components/StartAProjectSection'
+
 
 export default function Home() {
   const [title, setTitle] = useState('Social Agent')
@@ -29,14 +29,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <>
-        <HeroSection />       
-        
+        <HeroSection />
         <WhySocialAgent />
         <HashBanner p='Your Digital Bridge To' h1='SUCCESS' />
-        <PortfolioBlogs/>
+        <PortfolioBlogs />
         <Review />
         <DownloadSection />
-        <Consultation/>
+        <StartAProjectSection />
         <Faq />
       </>
     </>

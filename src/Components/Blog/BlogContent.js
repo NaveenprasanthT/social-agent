@@ -118,5 +118,3 @@ const BlogContent = () => {
         </div>
     )
 }
-
-export default BlogContent;
