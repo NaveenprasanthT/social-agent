@@ -9,8 +9,6 @@ import { HiArrowLongRight } from 'react-icons/hi2'
 
 
 const Footer = () => {
-
-
     return (
 
         <div className={styles.footerWrap}>
@@ -35,11 +33,11 @@ const Footer = () => {
                     <div className={styles.linkLeft}>
                         <div className={styles.heading}>Social Agent</div>
                         <Link className={styles.link} href='/' >Home</Link>
-                        <Link className={styles.link} href='/' >About Us</Link>
-                        <Link className={styles.link} href='/' >Our Works</Link>
-                        <Link className={styles.link} href='/' >Blogs</Link>
+                        <Link className={styles.link} href='/AboutUs' >About Us</Link>
+                        <Link className={styles.link} href='/Portfolio' >Our Works</Link>
+                        <Link className={styles.link} href='/blog' >Blogs</Link>
                         <Link className={styles.link} href='/' >Careers</Link>
-                        <Link className={styles.link} href='/' >Contact Us</Link>
+                        <Link className={styles.link} href='/ContactUs' >Contact Us</Link>
                     </div>
                     <div className={styles.linkLeft}>
                         <div className={styles.heading}>Services</div>
@@ -55,9 +53,9 @@ const Footer = () => {
                     </div>
                     <div className={styles.linkRight}>
                         <div className={styles.heading}>Policies</div>
-                        <Link className={styles.link} href='/' >Privacy Policy</Link>
-                        <Link className={styles.link} href='/' >Refund Policy</Link>
-                        <Link className={styles.link} href='/' >Terms & Conditions</Link>
+                        <Link className={styles.link} href='/policy/refundPolicy' >Refund Policy</Link>
+                        <Link className={styles.link} href='/policy/termsConditions' >Terms & Conditions</Link>
+                        <Link className={styles.link} href='/policy/cookiesPolicy' >Website Cookies Policy</Link>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,120 @@
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500px;
+  }
+  
+  .left-side {
+    width: 30%;
+    /* background-image: url('/assets/heroBg.png');  */
+    background-color: #0f0d5d;
+    background-image: linear-gradient( #0f0d5d, #323157);
+    color: white;
+    padding: 50px;
+    padding-top: 10%;
+  }
+  
+  .heading-span{
+    color: #B388EB;
+ }
+
+  .right-heading{
+    padding-bottom: 15px;
+  }
+
+  .left-side h2 {
+    text-align: left;
+    margin-bottom: 40px;
+  }
+
+  .space {
+    margin-bottom: 20px; 
+  }
+  
+  .socialIcons {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(-50%, -50%);
+  }
+  
+  
+  .socialIcons a {
+    color: #FFFFFF;
+    font-size: 18px;
+    margin-right: 10px;
+  }
+
+  .intersection-image {
+    position: absolute;
+    top: 68%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 350px;
+    z-index: 0; /* Change z-index to 0 */
+  }
+  
+
+  .right-side {
+    width: 70%;
+    background-color: white;
+    padding: 60px;
+    padding-top: 10%;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .form-field label {
+    font-weight: bold;
+  }
+  
+  .form-field input,
+  .form-field textarea {
+    padding: 10px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .form-field textarea {
+    resize: vertical;
+  }
+  
+  .submit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .submit-button button {
+    color: #FFFFFF;
+    background-color: #38405F;
+    border: none;
+    width: max-content;
+    height: max-content;
+    padding: 15px 30px;
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  }
+  
+  .submit-button button:hover {
+    background-color: #FFFFFF;
+    color: #38405F;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  

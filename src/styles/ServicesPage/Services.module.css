@@ -1,8 +1,9 @@
 .heroSection {
-    height: 100vh;
+    height: 90vh;
     background-image: url('/assets/heroBg.webp');
     background-size: cover;
     display: flex;
+    gap:1rem;
     flex-direction: column;
     justify-content: center;
     padding-left: 4%;
@@ -11,77 +12,134 @@
 }
 
 .heroSection h1 {
-    font-weight: 600;
-    font-size: 4vw;
-    line-height: 160px;
+    font-weight: 500;
+    font-size: 56px;
 }
 
 .heroSection p {
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 42px;
-    width: 60vw;
-    margin-bottom: 2%;
-    margin-top: 1%;
-}
-
-.emailWrap {
-    font-size: 18px;
-}
-
-.emailWrap a {
-    text-decoration: none;
-    color: var(--P300);
+    font-weight: 200;
+    font-size: 20px;
+    width: 55%;
+    margin-bottom: 4%;
 }
 
 .bannerHash {
     position: absolute;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 50%;
+    top: 10%;
+    right: 5%;
+    height: 80vh;
+    width: 45%;
     object-fit: contain;
 }
 
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 4%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 3%;
     justify-content: center;
     gap: 10px;
 }
 
-.card {
-    width: 280px;
-    height: 300px;
-    padding: 2%;
-    border: 2px solid var(--P700);
+.borderWrapper {
+    padding: 1rem;
+    position: relative;
+    background: linear-gradient(to right,  #38405F -20%, #B388EB 92.67%, #F7AEF8 121%);
+    padding: 2px;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
+.card {
+    position: relative;
+    background-color: white;
+    color: var(--P700);
+    height: 210px;
+    padding: 10%;
+    border: 2px solid linear-gradient(rgba(255, 255, 255, 0));
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    justify-content: space-between;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer; 
+}
+
+.TopWrap{
+    z-index: 5;
+}
+
+.hoverOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../../public/assets/heroBg.webp');
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+  }
+  
+  .card:hover .hoverOverlay {
+    opacity: 1;
+  }
+
+
 .title {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 33px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.5s ease-in-out;
+}
+
+.card:hover .title{
+    color: #ffffff;
 }
 
 .desc {
     font-weight: 400;
-    font-size: 13.1683px;
-    line-height: 20px;
+    font-size: 10px;
     margin-top: 6%;
+    transition: all 0.5s ease-in-out;
+}
+
+.card:hover .desc{
+    color: #ffffff;
 }
 
 .bottomWrap {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: first baseline;
+    z-index: 5;
 }
 
-.codeIcon {
-    font-size: 100px;
-    color: #0000005d;
+.backgroundContainer {
+    width: 120px;
+    height: 100px;
+    background-image: url('../../../public/assets/Services/service1.png');
+    background-size: cover;
+    transition: all .5s ease-in-out;
+}
+
+.card:hover .backgroundContainer{
+    transform: scale(1.3);
+}
+
+.bottomWrapBtn{
+    font-size: 10px;
+    font-weight: 500;
+    color: #fff;
+    background-color: var(--P700);
+    padding: 7px 20px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover .bottomWrapBtn{
+    background-color: #fff;
+    color: var(--P700);
 }
