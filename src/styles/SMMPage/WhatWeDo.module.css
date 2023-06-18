@@ -1,5 +1,12 @@
 .WhatWeDoWrap {
     padding: 4% 6%;
+    align-items: center;
+    text-align: center;
+}
+
+.WhatWeDoWrap h3{
+    font-size: 30px;
+    font-weight: 500;
 }
 
 .cards {

@@ -40,46 +40,106 @@
     gap: 10px;
 }
 
+.borderWrapper {
+    padding: 1rem;
+    position: relative;
+    background: linear-gradient(to right,  #38405F -20%, #B388EB 92.67%, #F7AEF8 121%);
+    padding: 2px;
+    border-radius: 10px;
+}
+
 .card {
-    background-image: none;
+    position: relative;
+    background-color: white;
     color: var(--P700);
     height: 210px;
     padding: 10%;
-    border: 2px solid var(--P700);
+    border: 2px solid linear-gradient(rgba(255, 255, 255, 0));
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 50% 50%;
     justify-content: space-between;
     overflow: hidden;
-    transition: all 1s ease-in-out; 
+    transition: all 0.5s ease-in-out;
+    cursor: pointer; 
 }
 
-.card:hover{
-    color: #fff;
+.TopWrap{
+    z-index: 5;
+}
+
+.hoverOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url('../../../public/assets/heroBg.webp');
     background-size: cover;
-    transition: all 1s ease-in-out;
-}
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+  }
+  
+  .card:hover .hoverOverlay {
+    opacity: 1;
+  }
+
 
 .title {
     font-weight: 600;
     font-size: 16px;
-    line-height: 33px;
+    transition: all 0.5s ease-in-out;
+}
+
+.card:hover .title{
+    color: #ffffff;
 }
 
 .desc {
     font-weight: 400;
     font-size: 10px;
     margin-top: 6%;
+    transition: all 0.5s ease-in-out;
+}
+
+.card:hover .desc{
+    color: #ffffff;
 }
 
 .bottomWrap {
     display: flex;
     justify-content: space-between;
     align-items: first baseline;
+    z-index: 5;
 }
 
-.cardImage {
-    width: 100px;
+.backgroundContainer {
+    width: 120px;
     height: 100px;
+    background-image: url('../../../public/assets/Services/service1.png');
+    background-size: cover;
+    transition: all .5s ease-in-out;
+}
+
+.card:hover .backgroundContainer{
+    transform: scale(1.3);
+}
+
+.bottomWrapBtn{
+    font-size: 10px;
+    font-weight: 500;
+    color: #fff;
+    background-color: var(--P700);
+    padding: 7px 20px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover .bottomWrapBtn{
+    background-color: #fff;
+    color: var(--P700);
 }
