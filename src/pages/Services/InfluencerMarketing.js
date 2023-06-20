@@ -1,12 +1,14 @@
+import Consultation from '@/Components/Consultation'
 import DownloadSection from '@/Components/DownloadSection'
 import Faq from '@/Components/Faq'
 import HashBanner from '@/Components/HashBanner'
 import HeroSection from '@/Components/Services/InfluencerMarketing/HeroSection'
 import WhatWeDo from '@/Components/Services/InfluencerMarketing/WhatWeDo'
+import Work from '@/Components/Services/OurWork'
 import Head from 'next/head'
 import React from 'react'
 
-const SMMPage = () => {
+const IMPage = () => {
     return (
         <>
             <Head>
@@ -19,11 +21,13 @@ const SMMPage = () => {
                 <HeroSection />
                 <WhatWeDo />
                 <HashBanner p='Let Us Build Your' h1='ONLINE PRESENCE' />
+                <Work/>
                 <DownloadSection />
+                <Consultation/>
                 <Faq />
             </>
         </>
     )
 }
 
-export default SMMPage
+export default IMPage

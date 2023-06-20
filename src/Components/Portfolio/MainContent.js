@@ -60,13 +60,6 @@ const MainContent = () => {
                         <span>{item.tags}</span>
                     </div>
                     <p>{item.desc}</p>
-                    <Button 
-                        bg='#354673' 
-                        color='#fff' 
-                        value="View case Study" 
-                        fontSize="14px"
-                        borderRadius='5px'
-                    />            
                 </div>
             ))}
         </div>

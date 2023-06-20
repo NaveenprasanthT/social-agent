@@ -2,49 +2,10 @@
     padding: 4% 6%;
     align-items: center;
     text-align: center;
+    justify-content: center;
 }
 
 .WhatWeDoWrap h3{
     font-size: 30px;
     font-weight: 500;
-}
-
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    column-gap: 40px;
-}
-
-.card {
-    width: 400px;
-    height: 500px;
-    border-radius: 15px;
-    position: relative;
-
-}
-
-
-
-.content h5 {
-    font-size: 25px;
-    font-weight: 500;
-    margin-bottom: 30px;
-}
-
-.content p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.knowMore {
-    font-weight: 500;
-    font-size: 18px;
-    text-decoration: none;
-
-}
-
-.knowMore:hover {
-    cursor: pointer;
-    color: var(--P300);
 }

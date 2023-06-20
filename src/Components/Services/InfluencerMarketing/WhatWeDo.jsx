@@ -1,16 +1,361 @@
-import React from 'react'
-import styles from '@/styles/InfluencerMarketing/InfluencerMarketing.module.css'
+import React, { useEffect, useState } from 'react'
+import styles from '@/styles/SMMPage/WhatWeDo.module.css'
+import Image from 'next/image'
+import image from '../../../../public/assets/tempImg.png'
+import styled from 'styled-components'
+import Link from 'next/link'
 
+// const TempCard = styled.div`
+//     padding: 6%;
+//     display: flex;
+//     height: 450px;
+//     border-radius: 15px;
+//     position: relative;
+//     justify-content: center;
+//     transition: all 2s ease-in-out;
+// `
+
+// const TempCardImg1 = styled.img`
+//     width: 270px;
+//     height: 400px;
+//     position: absolute;
+//     border-radius: 30px;
+//     box-shadow: rgba(0, 0, 0, 1) 0px 0px 15px;
+//     z-index: 1;
+//     transform:${({condition})=>(condition ? 'rotate(0deg)' : 'rotate(-18deg)' )}; ;
+//     left:${({condition})=>(condition ? '0%' : '27%')};
+//     transition: all 2s ease-in-out;
+// `
+
+// const TempCardImg2 = styled.img`
+//     width: 270px;
+//     height: 400px;
+//     position: absolute;
+//     border-radius: 30px;
+//     box-shadow: rgba(0, 0, 0, 1) 0px 0px 15px;
+//     z-index: 2;
+//     bottom:${({condition})=>(condition ? '20%' : '10%')};
+//     transition: all 2s ease-in-out;
+// `
+
+// const TempCardImg3 = styled.img`
+//     width: 270px;
+//     height: 400px;    
+//     position: absolute;
+//     border-radius: 30px;
+//     box-shadow: rgba(0, 0, 0, 1) 0px 0px 15px;
+//     transform: ${({condition})=>(condition ? 'rotate(0deg)' : 'rotate(18deg)' )};
+//     right:${({condition})=>(condition ? '0%' : '27%')};   
+//     z-index: 1;
+//     transition: all 2s ease-in-out;
+// `
+
+const Cards = styled.div`
+    padding: 4% 0%;
+    display: flex;display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:1.5rem;
+    margin-top: ${({condition}) => (condition ? '1rem':'3rem')};
+    transition: all 1.5s ease-in-out;
+`
+
+const Cards2 = styled.div`
+    padding: 4% 0%;
+    display: flex;display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:1.5rem;
+    margin-top: ${({condition}) => (condition ? '1rem':'3rem')};
+    transition: all 1.5s ease-in-out;
+`
+
+const Card1 = styled.div`
+    position: relative;
+    height: ${({condition}) => (condition ? '475px':'400px')};
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    overflow: hidden;
+    transform:${({condition}) => (condition ? 'rotate(0deg)':'rotate(-18deg)')};
+    left: ${({condition}) => (condition ? '0%':'67%')};
+    transition: all 1.5s ease-in-out;
+`
+
+const Card2 = styled.div`
+    position: relative;
+    height: 475px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    overflow: hidden;
+    bottom: ${({condition}) => (condition ? '0%':'-10%')};
+    transition: all 1.5s ease-in-out;
+`
+
+const Card3 = styled.div`
+    position: relative;
+    height: ${({condition}) => (condition ? '475px':'400px')};
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    overflow: hidden;
+    transform:${({condition}) => (condition ? 'rotate(0deg)':'rotate(18deg)')};;
+    right: ${({condition}) => (condition ? '0%':'67%')};
+    transition: all 1.5s ease-in-out;
+`
+
+const Card4 = styled.div`
+    position: relative;
+    height: ${({condition}) => (condition ? '475px':'400px')};
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    overflow: hidden;
+    transform:${({condition}) => (condition ? 'rotate(0deg)':'rotate(-18deg)')};
+    left: ${({condition}) => (condition ? '0%':'67%')};
+    transition: all 1.5s ease-in-out;
+`
+
+const Card5 = styled.div`
+    position: relative;
+    height: 475px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    overflow: hidden;
+    bottom: ${({condition}) => (condition ? '0%':'-10%')};
+    transition: all 1.5s ease-in-out;
+`
+
+const Card6 = styled.div`
+    position: relative;
+    height: ${({condition}) => (condition ? '475px':'400px')};
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    overflow: hidden;
+    transform:${({condition}) => (condition ? 'rotate(0deg)':'rotate(18deg)')};;
+    right: ${({condition}) => (condition ? '0%':'67%')};
+    transition: all 1.5s ease-in-out;
+`
+
+const Content = styled.p`
+    z-index: 6;
+    margin: 10% 8%;
+    text-align: justify;
+    font-size: 19px;
+    font-weight: 500;
+    opacity: 0;
+    transition: all 0.9s ease-in-out;
+
+    ${Card1}:hover & {
+        opacity: 1;
+    }
+    ${Card2}:hover & {
+        opacity: 1;
+    }
+    ${Card3}:hover & {
+        opacity: 1;
+    }
+    ${Card4}:hover & {
+        opacity: 1;
+    }
+    ${Card5}:hover & {
+        opacity: 1;
+    }
+    ${Card6}:hover & {
+        opacity: 1;
+    }
+`
+const CardImg = styled.img`
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    transform: scale(1);    
+    border-radius: 20px;
+    z-index: ${({condition}) => (condition ? '5':'7')};
+    transition: all 1s ease-in-out;
+    
+    
+    ${Card1}:hover & {
+        height: ${({condition}) => (condition ? '65%':'100%')};
+    }
+
+    ${Card2}:hover & {
+        height: ${({condition}) => (condition ? '65%':'100%')};
+    }
+
+    ${Card3}:hover & {
+        height: ${({condition}) => (condition ? '65%':'100%')};
+    }
+    ${Card4}:hover & {
+        height: ${({condition}) => (condition ? '65%':'100%')};
+    }
+
+    ${Card5}:hover & {
+        height: ${({condition}) => (condition ? '65%':'100%')};
+    }
+
+    ${Card6}:hover & {
+        height: ${({condition}) => (condition ? '65%':'100%')};
+    }
+`
+
+const CardBtn = styled.button`
+    z-index: 6;
+    margin: 7% 5%;
+    outline: none;
+    border: 1.45px solid #ffffff;
+    border-radius: 5px;
+    background: transparent;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 0%;
+    opacity:  ${({condition}) => (condition ? '1':'0')};
+    transition : all 3s ease-in-out;
+    cursor: pointer;
+`
 
 const WhatWeDo = () => {
+    const SMMData = [
+        {
+            key: 1,
+            image:'/assets/SMM/SMMImg1.png',
+            btnText:'Planning & Strategy Development',
+            desc:'Goals are set, audiences are understood, and effective strategies take shape to increase the reach',
+        },
+        {
+            key: 2,
+            image:'/assets/SMM/SMMImg2.png',
+            btnText:'Brand Engagement',
+            desc:'Goals are set, audiences are understood, and effective strategies take shape to increase the reach',
+        },
+        {
+            key: 3,
+            image:'/assets/SMM/SMMImg3.png',
+            btnText:'Content Calendar Planning',
+            desc:'Goals are set, audiences are understood, and effective strategies take shape to increase the reach',
+        },
+        {
+            key: 4,
+            image:'/assets/SMM/SMMImg4.png',
+            btnText:'Content Curation & Design',
+            desc:'Goals are set, audiences are understood, and effective strategies take shape to increase the reach',
+        },
+        {
+            key: 5,
+            image:'/assets/SMM/SMMImg5.png',
+            btnText:'Campaign Creation & Promotion', 
+            desc:'Goals are set, audiences are understood, and effective strategies take shape to increase the reach',
+        },
+        {
+            key: 6,
+            image:'/assets/SMM/SMMImg1.png',
+            btnText:'Socail Media Marketing & Analytics',
+            desc:'Goals are set, audiences are understood, and effective strategies take shape to increase the reach',
+        },
+    ]
+
+      const [scrollY, setScrollY] = useState(false);
+      const [scrollY2, setScrollY2] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+        if(window.scrollY > 525){
+            setScrollY(true);
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+        if(window.scrollY > 750){
+            setScrollY2(true);
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className={styles.WhatWeDoWrap}>
-      <h1>What we do</h1>
-      <div className={styles.cardsWrap}>
-        cards
-      </div>
-    </div>
-  )
+        <div className={styles.WhatWeDoWrap}>
+            <h3>How do we build your online community</h3>  
+            {/*<TempCard className={styles.TempCard}>
+                <TempCardImg1 condition={scrollY} src='/assets/SMM/SMMLeft.png' className={styles.TempCardImage1}/>
+                <TempCardImg2 condition={scrollY} src='/assets/SMM/SMMCenter.png' className={styles.TempCardImage2}/>
+                <TempCardImg3 condition={scrollY} src='/assets/SMM/SMMRight.png' className={styles.TempCardImage3}/>
+            </TempCard>*/}
+            <Cards condition={scrollY}>
+                <Card1 condition={scrollY}>
+                    <Content>{SMMData[0].desc}</Content>
+                    <CardImg condition={scrollY} src={SMMData[0].image}/>
+                    <CardBtn condition={scrollY}>
+                        {SMMData[0].btnText}
+                    </CardBtn>    
+                </Card1>
+                <Card2 condition={scrollY}>
+                    <Content>{SMMData[1].desc}</Content>
+                    <CardImg condition={scrollY} src={SMMData[1].image}/>
+                    <CardBtn condition={scrollY}>
+                        {SMMData[1].btnText}
+                    </CardBtn>    
+                </Card2>
+                <Card3 condition={scrollY}>
+                    <Content>{SMMData[2].desc}</Content>
+                    <CardImg condition={scrollY} src={SMMData[2].image}/>
+                    <CardBtn condition={scrollY}>
+                        {SMMData[2].btnText}
+                    </CardBtn>    
+                </Card3>
+            </Cards>
+            <Cards2 condition={scrollY2}>
+                <Card4 condition={scrollY2}>
+                    <Content>{SMMData[3].desc}</Content>
+                    <CardImg condition={scrollY2} src={SMMData[3].image}/>
+                    <CardBtn condition={scrollY2}>
+                        {SMMData[3].btnText}
+                    </CardBtn>    
+                </Card4>
+                <Card5 condition={scrollY2}>
+                    <Content>{SMMData[4].desc}</Content>
+                    <CardImg condition={scrollY2} src={SMMData[4].image}/>
+                    <CardBtn condition={scrollY2}>
+                        {SMMData[4].btnText}
+                    </CardBtn>    
+                </Card5>
+                <Card6 condition={scrollY2}>
+                    <Content>{SMMData[5].desc}</Content>
+                    <CardImg condition={scrollY2} src={SMMData[5].image}/>
+                    <CardBtn condition={scrollY2}>
+                        {SMMData[5].btnText}
+                    </CardBtn>    
+                </Card6>
+            </Cards2>
+        </div>
+    )
 }
 
 export default WhatWeDo

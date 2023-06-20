@@ -1,9 +1,6 @@
 import MainServicePage from '@/Components/Services/MainServicePage'
-import MainServicePageDemo from '@/Components/Services/demo'
 import Head from 'next/head'
 import React from 'react'
-
-
 
 const index = () => {
     

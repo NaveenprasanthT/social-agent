@@ -43,7 +43,7 @@ const WhySocialAgent = () => {
 
 
     return (
-        <div className={styles.sectionWrap}  >
+        <div className={styles.sectionWrap}>
             <Title ref={ref} inView={inView} ><span style={{}} className={styles.praise}>Why </span>Social Agent <span className={styles.praise}>?</span></Title>
             <div className={styles.cardsWrap}>
                 {

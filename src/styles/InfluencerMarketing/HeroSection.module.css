@@ -1,0 +1,223 @@
+.sectionWrap {
+    position: relative;
+    height: 95vh;
+    background-image: url('../../../public/assets/heroBg.webp');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0%;
+    color: #fff;
+    overflow: hidden;
+}
+
+.sectionWrap h1 {
+    font-weight: 600;
+    font-size: 5vw;
+    line-height: 160px;
+}
+
+.sectionWrap p {
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    width: 55vw;
+    margin-bottom: 2%;
+    margin-top: 1%;
+}
+
+.MsgContainer1{
+    position: absolute;
+    height: 190px;
+    width: 250px;
+    display: grid;
+    grid-template-rows: 60% 40%; 
+    gap: 5px; 
+    overflow: none;
+    left: 30px;
+    top: 30%;
+}
+
+.MsgContainer1 img{
+    height: 100px;
+    width: 100px;
+    margin-left:20px ;
+}
+
+.MsgContainer1Content{
+    width: 200px;
+    height: 50px;
+    position: relative;
+    border: 1px solid var(--P300);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.MsgContainer1Content h6{
+    font-size: 19px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+
+.MsgContainer1Shape{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border: 1px solid var(--P300);
+    transform: rotate(45deg);
+    left: 30px;
+    top: -8px;
+    border-right:none;
+    border-bottom: none;
+    background-image: url('../../../public/assets/heroBg.webp');
+}
+
+.MsgContainer2{
+    position: absolute;
+    height: 190px;
+    width: 150px;
+    display: grid;
+    grid-template-rows: 40% 60%; 
+    gap: 1px; 
+    overflow: none;
+    right: 10px;
+    top: 40%;
+}
+
+.MsgContainer2 img{
+    height: 70px;
+    width: 70px;
+    margin-left:20px ;
+}
+
+.MsgContainer2Content{
+    width: 90px;
+    height: 50px;
+    position: relative;
+    border: 1px solid var(--P300);
+    border-radius: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.MsgContainer2Content h6{
+    font-size: 19px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+
+.MsgContainer2Shape{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border: 1px solid var(--P300);
+    transform: rotate(45deg);
+    left: 20px;
+    bottom: -8px;
+    border-left:none;
+    border-top: none;
+    background-color: #ffffff;
+}
+
+.MsgContainer3{
+    position: absolute;
+    height: 190px;
+    width: 150px;
+    display: grid;
+    grid-template-rows: 25% 50%; 
+    gap: 1px; 
+    overflow: none;
+    left: 370px;
+    bottom: -8%;
+}
+
+.MsgContainer3 img{
+    height: 70px;
+    width: 70px;
+    margin-left:20px ;
+}
+
+.MsgContainer3Content{
+    width: 170px;
+    height: 40px;
+    position: relative;
+    border: 1px solid var(--P300);
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 40px;
+}
+
+.MsgContainer3Content h6{
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+
+.MsgContainer3Shape{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border: 1px solid var(--P300);
+    transform: rotate(45deg);
+    left: 30px;
+    bottom: -8px;
+    border-left:none;
+    border-top: none;
+    background-image: url('../../../public/assets/heroBg.webp');
+}
+
+.MsgContainer4{
+    position: absolute;
+    height: 190px;
+    width: 150px;
+    display: grid;
+    grid-template-rows: 40% 60%; 
+    gap: 1px; 
+    overflow: none;
+    right: 270px;
+    bottom: 0%;
+}
+
+.MsgContainer4 img{
+    height: 70px;
+    width: 70px;
+    margin-left:20px ;
+}
+
+.MsgContainer4Content{
+    width: 200px;
+    height: 50px;
+    position: relative;
+    border: 1px solid var(--P300);
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 40px;
+    background-color: #fff;
+    color: #000;
+}
+
+.MsgContainer4Content h6{
+    font-size: 19px;
+    font-weight: 500;
+    padding: 10px 0px;
+}
+
+.MsgContainer4Content h6 span{
+    color: var(--P300);
+}
+
+.MsgContainer4Shape{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border: 1px solid var(--P300);
+    transform: rotate(45deg);
+    left: 30px;
+    top: -8px;
+    border-right:none;
+    border-bottom: none;
+    background-color: #fff;
+}
