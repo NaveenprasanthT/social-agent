@@ -7,6 +7,7 @@ import { RiMenuFill } from 'react-icons/ri'
 import { HoverContext, SliderContext } from '../../../Context'
 import Typewriter from 'typewriter-effect';
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 const Navbar = () => {
     const { push } = useRouter();
@@ -40,9 +41,16 @@ const Navbar = () => {
 
                 </div>
                 <div className={styles.navContentWrap}>
-                    <Button className={styles.btn} value='Start a project' color='var(--P700)' bg='#fff' />
+                    <Link href='/Start-A-Project'>
+                        <Button className={styles.btn} value='Start a project' color='var(--P700)' bg='#fff' />
+                    </Link>
                     <Button value='Login' color='var(--P700)' bg='#fff' />
-                    <div onClick={() => setSliderActive(true)} >
+                    <div onClick={() => setSliderActive(true)}>
+                        <Button value={<RiMenuFill style={{ fontSize: '20px', display: 'flex' }} />} color='var(--P700)' bg='#fff' />
+                    </div>
+                </div>
+                <div className={styles.navContentWrapPhone}>
+                    <div onClick={() => setSliderActive(true)}>
                         <Button value={<RiMenuFill style={{ fontSize: '20px', display: 'flex' }} />} color='var(--P700)' bg='#fff' />
                     </div>
                 </div>

@@ -5,24 +5,49 @@
     gap: 5rem;
     background-color:  #eee2ff; /* For browsers that do not support gradients */
     background-image: linear-gradient(#f9f9f9, #eee2ff );
+    @media (max-width: 768px){
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .consultationLeft{
     position: relative;
+    @media (max-width: 768px){
+    }
 }
 
 .consultationImage{
     width: 100%;
-    height: max-content;
+    height: 100%;
+    object-fit: contain;
+    @media (max-width: 768px){
+        width: 80%;
+    }
 }
 
 .consultationLeft div{
     position: absolute;
-    top: 60%;
-    right: -7%;
+    top: 240px;
+    right: -50px;
     background-color: #B388EB;
     padding: 35px 30px;
     border-radius: 20px 20px 20px 0px;
+    @media (max-width: 1000px){
+        position: absolute;
+        top: 150px;
+        right: -50px;
+        background-color: #B388EB;
+        padding: 25px 20px;
+        border-radius: 20px 20px 20px 0px;
+        }
+        @media (max-width: 768px){
+            top: 70%;
+            right: 0;
+        }
 }
 
 .consultationLeft div span{
@@ -36,14 +61,49 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @media (max-width: 768px){
+        width: 95%;
+    }
 }
 
 .consultationRight h1{
     font-size: 28px;
     font-weight: 500;
+    @media (max-width: 1000px){
+        font-size: 24px;
+    }
+    @media (max-width:701px){
+        display:none;
+    }
 }
 
 .consultationRight p{
     margin-top: 30px;
     text-align: justify;
+    @media (max-width: 1000px){
+        font-size: 13px;
+    }
+}
+
+.consultationRight Button{
+    @media (max-width: 1000px){
+        font-size: 12px;
+        margin-top: 15px;
+    }
+    @media (max-width:768px){
+        align-self: center;
+    }
+}
+
+.consultationLeft h2{
+    font-size: 22px;
+    text-align: center;
+    padding: 2% 0% 5%;
+    @media (min-width:701px){
+        display:none;
+    }
+}
+
+.consultationLeft h2 span{
+    color: var(--P500);
 }

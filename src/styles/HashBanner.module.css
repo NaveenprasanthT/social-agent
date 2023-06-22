@@ -33,3 +33,42 @@
     height: 100%;
 }
 
+@media (max-width: 900px){
+    .banner{
+        height: 50vh;
+    }
+    .leftContent{
+        font-size: 28px;
+        line-height: 54px;
+    }
+    .leftContent h1{
+        font-size: 80px;
+    }
+}
+
+@media (max-width: 620px){
+    .banner{
+        height: 40vh;
+    }
+    .leftContent{
+        line-height: 46px;
+        font-size: 20px;
+    }
+    .leftContent h1{
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 478px){
+    .banner{
+        height: 30vh;
+    }
+    .leftContent{
+        font-size: 20px;
+        line-height: 36px;
+        font-weight: 300;
+    }
+    .leftContent h1{
+        font-size: 40px;
+    }
+}

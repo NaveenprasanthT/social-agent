@@ -10,6 +10,7 @@ const HashWorks = () => {
                 <h1>Our Works</h1>
             </div>
             <div className={styles.HashWorksRight}>
+                <h1>Our Works</h1>
                 <p>
                     With years of experience, we have had the opportunity to work
                     on a wide range of projects for clients from all over the world,

@@ -1,7 +1,7 @@
 .BlogContentContainer{
     padding: 6% 6%;
     display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
 }
 
@@ -20,7 +20,6 @@
 .BlogContent h3{
     font-size: 18px;
     font-weight: 500;
-    text-align: justify;
 }
 
 .BlogContent h3 span{
@@ -40,4 +39,41 @@
     border-bottom: 1px solid #000000;
     font-size: 13px;
     font-weight: 600;
+}
+
+@media (max-width: 978px){
+    .BlogContentContainer{
+        grid-template-columns: 1fr 1fr;
+    }
+    .BlogContentImage {
+        height: 200px;
+    }
+    .BlogContent{
+        gap: .5rem;
+        justify-content: space-between;
+    }
+    .BlogContent h3{
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    .BlogContent h3 span{
+        color: var(--P500);
+    }
+    
+    .BlogContent p{
+        font-size: 10.3px;
+        font-weight: 400;
+        text-align: justify;
+    }   
+}
+
+@media (max-width: 978px){
+    .BlogContentImage {
+        height: 150px;
+    }
+    .BlogContentContainer{
+        padding: 3%;
+        gap: 3%;
+    }
 }

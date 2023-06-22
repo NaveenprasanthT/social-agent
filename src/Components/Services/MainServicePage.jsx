@@ -1,48 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from '../Button'
 import Link from 'next/link'
 import Work from './OurWork'
 import HashBanner from '../HashBanner'
 import styled from 'styled-components'
+import ServiceBanner from './ServiceBanner'
+import Carousel from '../Home/PortfolioBlog/Carousel'
 
-const HeroSection = styled.div`
-    height: 90vh;
-    background-image: url('/assets/heroBg.webp');
-    background-size: cover;
-    display: flex;
-    gap:1rem;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 4%;
-    color: #fff;
-    position: relative;
-`
-
-const BannerHeader = styled.h1`
-    font-weight: 500;
-    font-size: 56px;
-`
-const BannerDesc = styled.p`
-    font-weight: 200;
-    font-size: 20px;
-    width: 55%;
-    margin-bottom: 4%;
-`
-
-const Image = styled.img`
-    position: absolute;
-    top: 10%;
-    right: 5%;
-    height: 80vh;
-    width: 45%;
-    object-fit: contain;
-`
 const Cards = styled.div`
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 3%;
     justify-content: center;
     gap: 10px;
+    @media screen and (max-width: 1100px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media screen and (max-width: 800px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (max-width: 500px) {
+        grid-template-columns: 1fr;
+    }
 `
 
 const BorderWrapper = styled.div`
@@ -55,7 +34,8 @@ const Title = styled.div`
     font-weight: 600;
     font-size: 16px;
     transition: all 0.5s ease-in-out;
-    
+    @media screen and (max-width: 768px) {
+    }
 `
 
 const HoverOverlay = styled.div`
@@ -82,7 +62,6 @@ const Desc = styled.p`
     font-size: 9px;
     margin-top: 6%;
     transition: all 0.5s ease-in-out;
-
 `
 
 const BottomWrap = styled.div`
@@ -147,9 +126,42 @@ const Card = styled.div`
         transform: scale(1.3);
         background-image: url(${props => props.ImgHover})
     }
+    @media screen and (max-width: 500px) {
+        height: 200px;
+    }
+`
+
+const ButtonContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
 `
 
 const MainServicePage = () => {
+
+    const [mobileView, setMobileView] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      if(window.innerWidth<=500){
+        setMobileView(true)
+      }else{
+        setMobileView(false)
+      }
+    };
+
+    // Initial screen size
+    handleResize();
+
+    // Add event listener for resize
+    window.addEventListener('resize', handleResize);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
     const data = [
         {
@@ -182,7 +194,7 @@ const MainServicePage = () => {
             desc: 'Lorem ipsum dolor sit amet consectetur. Amet lectus blandit tempus ac aliquam.',
             imgHover:'/assets/Services/serviceHover4.png',
             img:'/assets/Services/service4.png',
-            url: '/Services',
+            url: '/Services/WebsiteDevelopment',
         },
         {
             id: '05',
@@ -214,7 +226,7 @@ const MainServicePage = () => {
             desc: "From Ideation to Execution,We Craft Your Brand's Story with Artistry and Precision.",
             imgHover:'/assets/Services/serviceHover8.png',
             img:'/assets/Services/service8.png',
-            url: '/Services',
+            url: '/Services/Brand',
         },
         {
             id: '09',
@@ -268,21 +280,7 @@ const MainServicePage = () => {
 
     return(
         <>
-            <HeroSection>
-                <BannerHeader>Our Services</BannerHeader>
-                <BannerDesc>Lorem ipsum dolor sit amet consectetur.
-                    Consectetur feugiat bibendum mattis sed vel maecenas gravida faucibus.</BannerDesc  >
-                <Button 
-                    color='var(--P700)' 
-                    bg='#fff' 
-                    value="GET STARTED" 
-                    fontSize="13px"
-                    borderRadius='50px'
-                    padding='14px 50px'
-                    fontWeight='600'
-                />
-                <Image src='/assets/serviceBg.png' alt='hash image' />
-            </HeroSection>
+            <ServiceBanner/>
             <Cards>
                 {
                     data.map((item, key) => (
@@ -304,8 +302,16 @@ const MainServicePage = () => {
                     ))
                 }
             </Cards>
-            <HashBanner p='Let Us Be Your' h1=' SOCIAL AGENT' H1fontSize='80px' pfontSize='32px'/>
+            <HashBanner p='Let Us Be Your' h1='SOCIAL AGENT'/>
             <Work/>
+            <Carousel mobile={mobileView}/>
+            <ButtonContainer>
+                <Button
+                    value="View More"
+                    color="#ffffff"
+                    bg='var(--P700)'
+                />
+            </ButtonContainer>
         </>
     )
 }

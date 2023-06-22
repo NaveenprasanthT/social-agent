@@ -8,7 +8,7 @@ const Blog = () => {
     return (
         <div>
             <BlogMain/>
-            <Consultation />
+            {/*<Consultation />*/}
             <DownloadSection />
             <Faq />
         </div>

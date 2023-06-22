@@ -1,34 +1,43 @@
 import React, { useState } from 'react';
 
-const Carousel = () => {
+const Carousel = ({ mobile }) => {
   const [activeItemOne, setActiveItemOne] = useState('item-4');
 
   const handleClick = (itemId) => {
-    setActiveItemOne(itemId); 
+    setActiveItemOne(itemId);
   };
 
   return (
     <div>
-      <div className="container__sliderTwo">
-        <div className="containerTwo">
-          <input type="radio" name="sliderTwo" id="item-4" checked={activeItemOne === 'item-4'} />
-          <input type="radio" name="sliderTwo" id="item-5" checked={activeItemOne === 'item-5'} />
-          <input type="radio" name="sliderTwo" id="item-6" checked={activeItemOne === 'item-6'} />
-          <div className="cardsTwo">
-            <label className="cardTwo" htmlFor="item-4" id="selector-4" onClick={() => handleClick('item-4')}>
-              <img src="/assets/portfolio/portfolio2.png" alt="Image 1" />
-            </label>
-            <label className="cardTwo" htmlFor="item-2" id="selector-5" onClick={() => handleClick('item-5')}>
-              <img src="/assets/portfolio/portfolio1.png" alt="Image 2" />
-            </label>
-            <label className="cardTwo" htmlFor="item-3" id="selector-6" onClick={() => handleClick('item-6')}>
-              <img src="/assets/portfolio/portfolio5.png" alt="Image 3" />
-            </label>
-          </div>
-        </div>
+    
+    {
+      mobile?
+        <div>
+      < div className = "container__sliderTwo" >
+    <div className="containerTwo">
+      <input type="radio" name="sliderTwo" id="item-4" checked={activeItemOne === 'item-4'} />
+      <input type="radio" name="sliderTwo" id="item-5" checked={activeItemOne === 'item-5'} />
+      <input type="radio" name="sliderTwo" id="item-6" checked={activeItemOne === 'item-6'} />
+      <div className="cardsTwo">
+        <label className="cardTwo" htmlFor="item-4" id="selector-4" onClick={() => handleClick('item-4')}>
+          <img src="/assets/portfolio/portfolio2.png" alt="Image 1" />
+        </label>
+        <label className="cardTwo" htmlFor="item-2" id="selector-5" onClick={() => handleClick('item-5')}>
+          <img src="/assets/portfolio/portfolio1.png" alt="Image 2" />
+        </label>
+        <label className="cardTwo" htmlFor="item-3" id="selector-6" onClick={() => handleClick('item-6')}>
+          <img src="/assets/portfolio/portfolio5.png" alt="Image 3" />
+        </label>
       </div>
+    </div>
+      </div >
 
-      <style jsx>{`
+  <style jsx>{`
+
+        .carousel{
+          dispaly:none;
+        }
+
         .container__sliderTwo {
           max-width: 1000px;
           height: 250px;
@@ -102,7 +111,10 @@ const Carousel = () => {
           z-index: 1;
         }
       `}</style>
+    </div > : ''
+    }
     </div>
+    
   );
 };
 

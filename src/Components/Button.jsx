@@ -11,6 +11,7 @@ const Btn = styled.button`
         border-radius: ${({borderRadius}) => (borderRadius ? borderRadius : '40px')};
         font-weight: ${({fontWeight}) => (fontWeight ? fontWeight : 500)};
         font-size: ${({fontSize}) => (fontSize ? fontSize : '16px')};
+        z-index: 1;
 
         &:hover{
             cursor: pointer;

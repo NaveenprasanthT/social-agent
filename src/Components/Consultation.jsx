@@ -8,6 +8,7 @@ function Consultation() {
     return ( 
         <div className={styles.consultationContainer}>
             <div className={styles.consultationLeft}>
+            <h2>Ready to <span>start your project?</span></h2>
                 <Image src={Meeting} className={styles.consultationImage}/>
                 <div>
                     <span>Let us be your <br/> Social Agent!</span>

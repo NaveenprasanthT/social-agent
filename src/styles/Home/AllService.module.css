@@ -3,23 +3,52 @@
     grid-template-columns: 50% 50%;
     margin: 1rem 2rem;
     color: #1E1E1E;
+    @media (max-width:700px){
+        grid-template-columns: 100%;
+        text-align: center;
+    }
 }
 
 .ServiceText{
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+    padding: 10% 4%;
 }
 
 .ServiceText h1{
-    font-size: 36px;
+    font-size: 34px;
     font-weight: 500;
+    @media (max-width:850px){
+        font-size: 28px;
+    }
+    @media (max-width:700px){
+        font-weight: 600;
+        font-size: 32px;
+    }
+    @media (max-width:600px){
+        width: 100%;
+        font-size: 28px;
+    }
+    @media (max-width:450px){
+        font-size:18px;
+    }
+}
+
+.ServiceText span{
+    @media (max-width:700px){
+        color: var(--P500);
+    }
 }
 
 .ServiceText p{
-    margin: 1rem 0rem;   
+    font-size: 16px;
+    @media (max-width:700px){
+        font-size: 14px;
+    }
 }
 
-.ServiceText button{
+.ServiceTextButton{
     width: max-content;
     font-weight: 500;
     padding: .7rem 2.5rem;
@@ -27,4 +56,39 @@
     outline: none;
     border: 1.5px solid #1E1E1E;
     border-radius: 50px;
+    margin-top: 10%;
+    cursor: pointer;
+    @media (max-width:700px){
+        width: 80%;
+        color: #ffffff;
+        outline: none;
+        border: 1.5px solid var(--P700);
+        background-color: var(--P700);
+    }
+
+}
+
+.slideContainer{
+    height: 350px;
+    border-radius: 20px;
+    overflow: hidden !important;
+    @media screen and (max-width:500px){
+        height: 300px;
+    }
+    @media screen and (max-width:400px){
+        height: 250px;
+    }
+    @media screen and (min-width:701px){
+        display: none;
+    }
+}
+
+.slideContainer img{
+    height: 350px;
+    @media screen and (max-width:500px){
+        height: 300px;
+    }
+    @media screen and (max-width:400px){
+        height: 250px;
+    }
 }

@@ -23,7 +23,7 @@ const IMPage = () => {
                 <HashBanner p='Let Us Boost your Customer' h1='ENGAGEMENT' />
                 <Work/>
                 <DownloadSection />
-                <Consultation/>
+                {/*<Consultation/>*/}
                 <Faq />
             </>
         </>

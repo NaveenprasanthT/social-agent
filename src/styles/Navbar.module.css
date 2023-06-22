@@ -1,5 +1,5 @@
 .navbarWrap {
-    height: 85px;
+    height: 65px;
     position: fixed;
     top: 0;
     left: 0;
@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     padding: 1% 0;
-    z-index: 999;
+    z-index: 10;
 }
 
 .navbar {
@@ -18,9 +18,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #ffffff4e;
-    backdrop-filter: blur(10px);
-    z-index: 999;
+    background: #ffffff;
+    /*background:#ffffff4e; 
+    backdrop-filter: blur(10px); */
+    z-index: 9;
 }
 
 .navContentWrap {
@@ -29,17 +30,47 @@
 }
 
 .logo {
-    width: 200px;
+    width: 150px;
     height: 100%;
     object-fit: contain;
     cursor: pointer;
+    padding-top: 3%;
 }
 
 .logoTxt {
     width: max-content;
 }
 
-.navContentWrap button {
-    backdrop-filter: blur(10px);
+.navContentWrap Button {
+    /* backdrop-filter: blur(10px); */
+    background-color: #F5F5F5;
+    border: 1.33px solid #bbbbbb;
+    padding: 10px 25px;
+}
 
+
+@media (max-width: 750px) {
+    .navContentWrap{
+        display: none;
+    }
+    .navContentWrapPhone Button {
+        /* backdrop-filter: blur(10px); */
+        background-color: #F5F5F5;
+        border: 1.33px solid #bbbbbb;
+        padding: 10px 25px;
+    }
+    .logo{
+        width: 120px;
+        padding-left: 20px;
+    }
+    .navContentWrapPhone {
+        display: flex;
+        column-gap: 20px;
+    }
+}
+
+@media (min-width: 750px) {
+    .navContentWrapPhone{
+        display: none;
+    }
 }

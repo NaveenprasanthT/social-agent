@@ -3,7 +3,7 @@
 
 
 .sectionWrap {
-    padding: 6% 0%;
+    padding: 6% 1%;
 }
 
 .praise {
@@ -16,18 +16,17 @@
 
 
 .cardsWrap {
-    margin-top: 2%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 0 0%;
-    column-gap: 30px;
+    margin: 2%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(360px, 1fr));    
+    gap:2rem;
+    justify-content: space-between;
 }
 
 .card {
-    width: 400px;
+    width: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
 }
 
 .number {
@@ -45,7 +44,55 @@
 }
 
 .content {
+    width: 100%;
     font-weight: 350;
     font-size: 18px;
     margin-top: 5%;
+    text-align: justify;
+}
+
+@media (max-width: 1000px){
+    .praise {
+        font-size: 100px;
+    }
+}
+
+@media (max-width: 768px){
+    .praise {
+        font-size: 80px;
+    }
+}
+@media (max-width: 640px){
+    .praise {
+        font-size: 50px;
+    }
+    .cardsWrap{
+        margin-top: 7%;
+        gap: 1rem;
+    }
+    .title{
+        font-size: 28px !important;
+        text-align: center !important;
+
+    }   
+    .content{
+        font-size: 16px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .cardsWrap{
+        margin-top: 4%;
+        gap: 1rem;
+    }
+    .title{
+        font-size: 24px !important;
+        text-align: center !important;
+
+    }   
+    .content{
+        font-size: 14px;
+        text-align: center;
+    }
 }

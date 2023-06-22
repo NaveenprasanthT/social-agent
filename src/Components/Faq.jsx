@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import styles from '@/styles/FAQ.module.css'
-import Image from 'next/image'
+import styles,{css} from '@/styles/FAQ.module.css'
 import { AiOutlineDown } from 'react-icons/ai'
 import Button from './Button';
 
@@ -22,7 +21,13 @@ const AccordionItem = styled.div`
   font-size: 22px;
   padding: 10px;
   cursor: pointer;
- 
+
+  @media screen and (max-width: 768px) {
+        font-size: 20px !important;
+}
+@media screen and (max-width: 500px) {
+    font-size: 18px !important;
+}
 `;
 
 const AccordionContent = styled.div`
@@ -34,7 +39,13 @@ const AccordionContent = styled.div`
   font-size: 20px;
   padding: 10px;
   padding-bottom : ${({ isOpen }) => (isOpen ? '10px' : '0')};
- `;
+  @media screen and (max-width: 768px) {
+    font-size: 18px !important;
+}
+@media screen and (max-width: 500px) {
+    font-size: 16px !important;
+}
+  `;
 
 const Faq = () => {
     const [activeIndices, setActiveIndices] = useState([]);
@@ -75,7 +86,7 @@ const Faq = () => {
 
     return (
 
-        <div className={styles.FaqFormWrap} >
+        <div className={styles.FaqFormWrap}>
             <div className={styles.header}>
                 <h1>Curious? <span style={{ color: 'var(--P500)' }} >We've Got the Answers!</span></h1>
             </div>

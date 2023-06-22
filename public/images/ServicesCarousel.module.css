@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.card {
+  border-radius: 7px;
+  padding: 10px 5px;
+  cursor: pointer;
+  font-size: 14px;
+  color:white;
+  transition: transform 0.3s ease;
+  height: 150px;
+  width: 280px; 
+  display: flex; 
+  justify-content: space-around; 
+  align-items: top; 
+  transform: scale(1);
+  opacity: 1;
+}
+
+.card:not(:first-child) {
+  margin-top: -2.5rem;
+}
+
+.card.selected {
+  transform: scale(1.3);
+  height: 170px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+.cardContainer {
+  padding: 10px 10px; 
+  display: flex;
+  gap:70px;
+}

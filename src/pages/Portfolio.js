@@ -8,7 +8,7 @@ const Portfolio = () => {
     return(
         <div>
             <PortfolioMain/>
-            <Consultation/>
+            {/*<Consultation/>*/}
             <DownloadSection />
             <Faq />
         </div>

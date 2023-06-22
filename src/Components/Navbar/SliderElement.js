@@ -10,6 +10,10 @@ export const SliderWrap = styled.div`
     background: #000;
     /* opacity: ${({ sliderActive }) => (sliderActive ? '100' : '0')}; */
     transition: .4s;
+    overflow: scroll;
+    ::-webkit-scrollbar {
+        display: none;
+      }
 `;
 export const NavbarWrap = styled.div`
     position: fixed;

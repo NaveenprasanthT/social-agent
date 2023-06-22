@@ -23,7 +23,7 @@ const SEOPage = () => {
         <HashBanner p='Let Us maximise Your' h1='DIGITAL VISIBILITY' />
         <Work/>
         <DownloadSection />
-        <Consultation/>
+        {/*<Consultation/>*/}
         <Faq />
       </>
     </>

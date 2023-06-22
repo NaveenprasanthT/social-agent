@@ -52,6 +52,12 @@
     margin-top: 4%;
 }
 
+@media  screen and (max-width: 900px) {
+    .header h1{
+        font-size: 40px;
+    }
+}
+
 @media screen and (max-width: 750px) {
     .bannerContent {
         font-size: 42px;
@@ -64,6 +70,10 @@
 
     .header {
         width: 100%;
+    }
+
+    .header h1{
+        font-size: 30px;
     }
 
     .body {
@@ -79,5 +89,11 @@
         display: flex;
         flex-direction: column;
         font-size: 28px;
+    }
+}
+
+@media  screen and (max-width: 500px) {
+    .header h1{
+        font-size: 20px;
     }
 }

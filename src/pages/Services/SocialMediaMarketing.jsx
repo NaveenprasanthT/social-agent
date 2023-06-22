@@ -2,6 +2,7 @@ import Consultation from '@/Components/Consultation'
 import DownloadSection from '@/Components/DownloadSection'
 import Faq from '@/Components/Faq'
 import HashBanner from '@/Components/HashBanner'
+import Carousel from '@/Components/Home/PortfolioBlog/Carousel'
 import Work from '@/Components/Services/OurWork'
 import HeroSection from '@/Components/Services/Social Media Marketing/HeroSection'
 import WhatWeDo from '@/Components/Services/Social Media Marketing/WhatWeDo'
@@ -22,10 +23,11 @@ const SMMPage = () => {
         <WhatWeDo />
         <HashBanner p='Let Us Ignite Your' h1='SOCAIL PRESENCE' />
         <Work/>
+        <Carousel />
         <DownloadSection />
-        <Consultation/>
+        {/*<Consultation/>*/}
         <Faq />
-      </>
+      </> 
     </>
   )
 }

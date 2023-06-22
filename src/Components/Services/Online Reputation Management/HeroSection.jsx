@@ -9,8 +9,14 @@ const HeroSection = () => {
         <div className={styles.sectionWrap}>
         <div>
             <h1>Online Reputation Management</h1>
+            <Image 
+                src='/assets/ORM/ORMHeader.png' 
+                width={1000} 
+                height={1000}
+                className={styles.ORMImagePhne}    
+            />
             <p>Protect, enhance, and shine in the digital landscape. Our expert online reputation management services safeguard your brand's image, build trust, and drive success. Be the benchmark of excellence online.</p>
-            <Button value='GET SOCIAL' color='var(--P700)' bg='#fff' padding='12px 45px'/>
+            <Button value='GET CREDIBLE' color='var(--P700)' bg='#fff' padding='12px 45px'/>
         </div>
         <Image 
                 src='/assets/ORM/ORMHeader.png' 

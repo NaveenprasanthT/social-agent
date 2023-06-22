@@ -158,12 +158,6 @@ function Work() {
         </div>
       </div>
       <Link href="/Portfolio">
-      <Button
-        value="View More"
-        color="#ffffff"
-        bg='var(--P700)'
-        className={styles.OurWorkButton}
-      />
       </Link>
     </div>
   );

@@ -29,8 +29,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <>
-        <HeroSection />       
-        
+        <HeroSection />  
+        <AllServices />
         <WhySocialAgent />
         <HashBanner p='Your Digital Bridge To' h1='SUCCESS' />
         <PortfolioBlogs/>

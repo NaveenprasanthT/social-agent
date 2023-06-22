@@ -1,11 +1,36 @@
 import HeroSection from '@/Components/About us/HeroSection'
+import OurTeam from '@/Components/About us/JoinOurTeam'
 import DownloadSection from '@/Components/DownloadSection'
-import Faq from '@/Components/Faq'
 import HashBanner from '@/Components/HashBanner'
+import Carousel from '@/Components/Home/PortfolioBlog/Carousel'
+import Work from '@/Components/Services/OurWork'
 import Head from 'next/head'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const AboutUs = () => {
+
+  const [mobileView, setMobileView] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      if(window.innerWidth<=500){
+        setMobileView(true)
+      }else{
+        setMobileView(false)
+      }
+    };
+
+    // Initial screen size
+    handleResize();
+
+    // Add event listener for resize
+    window.addEventListener('resize', handleResize);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
     <>
       <Head>
@@ -16,9 +41,11 @@ const AboutUs = () => {
       </Head>
       <>
         <HeroSection />
-        <HashBanner p='Let Us Build Your' h1='ONLINE PRESENCE' />
+        <HashBanner p='Let Us Be Your' h1='Socail Agent' />
+        <Work/>
+        <Carousel mobile={mobileView} />
         <DownloadSection />
-        <Faq />
+        <OurTeam/>
       </>
     </>
   )

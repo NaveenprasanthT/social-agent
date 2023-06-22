@@ -26,6 +26,7 @@ const BlogHeader = () => {
             <div className={styles.HashImageContainer}>
                 <Image src={HeaderTag} alt="No image"  className={styles.HashImage}/>
             </div>
+            <Image src={HeaderTag} alt="No image"  className={styles.HashImagePhne}/>
         </div>
     )
 }

@@ -37,7 +37,7 @@ const SingleBlogPage = () => {
     return(
         <div>
             <SingleBlog blogData={blogData}/>
-            <Consultation/>
+           {/*<Consultation/>*/}
         </div>
     )
 }

@@ -9,8 +9,14 @@ const HeroSection = () => {
         <div className={styles.sectionWrap}>
         <div>
             <h1>Email Marketing</h1>
+            <Image 
+                src='/assets/Email/EmailMarketHeader.png' 
+                width={1000} 
+                height={1000}
+                className={styles.ORMImagePhne}    
+            />
             <p>Creating and Publishing content, such as text, images and videos that is designed to engage the target audience and encourage them to take a specific action like making a purchase or visiting a website.</p>
-            <Button value='GET SOCIAL' color='var(--P700)' bg='#fff' padding='12px 45px'/>
+            <Button value='GET PROTECTED' color='var(--P700)' bg='#fff' padding='12px 45px'/>
         </div>
         <Image 
                 src='/assets/Email/EmailMarketHeader.png' 

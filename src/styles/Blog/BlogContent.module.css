@@ -53,3 +53,12 @@
     padding: 2px 0px 0px 5px;
     color: var(--P500);
 }
+
+@media (max-width: 600px) {
+    .BlogContentContainer{
+        padding: 6% 3%;
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 2rem;
+    }
+}

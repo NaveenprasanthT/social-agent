@@ -17,6 +17,12 @@
     font-size: 5vw;
     line-height: 120px;
     text-align: center;
+    @media (max-width:1000px){
+        line-height: 80px;
+    }
+    @media (max-width:768px){
+        line-height: 40px;
+    }
 }
 
 .sectionWrap p {
@@ -27,34 +33,130 @@
     width: 55vw;
     margin-bottom: 2%;
     margin-top: 1%;
+    @media screen and (max-width: 500px) {
+        width: 90%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
 }
 
 .SEOHeaderImg1{
+    width: 20%;
+    height: 20%;
     position: absolute;
     top: 10%;
     left: 1%;
+    object-fit: contain;
+    @media (max-width: 500px) {
+        display: none;
+    }
 }
 
 .SEOHeaderImg2{
+    width: 20%;
+    height: 20%;
     position: absolute;
-    bottom: 20%;
-    left: 8%;
+    bottom: 15%;
+    left: 5%;
+    object-fit: contain;
+    @media (max-width: 500px) {
+        display: none;
+    }
 }
 
 .SEOHeaderImg3{
+    width: 9%;
+    height: 20%;
     position: absolute;
     bottom: 0;
     right: 42%;
+    object-fit: contain;
+    @media (max-width: 500px) {
+        display: none;
+    }
 }
 
 .SEOHeaderImg4{
+    width: 20%;
+    height: 20%;
     position: absolute;
     right: 25px;
     bottom: 60px;
+    object-fit: contain;
+    @media (max-width: 500px) {
+        display: none;
+    }
 }
 
 .SEOHeaderImg5{
+    width: 21%;
+    height: 20%;
     position: absolute;
     right: 8%;
     top: 9%;
+    object-fit: contain;
+    @media (max-width: 500px) {
+        display: none;
+    }
+}
+
+.ImageContainer{
+    position: relative;
+    height: 20vh;
+    width: 80%;
+}
+
+.SEOHeaderImg1Phne{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 1%;
+    object-fit: contain;
+}
+
+.SEOHeaderImg2Phne{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    object-fit: contain;
+}
+
+.SEOHeaderImg3Phne{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    bottom: 30%;
+    right: 42%;
+    object-fit: contain;
+}
+
+.SEOHeaderImg4Phne{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: 25px;
+    object-fit: contain;
+}
+
+.SEOHeaderImg5Phne{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: 8%;
+    bottom: 0;
+    object-fit: contain;
+}
+
+@media screen and (min-width: 501px) {
+    .ImageContainer{
+        display: none;
+    }
+}
+
+.sectionWrap Button{
+    @media screen and (max-width: 500px){
+        width: 80%;
+      }
 }

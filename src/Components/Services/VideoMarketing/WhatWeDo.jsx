@@ -5,51 +5,6 @@ import image from '../../../../public/assets/tempImg.png'
 import styled from 'styled-components'
 import Link from 'next/link'
 
-// const TempCard = styled.div`
-//     padding: 6%;
-//     display: flex;
-//     height: 450px;
-//     border-radius: 15px;
-//     position: relative;
-//     justify-content: center;
-//     transition: all 2s ease-in-out;
-// `
-
-// const TempCardImg1 = styled.img`
-//     width: 270px;
-//     height: 400px;
-//     position: absolute;
-//     border-radius: 30px;
-//     box-shadow: rgba(0, 0, 0, 1) 0px 0px 15px;
-//     z-index: 1;
-//     transform:${({condition})=>(condition ? 'rotate(0deg)' : 'rotate(-18deg)' )}; ;
-//     left:${({condition})=>(condition ? '0%' : '27%')};
-//     transition: all 2s ease-in-out;
-// `
-
-// const TempCardImg2 = styled.img`
-//     width: 270px;
-//     height: 400px;
-//     position: absolute;
-//     border-radius: 30px;
-//     box-shadow: rgba(0, 0, 0, 1) 0px 0px 15px;
-//     z-index: 2;
-//     bottom:${({condition})=>(condition ? '20%' : '10%')};
-//     transition: all 2s ease-in-out;
-// `
-
-// const TempCardImg3 = styled.img`
-//     width: 270px;
-//     height: 400px;    
-//     position: absolute;
-//     border-radius: 30px;
-//     box-shadow: rgba(0, 0, 0, 1) 0px 0px 15px;
-//     transform: ${({condition})=>(condition ? 'rotate(0deg)' : 'rotate(18deg)' )};
-//     right:${({condition})=>(condition ? '0%' : '27%')};   
-//     z-index: 1;
-//     transition: all 2s ease-in-out;
-// `
-
 const Cards = styled.div`
     padding: 4% 0%;
     display: flex;display: grid;
@@ -57,6 +12,9 @@ const Cards = styled.div`
     gap:1.5rem;
     margin-top: ${({condition}) => (condition ? '1rem':'3rem')};
     transition: all 1.5s ease-in-out;
+    @media screen and (max-width: 800px) {
+        display: none;
+    }
 `
 
 const Cards2 = styled.div`
@@ -66,6 +24,9 @@ const Cards2 = styled.div`
     gap:1.5rem;
     margin-top: ${({condition}) => (condition ? '1rem':'3rem')};
     transition: all 1.5s ease-in-out;
+    @media screen and (max-width: 800px) {
+        display: none;
+    }
 `
 
 const Card1 = styled.div`
@@ -302,12 +263,7 @@ const WhatWeDo = () => {
 
   return (
         <div className={styles.WhatWeDoWrap}>
-            <h3>How do we build your online community</h3>  
-            {/*<TempCard className={styles.TempCard}>
-                <TempCardImg1 condition={scrollY} src='/assets/SMM/SMMLeft.png' className={styles.TempCardImage1}/>
-                <TempCardImg2 condition={scrollY} src='/assets/SMM/SMMCenter.png' className={styles.TempCardImage2}/>
-                <TempCardImg3 condition={scrollY} src='/assets/SMM/SMMRight.png' className={styles.TempCardImage3}/>
-            </TempCard>*/}
+            <h3>How do we build your <span className={styles.WhatDoWrapSpan}>online community</span></h3>  
             <Cards condition={scrollY}>
                 <Card1 condition={scrollY}>
                     <Content>{SMMData[0].desc}</Content>
@@ -354,6 +310,19 @@ const WhatWeDo = () => {
                     </CardBtn>    
                 </Card6>
             </Cards2>
+            <div className={styles.PhoneCards}>
+            {SMMData.map((item,key) => (
+                <div className={styles.PhoneCard}  key={key}>
+                    <h2>{item.btnText}</h2>
+                    <div className={styles.PhoneCardImageContent}>
+                        <div className={styles.PhoneCardImageContainer}>
+                            <Image src={item.image} width={500} height={500} className={styles.PhoneCardImage}/>
+                        </div>
+                        <p>{item.desc}</p>
+                    </div>
+                </div>
+            ))}
+            </div>
         </div>
     )
 }

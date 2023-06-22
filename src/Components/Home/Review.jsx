@@ -45,7 +45,7 @@ const Review = () => {
         scrl.current.scrollLeft += shift;
     };
     useEffect(() => {
-        scrl.current.scrollLeft += +300;
+        scrl.current.scrollLeft += +350; 
     }, [])
 
 

@@ -23,7 +23,7 @@ const SEOPage = () => {
         <HashBanner p='Let Us Capture Your' h1='BRAND STORY' />
         <Work/>
         <DownloadSection />
-        <Consultation/>
+        {/*<Consultation/>*/}
         <Faq />
       </>
     </>
