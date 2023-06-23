@@ -123,9 +123,9 @@ const ScrollBlog = ({blogData}) => {
                 </h3>
                 <p>{item.desc}</p>
                 <div>
+                <Link href={`/blog/${item.key}`} style={{color:"black", fontSize:'16px', textDecoration:'none'}}>
                     <span>Read</span>
-                    <Link href={`/${item.key}`} style={{padding:'0 0 0 5px',color: 'var(--P500)', fontSize:'16px'}}>
-                        <span><FiArrowDownRight/></span>
+                        <span style={{padding:'0 0 0 5px',color: 'var(--P500)'}}><FiArrowDownRight/></span>
                     </Link>
                 </div>
             </div>

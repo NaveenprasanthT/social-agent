@@ -1,6 +1,6 @@
 .reviewCardSection {
     padding: 4% 0%;
-    background-color: #f5effe;
+    background-color: #f9f5ff;
     background-size: cover;
 }
 
@@ -30,6 +30,9 @@
 }
 
 .reviewCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     min-width: 370px;
     transition: 0.4s ease-in-out;
     padding: 3% 4%;

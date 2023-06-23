@@ -6,9 +6,58 @@ import HeroSection from '@/Components/Services/SMSMarketing/HeroSection'
 import WhatWeDo from '@/Components/Services/SMSMarketing/WhatWeDo'
 import Work from '@/Components/Services/OurWork'
 import Head from 'next/head'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import Carousel from '@/Components/Home/PortfolioBlog/Carousel'
+import Button from '@/Components/Button'
+import Link from 'next/link'
 
-const IMPage = () => {
+const SMSPage = () => {
+
+  const items = [
+    {
+      title: 'How can businesses measure the success of SMS marketing services?',
+      content: `  To solve such problems a digital marketing agency like Social Agent is effective to measure SMS marketing success through tracking KPIs like delivery rate, open rate, CTR, conversion rate, opt-out rate, ROI, and customer feedback. We analyze various metrics and provide valuable insights to assess campaign effectiveness, identify improvements, and optimize strategies. Monitoring SMS marketing performance enables businesses to enhance engagement, drive conversions, and maximise marketing efforts.`,
+    },
+    {
+      title: 'How can businesses build SMS marketing?',
+      content: `To build an effective SMS marketing campaign we define goals and grow your subscriber list through opt-in strategies. We choose suitable platforms and create compelling messages with a strong call-to-action and segment your audience for targeted messaging, adhering to legal requirements, and optimizing campaigns based on regular testing. We provide valuable content, integrate with other channels, and analyze metrics for data-driven adjustments. This approach ensures a successful SMS marketing campaign that engages customers and drives desired outcomes.`,
+    },
+    {
+      title: 'What are the benefits of SMS marketing services in Bangalore?',
+      content: `SMS marketing services in Bangalore offer businesses several benefits, ranging from wide reach and direct communication to high open rates and prompt engagement. SMS messages deliver time-sensitive information effectively. We provide targeted marketing and opt-in subscribers ensuring personalized messages for an interested audience. We undertake tracking and analytics enabling businesses to measure success. SMS marketing is mobile-friendly and integrates with other channels. Thereby enhance engagement, increase brand visibility, and drive conversions efficiently.`,
+    },
+    {
+      title: 'How does SMS marketing work in a digital marketing agency in Bangalore?',
+      content: `SMS marketing is undertaken by digital marketing agencies in Bangalore to effectively engage target audiences. It involves building a subscriber list, devising campaign strategies, creating compelling content, segmenting the audience, selecting suitable platforms, executing campaigns, monitoring performance, ensuring compliance, integrating with other channels, and providing analysis. We undertake these steps to embed SMS marketing enabling businesses to deliver personalized and impactful messages, driving engagement and achieving marketing goals efficiently.`,
+    },
+    {
+      title: 'Can SMS marketing be integrated with other marketing channels?',
+      content: `Yes, SMS marketing can be integrated with other marketing channels to create a cohesive and synchronised marketing strategy. By combining SMS with channels like email marketing, social media, or even offline advertising, businesses can amplify their messaging and reach a wider audience. We help use SMS to send a personalised offer or reminder, followed by an email with more detailed information or a social media post to generate further engagement. Integrating SMS with other channels allows businesses to leverage the strengths of each platform and maximise their marketing impact`,
+    },
+  ]
+
+    const [mobileView, setMobileView] = useState(false)
+
+    useEffect(() => {
+      const handleResize = () => {
+        if(window.innerWidth<=500){
+          setMobileView(true)
+        }else{
+          setMobileView(false)
+        }
+      };
+  
+      // Initial screen size
+      handleResize();
+  
+      // Add event listener for resize
+      window.addEventListener('resize', handleResize);
+  
+      // Clean up event listener on component unmount
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
     return (
         <>
             <Head>
@@ -22,12 +71,22 @@ const IMPage = () => {
                 <WhatWeDo />
                 <HashBanner p='Let Us Boost your Customer' h1='ENGAGEMENT' />
                 <Work/>
+                <Carousel mobile={mobileView} />
+                <div style={{display:'flex',justifyContent:'center',marginBottom:'20px'}}>
+                <Link href='/Portfolio'>
+                <Button
+                    value="View More"
+                    color="#ffffff"
+                    bg='var(--P700)'
+                />
+                </Link>
+                </div>
                 <DownloadSection />
-                {/*<Consultation/>*/}
-                <Faq />
+                <Consultation/>
+                <Faq items={items}/>
             </>
         </>
     )
 }
 
-export default IMPage
+export default SMSPage

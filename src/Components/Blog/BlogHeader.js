@@ -2,6 +2,7 @@ import Button from "../Button";
 import styles from '@/styles/Blog/BlogHeader.module.css';
 import HeaderTag from '../../../public/assets/tag.png';
 import Image from "next/image";
+import Link from "next/link";
 
 const BlogHeader = () => {
     return(
@@ -14,6 +15,7 @@ const BlogHeader = () => {
                         Amet accumsan eu ut vitae lacus. Ac ornare mollis ut pulvinar amet sed sit blandit at. 
                         Ornare pretium sit augue enim imperdiet malesuada egestas in quisque. Id et netus lorem morbi.                    </p>
                 </div>
+                <Link href='/Start-A-Project'>
                 <Button
                     color='var(--P700)' 
                     bg='#fff' 
@@ -21,7 +23,8 @@ const BlogHeader = () => {
                     fontSize="14px"
                     padding='12px 85px'
                     fontWeight='700'
-                />               
+                />
+                </Link>               
             </div>
             <div className={styles.HashImageContainer}>
                 <Image src={HeaderTag} alt="No image"  className={styles.HashImage}/>

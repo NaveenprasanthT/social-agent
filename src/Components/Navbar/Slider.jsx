@@ -39,17 +39,17 @@ const Slider = () => {
                 <div className={styles.rightContent}>
                     <div className={styles.services}>
                         <h4>Top Services</h4>
-                        <Link href='/Services/SearchEngineOptimization' className={styles.ServiceLink}>Search Engine Optimization</Link>
-                        <Link href='/Services/SocialMediaMarketing' className={styles.ServiceLink}>Social Media Marketing</Link>
-                        <Link href='/' className={styles.ServiceLink}>UI/UX Designing</Link>
-                        <Link href='/Services/WebsiteDevelopment' className={styles.ServiceLink}>Website Development</Link>
-                        <Link href='/Portfolio' className={styles.ServiceLink}>Case Studies</Link>
+                        <Link href='/Services/SearchEngineOptimization' onClick={() => setSliderActive(false)} className={styles.ServiceLink}>Search Engine Optimization</Link>
+                        <Link href='/Services/SocialMediaMarketing' onClick={() => setSliderActive(false)} className={styles.ServiceLink}>Social Media Marketing</Link>
+                        <Link href='/' onClick={() => setSliderActive(false)} className={styles.ServiceLink}>UI/UX Designing</Link>
+                        <Link href='/Services/WebsiteDevelopment' onClick={() => setSliderActive(false)} className={styles.ServiceLink}>Website Development</Link>
+                        <Link href='/Portfolio' onClick={() => setSliderActive(false)} className={styles.ServiceLink}>Case Studies</Link>
                     </div>
                     <div className={styles.blogs}>
                         <h4>New Blogs</h4>
-                        <Link href='/' className={styles.blogLink}># The right time to hire a digital marketing agency for your brand is “right now”!</Link>
-                        <Link href='/' className={styles.blogLink}># Pick the Digital Marketing Agency that picks up your Brand.</Link>
-                        <Link href='/' className={styles.blogLink}># New is Good, sometimes better! Here is what you need to know about growing Digital marketing agencies.</Link>
+                        <Link href='/blog' onClick={() => setSliderActive(false)} className={styles.blogLink}># The right time to hire a digital marketing agency for your brand is “right now”!</Link>
+                        <Link href='/blog' onClick={() => setSliderActive(false)} className={styles.blogLink}># Pick the Digital Marketing Agency that picks up your Brand.</Link>
+                        <Link href='/blog' onClick={() => setSliderActive(false)} className={styles.blogLink}># New is Good, sometimes better! Here is what you need to know about growing Digital marketing agencies.</Link>
                     </div>
                 </div>
             </div>

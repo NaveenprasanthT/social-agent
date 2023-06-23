@@ -1,10 +1,12 @@
 import HeroSection from '@/Components/About us/HeroSection'
 import OurTeam from '@/Components/About us/JoinOurTeam'
+import Button from '@/Components/Button'
 import DownloadSection from '@/Components/DownloadSection'
 import HashBanner from '@/Components/HashBanner'
 import Carousel from '@/Components/Home/PortfolioBlog/Carousel'
 import Work from '@/Components/Services/OurWork'
 import Head from 'next/head'
+import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 
 const AboutUs = () => {
@@ -44,6 +46,15 @@ const AboutUs = () => {
         <HashBanner p='Let Us Be Your' h1='Socail Agent' />
         <Work/>
         <Carousel mobile={mobileView} />
+        <div style={{display:'flex',justifyContent:'center',marginBottom:'20px'}}>
+                <Link href='/Portfolio'>
+                <Button
+                    value="View More"
+                    color="#ffffff"
+                    bg='var(--P700)'
+                />
+                </Link>
+                </div>
         <DownloadSection />
         <OurTeam/>
       </>

@@ -2,14 +2,17 @@ import React from 'react'
 import styles from '@/styles/WebsiteDevelopment/HeroSection.module.css'
 import Button from '@/Components/Button'
 import Image from 'next/image'
+import Link from 'next/link'
 
 
 const HeroSection = () => {
     return (
         <div className={styles.sectionWrap}>
             <h1>Website Development</h1>
-            <p>Creating and Publishing content, such as text, images and videos that is designed to engage the target audience and encourage them to take a specific action like making a purchase or visiting a website.</p>
-            <Button value='GET DISCOVERED' color='var(--P700)' bg='#fff' padding='12px 35px'/>
+            <p>Ignite the power of your online presence with our exceptional website development services. We craft captivating websites that engage, inspire, and drive results. Experience digital excellence with an immersive user journey.</p>
+        <Link href='/Start-A-Project'>
+        <Button value='GET DIGITAL' color='var(--P700)' bg='#fff' padding='12px 35px'/>
+        </Link>
             <Image 
                 src='/assets/Website/Frame.png' 
                 width={500} 

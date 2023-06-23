@@ -1,14 +1,63 @@
+import Button from '@/Components/Button'
 import Consultation from '@/Components/Consultation'
 import DownloadSection from '@/Components/DownloadSection'
 import Faq from '@/Components/Faq'
 import HashBanner from '@/Components/HashBanner'
+import Carousel from '@/Components/Home/PortfolioBlog/Carousel'
 import Work from '@/Components/Services/OurWork'
 import HeroSection from '@/Components/Services/VideoMarketing/HeroSection'
 import WhatWeDo from '@/Components/Services/VideoMarketing/WhatWeDo'
 import Head from 'next/head'
-import React from 'react'
+import Link from 'next/link'
+import React, { useEffect, useState } from 'react'
 
 const VMPage= () => {
+
+  const items = [
+    {
+      title: 'What is online Video Marketing?',
+      content: `Online video marketing uses videos on various online platforms to engage the target audience. It includes creating and sharing video content to convey brand messages, showcase products, and provide valuable information. We provide video marketing by integrating various Video types include ads, demos, tutorials, and testimonials, distributed through YouTube, social media, websites, and email. We thus help you effectively captivate viewers, deliver compelling messages, and achieve goals like brand awareness, leads, and conversions.`,
+    },
+    {
+      title: 'Is Video marketing in digital marketing an important component?',
+      content: `Video marketing is crucial in digital marketing as it captivates audiences, delivers messages, and drives engagement effectively. Videos convey information, evoke emotions, and create memorable experiences. They are highly shareable, potentially going viral and increasing brand visibility. Platforms like YouTube offer opportunities to showcase products, services, and brand personality. We deliver Video content that improves SEO, increases website traffic, and helps businesses connect with their target audience, enhancing brand awareness and achieving marketing goals.`,
+    },
+    {
+      title: 'How does Video marketing Strategy work?',
+      content: `Creating and promoting captivating videos to meet marketing objectives is the essence of a video marketing strategy. We set goals, define target audiences, and produce compelling content optimized for SEO. We select distribution channels and leverage platforms to promote videos effectively. By monitoring and analyzing video performance, we gain valuable insights to refine the strategy, engage the audience, boost brand visibility, and drive traffic.`,
+    },
+    {
+      title: 'Why is YouTube video marketing important for my business?',
+      content: `YouTube video marketing offers immense opportunities for businesses to reach a wide audience, engage viewers visually, enhance brand visibility, drive conversions, and gain valuable insights. By leveraging the power of video content on YouTube, you can effectively promote your business and stay ahead of the competition in the digital landscape. We help businesses harness YouTube video marketing as a crucial tool for businesses. Leveraging YouTube drives growth, engagement, and brand recognition.`,
+    },
+    {
+      title: 'Why should I choose a Video Marketing Agency in Bangalore?',
+      content: `Selecting a Video Marketing Agency in Bangalore offers numerous advantages. With expertise in video marketing, we as a top video marketing agency in Bangalore provide professional video production, creative concept development, strategic distribution, enhanced brand visibility, improved engagement, and conversions. The in-depth understanding of the local market, the ability to save time and resources, offer measurable results, and provide a competitive edge stand out. Choosing a reputable Video Marketing Agency in Bangalore like us can help your business effectively communicate the brand message and achieve growth through compelling videos.`,
+    },
+  ]  
+
+    const [mobileView, setMobileView] = useState(false)
+
+    useEffect(() => {
+      const handleResize = () => {
+        if(window.innerWidth<=500){
+          setMobileView(true)
+        }else{
+          setMobileView(false)
+        }
+      };
+  
+      // Initial screen size
+      handleResize();
+  
+      // Add event listener for resize
+      window.addEventListener('resize', handleResize);
+  
+      // Clean up event listener on component unmount
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
     return (
         <>
             <Head>
@@ -20,11 +69,21 @@ const VMPage= () => {
             <>
                 <HeroSection />
                 <WhatWeDo />
-                <HashBanner p='Let Us Boost your' h1='CUSTOMER AGEMENT' />
+                <HashBanner p='Let us tell your story' h1='VISUALLY' />
                 <Work/>
+                <Carousel mobile={mobileView} />
+                <div style={{display:'flex',justifyContent:'center',marginBottom:'20px'}}>
+                <Link href='/Portfolio'>
+                <Button
+                    value="View More"
+                    color="#ffffff"
+                    bg='var(--P700)'
+                />
+                </Link>
+                </div>
                 <DownloadSection />
-                {/*<Consultation/>*/}
-                <Faq />
+                <Consultation/>
+                <Faq items={items}/>
             </>
         </>
     )

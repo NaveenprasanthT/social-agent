@@ -144,7 +144,7 @@ const CardImg = styled.img`
     width: 100%;
     position: absolute;
     bottom: 0;
-    transform: scale(1);    
+    transform: scale(1.02);    
     border-radius: 20px;
     z-index: ${({condition}) => (condition ? '5':'7')};
     transition: all 1s ease-in-out;

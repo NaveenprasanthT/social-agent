@@ -175,7 +175,7 @@ const MainServicePage = () => {
         {
             id: '02',
             title: 'Search Engine Optimization & Marketing  ',
-            desc: 'rom keyword research to ranking, entrust your SEO & SEM marketing journey to our specialists.',
+            desc: "From keyword research to ranking, entrust your SEO & SEM marketing journey to our specialists.",
             imgHover:'/assets/Services/serviceHover2.png',
             img:'/assets/Services/service2.png',
             url: '/Services/SearchEngineOptimization',
@@ -191,7 +191,7 @@ const MainServicePage = () => {
         {
             id: '04',
             title: 'Website Development',
-            desc: 'Lorem ipsum dolor sit amet consectetur. Amet lectus blandit tempus ac aliquam.',
+            desc:"From design to deployment, we ensure seamless execution of all aspects of your brand's website.",
             imgHover:'/assets/Services/serviceHover4.png',
             img:'/assets/Services/service4.png',
             url: '/Services/WebsiteDevelopment',
@@ -207,23 +207,15 @@ const MainServicePage = () => {
         {
             id: '06',
             title: 'Online reputation Management',
-            desc: 'From reputation monitoring to proactive management, we expertly handle every aspect of your digital brand presence',
+            desc: 'From reputation monitoring to proactive management, we expertly handle every aspect of your digital brand presence.',
             imgHover:'/assets/Services/serviceHover6.png',
             img:'/assets/Services/service6.png',
             url: '/Services/OnlineReputationManagement',
         },
         {
-            id: '07',
-            title: 'Digital Strategy & Consulting',
-            desc: 'Lorem ipsum dolor sit amet consectetur. Varius egestas phasellus fusce tempus ut.',
-            imgHover:'/assets/Services/serviceHover7.png',
-            img:'/assets/Services/service7.png',
-            url: '/Services/DigitalStrategy',
-        },
-        {
             id: '08',
             title: 'Brand & Print Solutions',
-            desc: "From Ideation to Execution,We Craft Your Brand's Story with Artistry and Precision.",
+            desc: "From Reach to Metrics we got you covered in all aspects of performance marketing.",
             imgHover:'/assets/Services/serviceHover8.png',
             img:'/assets/Services/service8.png',
             url: '/Services/Brand',
@@ -247,26 +239,18 @@ const MainServicePage = () => {
         {
             id: '11',
             title: 'Video marketing',
-            desc: 'From writing tailored messages to reaching out to individual recipients, we manage SMS marketing.',
+            desc: 'From Concept to Conversion, We Master Your Video Marketing Journey.',
             imgHover:'/assets/Services/serviceHover11.png',
             img:'/assets/Services/service11.png',
             url: '/Services/VideoMarketing',
         },
         {
             id: '12',
-            title: 'Content & Creatives',
+            title: 'WhatsApp Marketing',
             desc: 'From writing tailored messages to reaching out to individual recipients, we manage SMS marketing.',
             imgHover:'/assets/Services/serviceHover12.png',
             img:'/assets/Services/service12.png',
-            url: '/Services/ContentAndCreative',
-        },
-        {
-            id: '13',
-            title: 'Analytics & Reports',
-            desc: 'From writing tailored messages to reaching out to individual recipients, we manage SMS marketing.',
-            imgHover:'/assets/Services/serviceHover13.png',
-            img:'/assets/Services/service13.png',
-            url: '/Services/Analytics',
+            url: '/Services/WhatsappMarketing',
         },
         {
             id: '14',
@@ -285,6 +269,7 @@ const MainServicePage = () => {
                 {
                     data.map((item, key) => (
                         <BorderWrapper  key={key}>
+                        <Link href={item.url} style={{textDecoration:'none'}}>
                         <Card ImgHover={item.imgHover}>
                             <TopWrap>
                                 <Title>{item.title}</Title>
@@ -298,6 +283,7 @@ const MainServicePage = () => {
                             <BackgroundContainer Img={item.img}></BackgroundContainer>
                             <HoverOverlay></HoverOverlay>
                         </Card>
+                        </Link>
                         </BorderWrapper>
                     ))
                 }

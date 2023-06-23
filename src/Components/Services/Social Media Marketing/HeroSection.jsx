@@ -2,6 +2,7 @@ import React from 'react'
 import styles from '@/styles/SMMPage/HeroSection.module.css'
 import Button from '@/Components/Button'
 import Image from 'next/image'
+import Link from 'next/link'
 
 
 const HeroSection = () => {
@@ -9,7 +10,9 @@ const HeroSection = () => {
         <div className={styles.sectionWrap}>
             <h1>Socail Media Marketing</h1>
             <p>Craft and share captivating content - from text, and images to videos - strategically designed to engage your audience, drive action, and boost conversions. Experience the art of persuasive social media marketing that delivers tangible results.</p>
+        <Link href='/Start-A-Project'>
             <Button value='GET SOCIAL' color='var(--P700)' bg='#fff' padding='12px 35px'/>
+        </Link>
             <Image 
                 src='/assets/SMM/SMMBG1.png' 
                 width={100} 

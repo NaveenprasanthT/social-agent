@@ -2,6 +2,7 @@ import React from 'react'
 import styles from '@/styles/EmailMarketing/HeroSection.module.css'
 import Button from '@/Components/Button'
 import Image from 'next/image'
+import Link from 'next/link'
 
 
 const HeroSection = () => {
@@ -15,8 +16,10 @@ const HeroSection = () => {
                 height={1000}
                 className={styles.ORMImagePhne}    
             />
-            <p>Creating and Publishing content, such as text, images and videos that is designed to engage the target audience and encourage them to take a specific action like making a purchase or visiting a website.</p>
-            <Button value='GET PROTECTED' color='var(--P700)' bg='#fff' padding='12px 45px'/>
+            <p>Speed up your business with targeted emails! Expand reach, nurture leads, and boost conversions. Maximize the potential of impactful campaigns to achieve extraordinary growth and success.</p>
+        <Link href='/Start-A-Project'>
+        <Button value='GET PROTECTED' color='var(--P700)' bg='#fff' padding='12px 45px'/>
+        </Link>
         </div>
         <Image 
                 src='/assets/Email/EmailMarketHeader.png' 

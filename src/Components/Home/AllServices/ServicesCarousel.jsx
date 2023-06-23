@@ -30,35 +30,35 @@ const ServicesCarousel = () => {
       {
         id: 1,
         title: <>Social Media<br/> Marketing</>,
-        backgroundImage: "url('/images/gradient1.png')",
+        backgroundImage: "url('/images/gradient5.png')",
       },
       {
         id: 2,
         title: <>SEO &<br/> Marketing</>,
-        backgroundImage: "url('/images/gradient2.png')",
+        backgroundImage: "url('/images/gradient12.png')",
       },
       {
         id: 3,
         title: <>Influencer<br/>Marketing</>,
-        backgroundImage: "url('/images/gradient3.png')",
+        backgroundImage: "url('/images/gradient10.png')",
       },
       {
         id: 4,
         title: <>Website 
         <br/> Development
         </>,
-        backgroundImage: "url('/images/gradient4.png')",
+        backgroundImage: "url('/images/gradient2.png')",
       },
       {
         id: 5,
         title: <>Videography/
         <br/> Photography</>
-,        backgroundImage: "url('/images/gradient5.png')",
+,        backgroundImage: "url('/images/gradient1.png')",
       },
       {
         id: 6,
         title: <>Online reputation/<br/> Management</>,
-        backgroundImage: "url('/images/gradient11.png')",
+        backgroundImage: "url('/images/gradient15.png')",
       },
       {
         id: 7,
@@ -69,32 +69,32 @@ const ServicesCarousel = () => {
       {
         id: 8,
         title: <>Branding & <br/> Print Solutions</>,
-        backgroundImage: "url('/images/gradient1.png')",
+        backgroundImage: "url('/images/gradient5.png')",
       },
       {
         id: 9,
         title: <>Email<br/>Marketing</>,
-        backgroundImage: "url('/images/gradient5.png')",
+        backgroundImage: "url('/images/gradient12.png')",
       },
       {
         id: 10,
         title: <>SMS<br/> Marketing</>,
-        backgroundImage: "url('/images/gradient9.png')",
+        backgroundImage: "url('/images/gradient10.png')",
       },
       {
         id: 11,
         title: <>Video<br/>Marketing</>,
-        backgroundImage: "url('/images/gradient4.png')",
+        backgroundImage: "url('/images/gradient2.png')",
       },
       {
         id: 12,
         title: <>Content &<br/> Creatives</>,
-        backgroundImage: "url('/images/gradient10.png')",
+        backgroundImage: "url('/images/gradient1.png')",
       },
       {
         id: 13,
         title: <>Analytics & <br/> Reports </>,
-        backgroundImage: "url('/images/gradient11.png')",
+        backgroundImage: "url('/images/gradient15.png')",
       },
       {
         id: 14,

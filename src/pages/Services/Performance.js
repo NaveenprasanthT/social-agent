@@ -6,9 +6,58 @@ import HeroSection from '@/Components/Services/Performance/HeroSection'
 import WhatWeDo from '@/Components/Services/Performance/WhatWeDo'
 import Work from '@/Components/Services/OurWork'
 import Head from 'next/head'
-import React from 'react'
+import Carousel from '@/Components/Home/PortfolioBlog/Carousel'
+import React, { useEffect, useState } from 'react'
+import Link from 'next/link'
+import Button from '@/Components/Button'
 
-const IMPage = () => {
+const PerformancePage = () => {
+
+  const items = [
+    {
+      title: `What is performance marketing and what are its key components?`,
+      content: `Performance marketing is a results-driven approach that leverages digital channels, precise targeting, and data analytics to achieve specific marketing goals and deliver measurable performance and ROI.Performance marketing includes tracking and analytics tools, affiliate marketing, search engine marketing (SEM), display advertising, social media advertising, email marketing, and conversion rate optimization (CRO). We utilize these components enabling businesses to measure and optimize their marketing efforts based on specific outcomes, such as clicks, conversions, or sales`,
+    },
+    {
+      title: ` How do we implement performance marketing?`,
+      content: `To implement performance marketing effectively, we formulate detailed plans and follow the underlying steps:we set clear and measurable goals, we identify and understand your target audience, choose the most suitable digital advertising channels, set up robust tracking and analytics systems, create engaging and persuasive creatives, conduct thorough testing and optimization, monitor and analyze campaign data, refine and scale successful campaigns, collaborate with relevant affiliates, and stay updated with industry trends and changes.`,
+    },
+    {
+      title: `Is SEM part of performance marketing? `,
+      content: `Yes, SEM (Search Engine Marketing) is a key component of performance marketing. By leveraging SEM strategies, businesses can increase their website's visibility in search engine results pages (SERPs) through paid advertising like PPC campaigns. We optimise SEM and align it with the goals of performance marketing by driving targeted traffic and measuring success based on specific outcomes such as clicks, conversions, or sales. We integrate SEM effectively into performance marketing efforts, enhance overall campaign performance and help businesses achieve their desired results.`,
+    },
+    {
+      title: `How do we track PPC campaigns?`,
+      content: `To effectively track a PPC (Pay-Per-Click) campaign, We employ numerous strategies like implementing conversion tracking codes or pixels on your website to measure specific actions, utilizing URL tracking parameters to gather data from your website analytics tool, we set up goals in Google Analytics to monitor key actions, regularly review campaign metrics like impressions, clicks, CTR, CPC, and conversion rate, segment and analyze data to identify trends and optimize bidding strategies, utilize third-party tracking tools for more advanced insights, we conduct A/B testing to improve performance, and continuously monitor and adjust bids for optimal results.`,
+    },
+    {
+      title: `How can performance marketing campaigns be optimized?`,
+      content: `Social Agent excels in optimizing performance marketing campaigns. We define clear goals, segment audiences, utilize data and analytics, conduct A/B testing, optimize landing pages, monitor and adjust campaigns, employ retargeting, collaborate with partners, stay updated, and iterate based on insights for ongoing optimization and improved results.`,
+    },
+  ]
+
+    const [mobileView, setMobileView] = useState(false)
+
+    useEffect(() => {
+      const handleResize = () => {
+        if(window.innerWidth<=500){
+          setMobileView(true)
+        }else{
+          setMobileView(false)
+        }
+      };
+  
+      // Initial screen size
+      handleResize();
+  
+      // Add event listener for resize
+      window.addEventListener('resize', handleResize);
+  
+      // Clean up event listener on component unmount
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
     return (
         <>
             <Head>
@@ -20,14 +69,24 @@ const IMPage = () => {
             <>
                 <HeroSection />
                 <WhatWeDo />
-                <HashBanner p='Let Us Boost your' h1='CUSTOMER AGEMENT' />
+                <HashBanner p='Let us make your' h1='BRAND SHINE' />
                 <Work/>
+                <Carousel mobile={mobileView} />
+                <div style={{display:'flex',justifyContent:'center',marginBottom:'20px'}}>
+                <Link href='/Portfolio'>
+                <Button
+                    value="View More"
+                    color="#ffffff"
+                    bg='var(--P700)'
+                />
+                </Link>
+                </div>
                 <DownloadSection />
-                {/*<Consultation/>*/}
-                <Faq />
+                <Consultation/>
+                <Faq items={items}/>
             </>
         </>
     )
 }
 
-export default IMPage
+export default PerformancePage;

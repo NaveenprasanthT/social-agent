@@ -64,6 +64,7 @@
         outline: none;
         border: 1.5px solid var(--P700);
         background-color: var(--P700);
+        align-self: center;
     }
 
 }

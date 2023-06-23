@@ -35,9 +35,7 @@ function AllServices() {
               </Fade>
                 </div>
                 <p>Unleash your digital potential with our exceptional service and drive remarkable results.</p>
-                <Link href='/Services' style={{width:'100%',display:'flex',justifyContent:'center',textDecoration:'none'}}>
-                    <button className={styles.ServiceTextButton}>EXPLORE ALL SERVICES</button>
-                </Link>
+                <button className={styles.ServiceTextButton} onClick={() => {window.location.href = '/Services'}}>EXPLORE ALL SERVICES</button>
             </div>
             <ServicesCarousel/>
         </div>

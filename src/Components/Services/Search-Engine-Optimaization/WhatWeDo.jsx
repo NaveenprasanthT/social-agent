@@ -111,32 +111,66 @@ const Card6 = styled.div`
     transition: all 1.5s ease-in-out;
 `
 
-const Content = styled.p`
-    z-index: 6;
-    margin: 10% 8%;
-    text-align: justify;
-    font-size: 19px;
-    font-weight: 500;
-    opacity: 0;
-    transition: all 0.9s ease-in-out;
+const Overlay = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    transition: all 1.5s ease-in-out;
+    ${Card1}:hover & {
+        background-color: rgba(0,0,0,0.75); /* Adjust the opacity as needed */
+    }
+    ${Card2}:hover & {
+        background-color: rgba(0,0,0,0.6); /* Adjust the opacity as needed */
+    }
+    ${Card3}:hover & {
+        background-color: rgba(0,0,0,0.6); /* Adjust the opacity as needed */
+    }
+    ${Card4}:hover & {
+        background-color: rgba(0,0,0,0.6); /* Adjust the opacity as needed */
+    }
+    ${Card5}:hover & {
+        background-color: rgba(0,0,0,0.6); /* Adjust the opacity as needed */
+    }
+    ${Card6}:hover & {
+        background-color: rgba(0,0,0,0.6); /* Adjust the opacity as needed */
+    }
+`
 
+const Content = styled.p`
+    z-index: 11;
+    margin: 10% 10%;
+    font-size: 17px;
+    font-weight: 400;
+    opacity: 0;
+    padding-top: 30%;
+    transition: all 0.9s ease-in-out;
+    color : #fff;
     ${Card1}:hover & {
         opacity: 1;
+        scale: 1.15;
     }
     ${Card2}:hover & {
         opacity: 1;
+        scale: 1.15;
     }
     ${Card3}:hover & {
         opacity: 1;
+        scale: 1.15;
     }
     ${Card4}:hover & {
         opacity: 1;
+        scale: 1.15;
     }
     ${Card5}:hover & {
         opacity: 1;
+        scale: 1.15;
     }
     ${Card6}:hover & {
         opacity: 1;
+        scale: 1.15;
     }
 `
 const CardImg = styled.img`
@@ -144,38 +178,14 @@ const CardImg = styled.img`
     width: 100%;
     position: absolute;
     bottom: 0;
-    transform: scale(1);    
+    transform: scale(1.02);    
     border-radius: 20px;
     z-index: ${({condition}) => (condition ? '5':'7')};
     transition: all 1s ease-in-out;
-    
-    
-    ${Card1}:hover & {
-        height: ${({condition}) => (condition ? '65%':'100%')};
-    }
-
-    ${Card2}:hover & {
-        height: ${({condition}) => (condition ? '65%':'100%')};
-    }
-
-    ${Card3}:hover & {
-        height: ${({condition}) => (condition ? '65%':'100%')};
-    }
-    ${Card4}:hover & {
-        height: ${({condition}) => (condition ? '65%':'100%')};
-    }
-
-    ${Card5}:hover & {
-        height: ${({condition}) => (condition ? '65%':'100%')};
-    }
-
-    ${Card6}:hover & {
-        height: ${({condition}) => (condition ? '65%':'100%')};
-    }
 `
 
 const CardBtn = styled.button`
-    z-index: 6;
+    z-index: 10;
     margin: 7% 5%;
     outline: none;
     border: 1.45px solid #ffffff;
@@ -190,43 +200,44 @@ const CardBtn = styled.button`
     cursor: pointer;
 `
 
+
 const WhatWeDo = () => {
     const SMMData = [
         {
             key: 1,
             image:'/assets/SMM/SMMImg1.png',
-            btnText:'Planning & Strategy Development',
-            desc:'Goals are set, audiences are understood, and effective strategies take shape to increase the reach',
+            btnText:'Keyword Research',
+            desc:' Unlock the power of targeted words to boost your online presence and dominate search rankings.',
         },
         {
             key: 2,
             image:'/assets/SMM/SMMImg2.png',
-            btnText:'Brand Engagement',
-            desc:'Goals are set, audiences are understood, and effective strategies take shape to increase the reach',
+            btnText:'On-Page Optimization',
+            desc:'Fine-tune your website for maximum visibility, captivating search engines, and captivating audiences.',
         },
         {
             key: 3,
             image:'/assets/SMM/SMMImg3.png',
-            btnText:'Content Calendar Planning',
-            desc:'Goals are set, audiences are understood, and effective strategies take shape to increase the reach',
+            btnText:'Technical SEO',
+            desc:' Maximise the technical aspects of your website to ensure seamless performance and higher search rankings.',
         },
         {
             key: 4,
             image:'/assets/SMM/SMMImg4.png',
-            btnText:'Content Curation & Design',
-            desc:'Goals are set, audiences are understood, and effective strategies take shape to increase the reach',
+            btnText:'Link Building',
+            desc:"Build a network of authoritative links that elevate your website's credibility and enhance search visibility.",
         },
         {
             key: 5,
             image:'/assets/SMM/SMMImg5.png',
-            btnText:'Campaign Creation & Promotion', 
-            desc:'Goals are set, audiences are understood, and effective strategies take shape to increase the reach',
+            btnText:'Content Creation and Optimization', 
+            desc:'Craft compelling content that resonates with your audience and ranks higher in search results.',
         },
         {
             key: 6,
             image:'/assets/SMM/SMMImg1.png',
-            btnText:'Socail Media Marketing & Analytics',
-            desc:'Goals are set, audiences are understood, and effective strategies take shape to increase the reach',
+            btnText:'Paid Search Advertising',
+            desc:'Accelerate your online visibility and drive targeted traffic with strategic paid search campaigns.',
         },
     ]
 
@@ -266,6 +277,7 @@ const WhatWeDo = () => {
             <h3>How do we build your <span className={styles.WhatDoWrapSpan}>online community</span></h3>  
             <Cards condition={scrollY}>
                 <Card1 condition={scrollY}>
+                    <Overlay></Overlay>
                     <Content>{SMMData[0].desc}</Content>
                     <CardImg condition={scrollY} src={SMMData[0].image}/>
                     <CardBtn condition={scrollY}>
@@ -273,6 +285,7 @@ const WhatWeDo = () => {
                     </CardBtn>    
                 </Card1>
                 <Card2 condition={scrollY}>
+                <Overlay></Overlay>
                     <Content>{SMMData[1].desc}</Content>
                     <CardImg condition={scrollY} src={SMMData[1].image}/>
                     <CardBtn condition={scrollY}>
@@ -280,6 +293,7 @@ const WhatWeDo = () => {
                     </CardBtn>    
                 </Card2>
                 <Card3 condition={scrollY}>
+                <Overlay></Overlay>
                     <Content>{SMMData[2].desc}</Content>
                     <CardImg condition={scrollY} src={SMMData[2].image}/>
                     <CardBtn condition={scrollY}>
@@ -289,6 +303,7 @@ const WhatWeDo = () => {
             </Cards>
             <Cards2 condition={scrollY2}>
                 <Card4 condition={scrollY2}>
+                <Overlay></Overlay>
                     <Content>{SMMData[3].desc}</Content>
                     <CardImg condition={scrollY2} src={SMMData[3].image}/>
                     <CardBtn condition={scrollY2}>
@@ -296,6 +311,7 @@ const WhatWeDo = () => {
                     </CardBtn>    
                 </Card4>
                 <Card5 condition={scrollY2}>
+                <Overlay></Overlay>
                     <Content>{SMMData[4].desc}</Content>
                     <CardImg condition={scrollY2} src={SMMData[4].image}/>
                     <CardBtn condition={scrollY2}>
@@ -303,6 +319,7 @@ const WhatWeDo = () => {
                     </CardBtn>    
                 </Card5>
                 <Card6 condition={scrollY2}>
+                <Overlay></Overlay>
                     <Content>{SMMData[5].desc}</Content>
                     <CardImg condition={scrollY2} src={SMMData[5].image}/>
                     <CardBtn condition={scrollY2}>

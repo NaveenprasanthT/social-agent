@@ -2,6 +2,7 @@ import React from 'react'
 import styles from '@/styles/Brand/HeroSection.module.css'
 import Button from '@/Components/Button'
 import Image from 'next/image'
+import Link from 'next/link'
 
 
 const HeroSection = () => {
@@ -48,7 +49,9 @@ const HeroSection = () => {
                 />
         </div>
         <p>Improving the client experience, we redefine marketing and printing solutions for your thriving business, from conception to implementation. Our innovative print solutions ensure extensive reach for your target audience.</p>
+        <Link href='/Start-A-Project'>
         <Button value='GET ARTISTIC' color='var(--P700)' bg='#fff' padding='12px 35px'/>
+        </Link>
         </div>
            <Image 
                 src='/assets/Brand/BrandImage.png' 

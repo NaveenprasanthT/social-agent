@@ -1,14 +1,39 @@
+import Button from '@/Components/Button'
 import Consultation from '@/Components/Consultation'
 import DownloadSection from '@/Components/DownloadSection'
 import Faq from '@/Components/Faq'
 import HashBanner from '@/Components/HashBanner'
+import Carousel from '@/Components/Home/PortfolioBlog/Carousel'
 import HeroSection from '@/Components/Services/Analytics/HeroSection'
 import WhatWeDo from '@/Components/Services/Analytics/WhatWeDo'
 import Work from '@/Components/Services/OurWork'
 import Head from 'next/head'
-import React from 'react'
+import Link from 'next/link'
+import React, { useEffect, useState } from 'react'
 
-const IMPage = () => {
+const AnalyticsPage = () => {
+    const [mobileView, setMobileView] = useState(false)
+
+    useEffect(() => {
+      const handleResize = () => {
+        if(window.innerWidth<=500){
+          setMobileView(true)
+        }else{
+          setMobileView(false)
+        }
+      };
+  
+      // Initial screen size
+      handleResize();
+  
+      // Add event listener for resize
+      window.addEventListener('resize', handleResize);
+  
+      // Clean up event listener on component unmount
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
     return (
         <>
             <Head>
@@ -22,12 +47,22 @@ const IMPage = () => {
                 <WhatWeDo />
                 <HashBanner p='Let Us Boost your' h1='CUSTOMER AGEMENT' />
                 <Work/>
+                <Carousel mobile={mobileView} />
+                <div style={{display:'flex',justifyContent:'center',marginBottom:'20px'}}>
+                <Link href='/Portfolio'>
+                <Button
+                    value="View More"
+                    color="#ffffff"
+                    bg='var(--P700)'
+                />
+                </Link>
+                </div>
                 <DownloadSection />
-                {/*<Consultation/>*/}
+                <Consultation/>
                 <Faq />
             </>
         </>
     )
 }
 
-export default IMPage
+export default AnalyticsPage;

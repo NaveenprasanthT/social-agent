@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import styles,{css} from '@/styles/FAQ.module.css'
 import { AiOutlineDown } from 'react-icons/ai'
 import Button from './Button';
+import Link from 'next/link';
 
 
 const AccordionContainer = styled.div`
@@ -47,7 +48,7 @@ const AccordionContent = styled.div`
 }
   `;
 
-const Faq = () => {
+const Faq = ({items}) => {
     const [activeIndices, setActiveIndices] = useState([]);
 
     const handleItemClick = (index) => {
@@ -57,32 +58,6 @@ const Faq = () => {
             setActiveIndices([...activeIndices, index]);
         }
     }
-    const items = [
-        {
-            title: 'Why do businesses need digital marketing services in Bangalore?',
-            content: 'Lorem ipsum dolor sit amet consectetur. Ultricies lectus tempor risus est scelerisque risus sit. Quis suspendisse porta eleifend ac ultricies donec mauris vestibulum.'
-        },
-        {
-            title: 'Lorem ipsum dolor sit amet consectetur.',
-            content: 'Lorem ipsum dolor sit amet consectetur. Ultricies lectus tempor risus est scelerisque risus sit. Quis suspendisse porta eleifend ac ultricies donec mauris vestibulum.'
-        },
-        {
-            title: 'Lorem ipsum dolor sit amet consectetur.',
-            content: 'Lorem ipsum dolor sit amet consectetur. Ultricies lectus tempor risus est scelerisque risus sit. Quis suspendisse porta eleifend ac ultricies donec mauris vestibulum.'
-        },
-        {
-            title: 'Lorem ipsum dolor sit amet consectetur.',
-            content: 'Lorem ipsum dolor sit amet consectetur. Ultricies lectus tempor risus est scelerisque risus sit. Quis suspendisse porta eleifend ac ultricies donec mauris vestibulum.'
-        },
-        {
-            title: 'Lorem ipsum dolor sit amet consectetur.',
-            content: 'Lorem ipsum dolor sit amet consectetur. Ultricies lectus tempor risus est scelerisque risus sit. Quis suspendisse porta eleifend ac ultricies donec mauris vestibulum.'
-        },
-        {
-            title: 'Lorem ipsum dolor sit amet consectetur.',
-            content: 'Lorem ipsum dolor sit amet consectetur. Ultricies lectus tempor risus est scelerisque risus sit. Quis suspendisse porta eleifend ac ultricies donec mauris vestibulum.'
-        },
-    ];
 
     return (
 
@@ -108,7 +83,9 @@ const Faq = () => {
                 </div>
             </div>
             <div className="btnWrap">
-                <Button value='Discover' bg='var(--P700)' color='#fff' />
+                <Link href="/Services">
+                    <Button value='Discover' bg='var(--P700)' color='#fff' />
+                </Link>
             </div>
         </div>
     )

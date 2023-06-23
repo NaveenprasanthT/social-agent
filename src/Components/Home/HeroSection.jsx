@@ -48,7 +48,7 @@ const HeroSection = () => {
                     <Image className={styles.img} src={img} alt='image' />
                 </div>
             </div>
-            <Image className={styles.icon} loading='lazy' style={imageStyle} src={icon} alt='image' />
+            {/*<Image className={styles.icon} loading='lazy' style={imageStyle} src={icon} alt='image' />*/}
         </div>
     )
 }

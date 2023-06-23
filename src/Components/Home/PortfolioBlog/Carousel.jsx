@@ -1,7 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Carousel = ({ mobile }) => {
   const [activeItemOne, setActiveItemOne] = useState('item-4');
+
+  const [mobileView, setMobileView] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      if(window.innerWidth<=500){
+        setMobileView(true)
+      }else{
+        setMobileView(false)
+      }
+    };
+
+    // Initial screen size
+    handleResize();
+
+    // Add event listener for resize
+    window.addEventListener('resize', handleResize);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const handleClick = (itemId) => {
     setActiveItemOne(itemId);
@@ -11,9 +34,9 @@ const Carousel = ({ mobile }) => {
     <div>
     
     {
-      mobile?
+      mobile ?
         <div>
-      < div className = "container__sliderTwo" >
+    < div className = "container__sliderTwo" style={{maxWidth: mobileView ? "370px" : "900px"}}>
     <div className="containerTwo">
       <input type="radio" name="sliderTwo" id="item-4" checked={activeItemOne === 'item-4'} />
       <input type="radio" name="sliderTwo" id="item-5" checked={activeItemOne === 'item-5'} />
@@ -33,19 +56,14 @@ const Carousel = ({ mobile }) => {
       </div >
 
   <style jsx>{`
-
-        .carousel{
-          dispaly:none;
-        }
-
         .container__sliderTwo {
-          max-width: 1000px;
           height: 250px;
           margin: auto;
           display: flex;
           align-items: center;
           justify-content: center;
           padding: 30px 10px;
+          overflow:hidden;
         }
 
         input[type='radio'] {

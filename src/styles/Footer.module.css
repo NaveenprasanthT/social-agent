@@ -16,7 +16,7 @@
 }
 
 .logo {
-    width: 60%;
+    width: 50%;
     height: 20%;
     object-fit: contain;
 }
@@ -149,6 +149,13 @@
 .BricstalImage{
     height: 35px;
     width: 120px;
+}
+
+.iconContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
 }
 
 @media (max-width:1000px){

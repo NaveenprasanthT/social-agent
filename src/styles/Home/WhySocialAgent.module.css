@@ -73,8 +73,17 @@
     .title{
         font-size: 28px !important;
         text-align: center !important;
-
-    }   
+        /* border-bottom: 2px solid var(--P500);
+        width: max-content; */
+    }
+    .title::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 65%;
+        background-color: var(--P500);
+        margin: 0 auto;
+      }  
     .content{
         font-size: 16px;
         text-align: center;
@@ -89,8 +98,7 @@
     .title{
         font-size: 24px !important;
         text-align: center !important;
-
-    }   
+    }  
     .content{
         font-size: 14px;
         text-align: center;

@@ -1,5 +1,5 @@
 .navbarWrap {
-    height: 85px;
+    height: 65px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -125,7 +125,7 @@
         padding: 10px 25px;
     }
     .logo{
-        width: 50px;
+        width: 35px;
         padding-left: 20px;
     }
     .navContentWrapPhone {
@@ -134,6 +134,11 @@
     }
     .blogs{
         width: 90%;
+    }
+    .navLink{
+        font-size: 30px;
+        line-height: 60px;
+        text-align: left;
     }
 }
 

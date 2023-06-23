@@ -17,16 +17,7 @@ function Consultation() {
             <div className={styles.consultationRight}>
                 <div>
                 <h1>Ready to start your project?</h1>
-                <p>Lorem ipsum dolor sit amet consectetur. 
-                    Morbi in mattis aliquam amet dui duis. 
-                    Vulputate enim pellentesque odio eget. 
-                    Vel facilisis libero metus morbi nec quis a mi non. 
-                    Id porta lorem quis risus nunc aliquam mi donec nisl. 
-                    Ultrices sed orci porttitor praesent. 
-                    Leo velit aenean lorem maecenas turpis tempus volutpat. 
-                    Diam risus et lorem tortor. Metus in lacus mauris massa mi. 
-                    Tincidunt mauris porttitor ut turpis. 
-                    Est metus molestie risus enim auctor nam.
+                <p>Having a good Digital strategic partner is like having a megaphone in a crowded stadium – it helps you reach a massive audience! With digital marketing, you can aim your messages directly at the right people, like a laser-guided missile, boosting your chances of winning them over. So, buckle up and embrace digital marketing to make your brand shine in the digital universe!
                 </p>
                 </div>
                 <Button 

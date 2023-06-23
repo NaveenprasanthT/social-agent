@@ -1,14 +1,63 @@
+import Button from '@/Components/Button'
 import Consultation from '@/Components/Consultation'
 import DownloadSection from '@/Components/DownloadSection'
 import Faq from '@/Components/Faq'
 import HashBanner from '@/Components/HashBanner'
+import Carousel from '@/Components/Home/PortfolioBlog/Carousel'
 import HeroSection from '@/Components/Services/InfluencerMarketing/HeroSection'
 import WhatWeDo from '@/Components/Services/InfluencerMarketing/WhatWeDo'
 import Work from '@/Components/Services/OurWork'
 import Head from 'next/head'
-import React from 'react'
+import Link from 'next/link'
+import React, { useEffect, useState } from 'react'
 
 const IMPage = () => {
+
+  const items = [
+    {
+      title:'How can I pick the best influencer marketing agency near me?',
+      content: `When selecting an influencer marketing agency, it is crucial to consider factors such as expertise, experience, influencer network, strategy, creativity, reputation, measurement and analytics, budget, communication, transparency, additional services, and client support. Social Agent, as an expert in the domain, excels in all these areas, ensuring they align with your specific needs and maximise the potential of your influencer marketing campaigns.`,
+    },
+    {
+      title:'Does Instagram influencer marketing really give results?',
+      content: `Instagram influencer marketing produces significant outcomes by providing a wide-reaching audience of billions of active users. It allows the opportunity to establish effective endorsements through influencers who possess credibility and create trust among their followers. Social Agent is highly effective in the domain of Instagram influencer marketing. We harness the power of this platform's vast audience, leveraging the credibility and trust influencers have built with their followers to deliver impactful results. By collaborating with relevant influencers, we ensure targeted outreach, heightened brand awareness, increased engagement, and improved conversions. Our approach is guided by strategic planning and a strong alignment with brand values, ensuring the success of every campaign we undertake.`,
+    },
+    {
+      title:'How is social media marketing & influencer marketing related?',
+      content: `Social media marketing and influencer marketing are intertwined approaches. The synergy between social media marketing and influencer marketing maximizes the impact and success of marketing campaigns. We effectively integrate social media marketing and influencer marketing to achieve marketing goals. We partner with influential individuals, and amplify brand visibility and engagement. With a focus on authenticity and trust, we maximize the potential of social media and influencers to drive impactful results for your brand.`,
+    },
+    {
+      title:' Can influencer marketing companies in bangalore give me contacts of influences?',
+      content: `Influencer marketing companies in Bangalore can connect businesses with relevant influencers that help in effectively bringing out the essence of their products for Result oriented campaigns. We offer access to a network of influencers in various industries and niches, providing valuable contacts for brands. We facilitate collaborations that align with the target audience and campaign goals, leveraging influencers engaged following. By partnering with influencers through these companies, we help businesses boost brand awareness, engagement, and conversions`,
+    },
+    {
+      title:'Will influencer marketing services boost my brand?',
+      content: `Influencer marketing services by Top Influencer marketing agencies in Bangalore like us can greatly enhance your brand presence. We can help your business to collaborate with influential individuals on social media and allow you to tap their engaged audience and leverage their credibility to enhance your presence. Through authentic content, influencers can increase brand awareness, trust, and customer engagement. Their endorsements and recommendations drive traffic, generate leads, and boost conversions.`,
+    },
+  ]
+
+    const [mobileView, setMobileView] = useState(false)
+
+    useEffect(() => {
+      const handleResize = () => {
+        if(window.innerWidth<=500){
+          setMobileView(true)
+        }else{
+          setMobileView(false)
+        }
+      };
+  
+      // Initial screen size
+      handleResize();
+  
+      // Add event listener for resize
+      window.addEventListener('resize', handleResize);
+  
+      // Clean up event listener on component unmount
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
     return (
         <>
             <Head>
@@ -22,9 +71,19 @@ const IMPage = () => {
                 <WhatWeDo />
                 <HashBanner p='Let Us Build Your' h1='ONLINE PRESENCE' />
                 <Work/>
+                <Carousel mobile={mobileView}/>
+                <div style={{display:'flex',justifyContent:'center',marginBottom:'20px'}}>
+                <Link href='/Portfolio'>
+                <Button
+                    value="View More"
+                    color="#ffffff"
+                    bg='var(--P700)'
+                />
+                </Link>
+                </div> 
                 <DownloadSection />
-                {/*<Consultation/>*/}
-                <Faq />
+                <Consultation/>
+                <Faq items={items}/>
             </>
         </>
     )

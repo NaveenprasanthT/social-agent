@@ -2,14 +2,18 @@ import React from 'react'
 import styles from '@/styles/Photography/HeroSection.module.css'
 import Button from '@/Components/Button'
 import Image from 'next/image'
+import Link from 'next/link'
 
 
 const HeroSection = () => {
     return (
         <div className={styles.sectionWrap}>
             <h1>Photography & Videography</h1>
-            <p>Creating and Publishing content, such as text, images and videos that is designed to engage the target audience and encourage them to take a specific action like making a purchase or visiting a website.</p>
-            <Button value='GET SOCIAL' color='var(--P700)' bg='#fff' padding='12px 35px'/>
+            <p>Retrieve  your message with compelling visuals and stunning videos allowing your brand's story to unfold with the power of video & enhance your visual presence with our artistic and innovative photography and videography services. 
+            </p>
+        <Link href='/Start-A-Project'>
+        <Button value='GET SOCIAL' color='var(--P700)' bg='#fff' padding='12px 35px'/>
+        </Link>
             <Image 
                 src='/assets/Photography/Group1.png' 
                 width={150} 

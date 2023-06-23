@@ -2,6 +2,7 @@ import React from 'react'
 import styles from '@/styles/ORMPage/HeroSection.module.css'
 import Button from '@/Components/Button'
 import Image from 'next/image'
+import Link from 'next/link'
 
 
 const HeroSection = () => {
@@ -16,7 +17,9 @@ const HeroSection = () => {
                 className={styles.ORMImagePhne}    
             />
             <p>Protect, enhance, and shine in the digital landscape. Our expert online reputation management services safeguard your brand's image, build trust, and drive success. Be the benchmark of excellence online.</p>
-            <Button value='GET CREDIBLE' color='var(--P700)' bg='#fff' padding='12px 45px'/>
+        <Link href='/Start-A-Project'>
+        <Button value='GET CREDIBLE' color='var(--P700)' bg='#fff' padding='12px 45px'/>
+        </Link>
         </div>
         <Image 
                 src='/assets/ORM/ORMHeader.png' 

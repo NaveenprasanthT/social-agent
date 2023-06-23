@@ -21,11 +21,19 @@
 }
 
 .center {
+    position: relative;
     width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.absoluteWrapper{
+    overflow: hidden;
+    width: 100%;
+    height: 150px;
+    position: relative;
 }
 
 .center h2 {
@@ -180,8 +188,13 @@
     .ForMobile{
         color: var(--P500);
     }
+    .absoluteWrapper{
+        height: 250px;
+    }
 }
 
-.inputWrapper1{
-   position: absolute;
+@media (max-width: 550px){
+    .absoluteWrapper{
+        height: 200px;
+    }
 }
