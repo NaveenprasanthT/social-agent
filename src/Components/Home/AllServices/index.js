@@ -29,7 +29,7 @@ function AllServices() {
                 <Fade autoplay={true} arrows={false} transitionDuration={1000} duration={2000}>
                 {fadeImages.map((fadeImage, index) => (
                   <div key={index}>
-                    <img style={{ width: '100%' }} src={fadeImage.url} />
+                    <img style={{ width: '100%',objectFit:'cover' }} src={fadeImage.url} />
                   </div>
                 ))}
               </Fade>

@@ -49,7 +49,7 @@
 }
 
 .emailField:focus {
-    outline: none;
+    outline: 1px solid var(--P300);
 }
 
 .emailField::placeholder {
@@ -83,6 +83,12 @@
     align-items: center;
     border-radius: 10px;
     transform: translateX(-10px);
+    cursor: pointer;
+    transition: background 1s ease-in-out;
+}
+
+.submitBtn:hover{
+    background: linear-gradient(to right,var(--P500),var(--P300));
 }
 
 .iconWrap {
@@ -94,6 +100,13 @@
 .icon {
     font-size: 30px;
     color: #fff;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+.icon:hover{
+    color: var(--P500);
+    scale: 1.05;
 }
 
 .right {

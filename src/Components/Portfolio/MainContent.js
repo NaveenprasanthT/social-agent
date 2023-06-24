@@ -16,35 +16,35 @@ const MainContent = () => {
         {
             key: 2,
             title:"Vriksh Fertility",
-            tags:"BRANDING  |  PRODUCT  |  GRAPHIC DESIGN",
+            tags:"BRANDING |  GRAPHIC DESIGN",
             image:'/assets/portfolio/portfolio2.png',
             desc:"Lorem ipsum dolor sit amet consectetur. Non adipiscing cursus non sed placerat tempor sed dolor eget. Rhoncus"
         },
         {
             key: 3,
             title:"Ramya Katta",
-            tags:"BRANDING  |  PRODUCT  |  GRAPHIC DESIGN ",
+            tags:"BRANDING  |  GRAPHIC DESIGN ",
             image:'/assets/portfolio/portfolio1.png',
             desc:"Lorem ipsum dolor sit amet consectetur. Non adipiscing cursus non sed placerat tempor sed dolor eget. Rhoncus"
         },
         {
             key: 4,
             title:"Veda Earth",
-            tags:"BRANDING  |  PRODUCT  |  GRAPHIC DESIGN ",
+            tags:"WEBSITE | PRODUCT ",
             image:'/assets/portfolio/portfolio4.png',
             desc:"Lorem ipsum dolor sit amet consectetur. Non adipiscing cursus non sed placerat tempor sed dolor eget. Rhoncus"
         },
         {
             key: 5,
             title:"Turbo Car care",
-            tags:"BRANDING  |  PRODUCT  |  GRAPHIC DESIGN ",
+            tags:"WEBSITE | PRODUCT ",
             image:'/assets/portfolio/portfolio5.png',
             desc:"Lorem ipsum dolor sit amet consectetur. Non adipiscing cursus non sed placerat tempor sed dolor eget. Rhoncus"
         },
         {
             key: 6,
             title:"Veda Earth",
-            tags:"BRANDING  |  PRODUCT  |  GRAPHIC DESIGN ",
+            tags:"WEBSITE | PRODUCT ",
             image:'/assets/portfolio/portfolio6.png',
             desc:"Lorem ipsum dolor sit amet consectetur. Non adipiscing cursus non sed placerat tempor sed dolor eget. Rhoncus"
         },

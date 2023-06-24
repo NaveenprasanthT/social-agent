@@ -70,15 +70,15 @@ const Footer = () => {
                         <button className={styles.submitBtn} type='submit' ><HiArrowLongRight /> </button>
                     </form>
                     <div className={styles.iconWrap}>
-                        <AiOutlineInstagram className={styles.icon} />
-                        <FaFacebookF className={styles.icon} />
-                        <AiOutlineTwitter className={styles.icon} />
-                        <FaLinkedinIn className={styles.icon} />
+                        <Link href='https://www.instagram.com/socialagent_official/' target='_blank'><AiOutlineInstagram className={styles.icon} /></Link>
+                        <Link href='https://www.facebook.com/socialagent.in' target='_blank'><FaFacebookF className={styles.icon} /></Link>
+                        <Link href='https://twitter.com/social__agent' target='_blank'><AiOutlineTwitter className={styles.icon} /></Link>
+                        <Link href='https://www.linkedin.com/company/socialagent' target='_blank'><FaLinkedinIn className={styles.icon} /></Link>
                     </div>
                 </div>
                     <PhoneMenu className={styles.linkLeft} open={open1}>
                         <div className={styles.iconContainer}  onClick={() => setOpen1(!open1)}>
-                            <div className={styles.heading}>Social Agent</div>
+                            <div className={styles.heading}># Company</div>
                             <Icon open={open1}><AiOutlinePlus/></Icon>
                         </div>
                         <Link className={styles.link} href='/' >Home</Link>
@@ -90,7 +90,7 @@ const Footer = () => {
                     </PhoneMenu>
                     <PhoneMenu1 className={styles.linkLeft} open={open2}>
                     <div className={styles.iconContainer}  onClick={() => setOpen2(!open2)}>
-                        <div className={styles.heading}>Services</div>
+                        <div className={styles.heading}># Services</div>
                         <Icon open={open2}><AiOutlinePlus/></Icon>
                         </div>
                         <Link className={styles.link} href='/Services/SocialMediaMarketing' >Social media marketing</Link>
@@ -105,7 +105,7 @@ const Footer = () => {
                     </PhoneMenu1>
                     <PhoneMenu2 className={styles.linkRight} open={open3}>
                         <div className={styles.iconContainer}  onClick={() => setOpen3(!open3)}>
-                            <div className={styles.heading}>Policies</div>
+                            <div className={styles.heading}># Policies</div>
                             <Icon open={open3}><AiOutlinePlus/></Icon>
                         </div>
                         <Link className={styles.link} href='/policy/refundPolicy' >Refund Policy</Link>

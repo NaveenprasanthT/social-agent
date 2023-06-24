@@ -18,9 +18,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #ffffff;
-    /*background:#ffffff4e; 
-    backdrop-filter: blur(10px); */
+    background:#ffffff4e; 
+    backdrop-filter: blur(10px);
     z-index: 9;
 }
 

@@ -11,8 +11,18 @@ const HeroSection = () => {
             <h1>Photography & Videography</h1>
             <p>Retrieve  your message with compelling visuals and stunning videos allowing your brand's story to unfold with the power of video & enhance your visual presence with our artistic and innovative photography and videography services. 
             </p>
-        <Link href='/Start-A-Project'>
-        <Button value='GET SOCIAL' color='var(--P700)' bg='#fff' padding='12px 35px'/>
+            <Link href='/Start-A-Project' style={{ textDecoration: 'none', width: '100%',display:'flex',justifyContent:'center' }}>
+            <div className={styles.ButtonContainer}>
+                <div className={styles.absoluteContainer}></div>
+                <Button
+                    color='var(--P700)'
+                    bg='#fff'
+                    value="GET SOCIAL"
+                    fontSize="14px"
+                    padding='15px 65px'
+                    fontWeight='700'
+                />
+            </div>
         </Link>
             <Image 
                 src='/assets/Photography/Group1.png' 

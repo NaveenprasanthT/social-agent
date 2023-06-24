@@ -7,7 +7,6 @@ import Social from '../../../../public/assets/Social.png';
 import UX from '../../../../public/assets/UX.png';
 import Website from '../../../../public/assets/Website.png';
 import { useEffect, useState } from "react";
-import Button from "@/Components/Button";
 import Link from "next/link";
 
 function Work() {

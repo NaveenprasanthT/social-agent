@@ -3,6 +3,16 @@ import styles from "@/styles/Home/ServicesCarousel.module.css";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/Io";
 
 const ServicesCarousel = () => {
+  // const [isMouseEntered, setIsMouseEntered] = useState(false);
+  // console.log(isMouseEntered)
+
+  // const handleMouseEnter = () => {
+  //   setIsMouseEntered(true);
+  // };
+
+  // const handleMouseLeave = () => {
+  //   setIsMouseEntered(false);
+  // };
   const [currentIndex, setCurrentIndex] = useState(1);
   const cardRef = useRef(null);
 
@@ -18,7 +28,7 @@ const ServicesCarousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % 14);
-    }, 1500);
+    }, 3000);
 
     return () => {
       clearInterval(interval);
@@ -132,7 +142,7 @@ const ServicesCarousel = () => {
           ref={isSelected ? cardRef : null}
         >
         <div className={styles.cardContainer}>
-          <div className={styles.contentContainer}>
+          <div className={styles.contentContainer} >
             <h3>{card.title}</h3>
             <p>{card.content}</p>
           </div>

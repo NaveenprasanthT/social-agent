@@ -1,7 +1,7 @@
 .AllServiceContainer{
     display: grid;
     grid-template-columns: 50% 50%;
-    margin: 1rem 2rem;
+    margin: 0rem 2rem;
     color: #1E1E1E;
     @media (max-width:700px){
         grid-template-columns: 100%;
@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 10% 4%;
+    padding: 20% 2%;
 }
 
 .ServiceText h1{

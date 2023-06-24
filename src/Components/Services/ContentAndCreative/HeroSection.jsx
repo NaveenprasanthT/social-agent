@@ -11,7 +11,7 @@ const HeroSection = () => {
         <div>
             <h1>WhatsApp Marketing</h1>
             <Image 
-                src='/assets/ContentCreative/ContentHeader.png' 
+                src='/assets/Whatsapp/WMHeader.png' 
                 width={1000} 
                 height={1000}
                 className={styles.ORMImagePhne}    
@@ -23,7 +23,7 @@ const HeroSection = () => {
         </Link>
         </div>
         <Image 
-                src='/assets/ContentCreative/ContentHeader.png' 
+                src='/assets/Whatsapp/WMHeader.png' 
                 width={1000} 
                 height={1000}
                 className={styles.ORMImage}    

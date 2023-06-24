@@ -38,6 +38,7 @@ const DownloadSection = () => {
 
   const [formChange,setFormChange] = useState(false);
   const [buttonValue,setButtonValue] = useState('Next');
+  const [ErrorMsg,setErrorMsg] = useState('');
 
   const [formData, setFormData] = useState({
     name: '',
@@ -50,13 +51,40 @@ const DownloadSection = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  const isValidEmail = (email) => {
+    // Regular expression pattern for validating email addresses
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+    return emailPattern.test(email);
+  };
+
+  const isValidPhoneNumber = (phoneNumber) => {
+    // Regular expression pattern for validating phone numbers
+    const phonePattern = /^\+?[1-9]\d{1,14}$/;
+  
+    return phonePattern.test(phoneNumber);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    if(formData.name !== '' && formData.phone !== '' && formData.email === ''){
+    if(formData.name === '' || formData.phone === '') {
+      setErrorMsg('All the fields are required');
+    }
+    else if(formData.name.length < 3){
+      setErrorMsg("Name Should be atleast 2 characters")
+    }
+    else if(isValidPhoneNumber(formData.phone) === false){
+      setErrorMsg("Phone Number is not valid")
+    }
+    else if(formData.email === ''){
       setFormChange(true);
       setButtonValue('Send')
+      setErrorMsg('');
     }
-    if(formData.name !== '' && formData.phone !== '' && formData.email !== ''){
+    else if(isValidEmail(formData.email) === false){
+      setErrorMsg("Enter a valid email address")
+    }
+    else{
       console.log(formData)   
       setFormData({
             name: '',
@@ -64,6 +92,7 @@ const DownloadSection = () => {
             email: '',  
           });
           setFormChange(false);
+          setErrorMsg("")
         }
   };
 
@@ -94,7 +123,8 @@ const DownloadSection = () => {
             </div>
           </InputWrapper2>
           </div>
-        </div>
+          <div className={styles.ErrorMsg}>{ErrorMsg}</div>
+          </div>
         <div className={styles.buttonWrap} onClick={handleSubmit}>
           <div className={styles.btn}>
             <FiArrowUpRight className={styles.arrowIcon} />

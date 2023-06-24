@@ -17,8 +17,18 @@ const HeroSection = () => {
                 className={styles.ORMImagePhne}    
             />
             <p>Protect, enhance, and shine in the digital landscape. Our expert online reputation management services safeguard your brand's image, build trust, and drive success. Be the benchmark of excellence online.</p>
-        <Link href='/Start-A-Project'>
-        <Button value='GET CREDIBLE' color='var(--P700)' bg='#fff' padding='12px 45px'/>
+            <Link href='/Start-A-Project' style={{ textDecoration: 'none',width:'100%' }}>
+            <div className={styles.ButtonContainer}>
+                <div className={styles.absoluteContainer}></div>
+                <Button
+                    color='var(--P700)'
+                    bg='#fff'
+                    value="GET SOCIAL"
+                    fontSize="14px"
+                    padding='12px 85px'
+                    fontWeight='700'
+                />
+            </div>
         </Link>
         </div>
         <Image 

@@ -38,9 +38,17 @@
     color: #b388eb3d;
 }
 
+.contentWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .title {
     font-weight: 500;
     font-size: 38px;
+    border-bottom: 3px solid var(--P500);
+    width: max-content;
 }
 
 .content {
@@ -48,7 +56,6 @@
     font-weight: 350;
     font-size: 18px;
     margin-top: 5%;
-    text-align: justify;
 }
 
 @media (max-width: 1000px){
@@ -75,15 +82,7 @@
         text-align: center !important;
         /* border-bottom: 2px solid var(--P500);
         width: max-content; */
-    }
-    .title::after {
-        content: "";
-        display: block;
-        height: 2px;
-        width: 65%;
-        background-color: var(--P500);
-        margin: 0 auto;
-      }  
+    }  
     .content{
         font-size: 16px;
         text-align: center;
@@ -104,3 +103,4 @@
         text-align: center;
     }
 }
+

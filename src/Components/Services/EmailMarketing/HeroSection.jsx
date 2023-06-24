@@ -17,8 +17,18 @@ const HeroSection = () => {
                 className={styles.ORMImagePhne}    
             />
             <p>Speed up your business with targeted emails! Expand reach, nurture leads, and boost conversions. Maximize the potential of impactful campaigns to achieve extraordinary growth and success.</p>
-        <Link href='/Start-A-Project'>
-        <Button value='GET PROTECTED' color='var(--P700)' bg='#fff' padding='12px 45px'/>
+            <Link href='/Start-A-Project' style={{ textDecoration: 'none',width:'100%' }}>
+            <div className={styles.ButtonContainer}>
+                <div className={styles.absoluteContainer}></div>
+                <Button
+                    color='var(--P700)'
+                    bg='#fff'
+                    value="GET PROTECTED"
+                    fontSize="14px"
+                    padding='12px 85px'
+                    fontWeight='700'
+                />
+            </div>
         </Link>
         </div>
         <Image 

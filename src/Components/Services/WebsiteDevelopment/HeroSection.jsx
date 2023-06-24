@@ -10,44 +10,54 @@ const HeroSection = () => {
         <div className={styles.sectionWrap}>
             <h1>Website Development</h1>
             <p>Ignite the power of your online presence with our exceptional website development services. We craft captivating websites that engage, inspire, and drive results. Experience digital excellence with an immersive user journey.</p>
-        <Link href='/Start-A-Project'>
-        <Button value='GET DIGITAL' color='var(--P700)' bg='#fff' padding='12px 35px'/>
-        </Link>
-            <Image 
-                src='/assets/Website/Frame.png' 
-                width={500} 
+            <Link href='/Start-A-Project' style={{ textDecoration: 'none', width: '100%', display: 'flex', justifyContent: 'center' }}>
+                <div className={styles.ButtonContainer}>
+                    <div className={styles.absoluteContainer}></div>
+                    <Button
+                        color='var(--P700)'
+                        bg='#fff'
+                        value="GET DIGITAL"
+                        fontSize="14px"
+                        padding='15px 75px'
+                        fontWeight='700'
+                    />
+                </div>
+            </Link>
+            <Image
+                src='/assets/Website/Frame.png'
+                width={500}
                 height={500}
-                className={styles.MessageIcon}    
+                className={styles.MessageIcon}
             />
-            <Image 
-                src='/assets/Website/Frame1.png' 
-                width={500} 
+            <Image
+                src='/assets/Website/Frame1.png'
+                width={500}
                 height={500}
-                className={styles.HeartbeatIcon}     
+                className={styles.HeartbeatIcon}
             />
-            <Image 
-                src='/assets/Website/Frame2.png' 
-                width={500} 
+            <Image
+                src='/assets/Website/Frame2.png'
+                width={500}
                 height={500}
-                className={styles.TwitterIcon}     
+                className={styles.TwitterIcon}
             />
-            <Image 
-                src='/assets/Website/Frame3.png' 
-                width={500} 
+            <Image
+                src='/assets/Website/Frame3.png'
+                width={500}
                 height={500}
-                className={styles.YoutubeIcon}     
+                className={styles.YoutubeIcon}
             />
-            <Image 
-                src='/assets/Website/Frame4.png' 
-                width={500} 
+            <Image
+                src='/assets/Website/Frame4.png'
+                width={500}
                 height={500}
-                className={styles.LinkedInIcon}     
+                className={styles.LinkedInIcon}
             />
-            <Image 
-                src='/assets/Website/Frame5.png' 
-                width={500} 
+            <Image
+                src='/assets/Website/Frame5.png'
+                width={500}
                 height={500}
-                className={styles.InstagramIcon}     
+                className={styles.InstagramIcon}
             />
         </div>
     )
