@@ -3,14 +3,16 @@ import Image from 'next/image';
 import tag from '../../../public/assets/tag.png';
 
 const HashWorks = () => {
-    return(
+    return (
         <div className={styles.HashWorksContainer}>
             <div className={styles.HashWorksLeft}>
-                <Image src={tag} className={styles.HashWorksImage}/>
+                <Image src={tag} className={styles.HashWorksImage} />
                 <h1>Our Works</h1>
             </div>
             <div className={styles.HashWorksRight}>
-                <h1>Our Works</h1>
+                <div className={styles.HashWorksRightHeader}>
+                    <h1>Our Works</h1>
+                </div>
                 <p>
                     With years of experience, we have had the opportunity to work
                     on a wide range of projects for clients from all over the world,

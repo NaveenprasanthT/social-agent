@@ -54,10 +54,10 @@
 }
 
 .knowUs {
-    font-weight: 300;
-    font-size: 48px;
+    font-weight: 600;
+    font-size: 38px;
     color: var(--P500);
-    font-family: 'Praise';
+    /* font-family: 'Praise'; */
     font-style: normal;
     padding: 2% 0;
 }
@@ -68,10 +68,14 @@
 }
 
 .PicAndContent p{
-    padding: 0rem 2rem;
+    padding: 0rem 2%;
     font-size: 20px;
     font-weight: 400;
-    text-align: justify;
+}
+
+.img{
+    height: 350px;
+    object-fit: cover;
 }
 
 .OurTeamContainer{
@@ -118,10 +122,9 @@
         gap: 1rem;
     }
     .PicAndContent p{
-        padding: 0rem 1rem;
-        font-size: 18px;
+        padding: 0rem 1%;
+        font-size: 16px;
         font-weight: 400;
-        text-align: justify;
     }
     .OurTeamContainer img{
         height: 300px;
@@ -129,6 +132,15 @@
     .OurTeamContent{
         padding: 2% 3%;
         gap: .5rem;
+    }
+    .img{
+        height: 280px;
+    }
+    .OurTeamContent h4{
+        font-size: 28px;
+    }
+    .OurTeamContent p{
+        font-size: 16px;
     }
 }
 
@@ -150,5 +162,25 @@
     }
     .HeroSectionWrap h1{
         line-height: 20px;
+    }
+    .knowUs{
+        font-size: 24px;
+    }
+    .PicAndContent p{
+        font-size: 14px;
+    }
+    .img{
+        height: 250px;
+    }
+    .OurTeamContent h4{
+        font-size: 22.5px;
+        border-bottom: 3px solid var(--P500);
+    }
+    .OurTeamContent p{
+        font-size: 15.5px;
+    }
+    .OurTeamContent{
+        justify-content: center;
+        align-items: center;
     }
 }

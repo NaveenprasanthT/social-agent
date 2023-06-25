@@ -43,7 +43,7 @@ const AboutUs = () => {
       </Head>
       <>
         <HeroSection />
-        <HashBanner p='Let Us Be Your' h1='Socail Agent' />
+        <HashBanner p='Let Us Be Your' h1='Social Agent' />
         <Work/>
         <Carousel mobile={mobileView} />
         <div style={{display:'flex',justifyContent:'center',marginBottom:'20px'}}>

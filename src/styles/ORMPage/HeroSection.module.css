@@ -18,7 +18,7 @@
     }
 }
 
-.sectionWrap div{
+.sectionContent{
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -54,14 +54,12 @@
 .sectionWrap h1 {
     font-weight: 600;
     font-size: 5vw;
-    line-height: 100px;
+    line-height: 80px;
     @media screen and (max-width: 768px) {
         line-height: 60px;
-        font-size: 6vw;
     }
     @media screen and (max-width: 768px) {
         line-height: 50px;
-        font-size: 7vw;
         text-align: center;
     }
 }
@@ -94,7 +92,6 @@
 .ButtonContainer Button{
     @media (max-width: 600px) {
         width: 90%;
-        padding: 12px 100px;
     }
 }
 
@@ -104,7 +101,7 @@
     width: 97%;
     height: 100%;
     position: absolute;
-    top: 0;
+    top: 0px;
     border-radius: 50px;
     transition: all .4s ease-in-out;
     @media (max-width: 600px) {

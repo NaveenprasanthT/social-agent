@@ -8,7 +8,7 @@ import Link from 'next/link'
 const HeroSection = () => {
     return (
         <div className={styles.sectionWrap}>
-        <div>
+        <div className={styles.sectionContent}>
             <h1>Online Reputation Management</h1>
             <Image 
                 src='/assets/ORM/ORMHeader.png' 

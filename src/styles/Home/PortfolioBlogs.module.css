@@ -21,6 +21,9 @@
     row-gap: 50px;
     height: 480px;
     overflow-y: scroll;
+    @media (max-width: 1024px){
+        padding-left: 400px;
+    }
 }
 
 .RightContent::-webkit-scrollbar {
@@ -49,6 +52,12 @@
 
 .blogWrap>h2>span{
     color: var(--P500);
+}
+
+.ButtonContainer{
+    @media (max-width:720px){
+        align-self: center;
+    }
 }
 
 @media (max-width:1000px){
@@ -90,11 +99,8 @@
         margin-top: 30px;
     }
     .blogWrap>h2{
-        font-size: 40px;
+        font-size: 28px;
         font-weight: 700;
         align-self: center;
-    }
-    .blogWrap>Link>Button{
-        display: none;
     }
 }

@@ -8,7 +8,7 @@ import Link from 'next/link'
 const HeroSection = () => {
     return (
         <div className={styles.sectionWrap}>
-            <h1>Socail Media Marketing</h1>
+            <h1>Social Media Marketing</h1>
             <p>Craft and share captivating content - from text, and images to videos - strategically designed to engage your audience, drive action, and boost conversions. Experience the art of persuasive social media marketing that delivers tangible results.</p>
             <Link href='/Start-A-Project' style={{ textDecoration: 'none', width: '100%',display:'flex',justifyContent:'center' }}>
                 <div className={styles.ButtonContainer}>

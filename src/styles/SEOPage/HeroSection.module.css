@@ -14,13 +14,16 @@
 
 .sectionWrap h1 {
     font-weight: 600;
-    font-size: 5vw;
+    font-size: 6.5vw;
     line-height: 120px;
     text-align: center;
     @media (max-width:1000px){
         line-height: 80px;
     }
     @media (max-width:768px){
+        line-height: 50px;
+    }
+    @media (max-width:500px){
         line-height: 40px;
     }
 }

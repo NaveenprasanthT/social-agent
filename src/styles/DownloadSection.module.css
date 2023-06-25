@@ -132,6 +132,9 @@
         font-size: 20px;
         width: 80%;
     }
+    .lable{
+        font-size: 16px;
+    }
     .logo{
         display: none;
     }
@@ -201,12 +204,30 @@
         color: var(--P500);
     }
     .absoluteWrapper{
-        height: 250px;
+        height: 260px;
+    }
+}
+
+@media (max-width: 600px){
+    .absoluteWrapper{
+        height: 240px;
     }
 }
 
 @media (max-width: 550px){
     .absoluteWrapper{
-        height: 200px;
+        height: 235px;
+    }
+}
+
+@media (max-width: 450px){
+    .absoluteWrapper{
+        height: 220px;
+    }
+}
+
+@media (max-width: 400px){
+    .absoluteWrapper{
+        height: 210px;
     }
 }

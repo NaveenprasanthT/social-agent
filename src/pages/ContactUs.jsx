@@ -3,6 +3,7 @@ import Head from 'next/head'
 import React from 'react'
 import ContactForm from '@/Components/Contact us/Form'
 import LocateUs from '@/Components/Contact us/Location'
+import Consultation from '@/Components/Consultation'
 
 const items = [
   {
@@ -43,6 +44,7 @@ const ContactUs = () => {
       <>
         <ContactForm />
         <LocateUs />
+        <Consultation/>
         <Faq items={items}/>
       </>
     </>

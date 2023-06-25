@@ -44,14 +44,14 @@ const PortfolioBlogs = () => {
                 <div className={styles.blogWrap}>
                     <h2><span>Our</span> Projects</h2>
                     <Carousel mobile={true}/>
-                    <Link href='/Portfolio'>
+                    <Link href='/Portfolio' className={styles.ButtonContainer}>
                         <Button color='#fff' bg='var(--P700)' value='View all'/>
                     </Link>
                 </div>
                 <div className={styles.blogWrap}>
                     <h2><span>Our</span> Blog</h2>
                     <Carousell mobile={mobileView}/>
-                    <Link href='/blog'>
+                    <Link href='/blog' className={styles.ButtonContainer}>
                         <Button color='#fff' bg='var(--P700)' value='View all' align='center'/>
                     </Link>
                 </div>

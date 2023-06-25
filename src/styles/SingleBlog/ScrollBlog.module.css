@@ -55,6 +55,13 @@
     .BlogContent h3{
         font-size: 16px;
         font-weight: 500;
+        height: 50px;
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2; /* Adjust the number of lines to fit your height */
+        -webkit-box-orient: vertical;
+        line-height: 1.5;
     }
     
     .BlogContent h3 span{
@@ -63,8 +70,15 @@
     
     .BlogContent p{
         font-size: 10.3px;
+        height: 45px;
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 3; /* Adjust the number of lines to fit your height */
+        -webkit-box-orient: vertical;
+        line-height: 1.5;
         font-weight: 400;
-        text-align: justify;
+        text-align: left;
     }   
 }
 

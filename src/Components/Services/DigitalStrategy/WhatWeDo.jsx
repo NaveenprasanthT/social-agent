@@ -42,7 +42,7 @@ const WhatWeDo = () => {
         {
             key: 6,
             image:'/assets/SMM/SMMImg1.png',
-            btnText:'Socail Media Marketing & Analytics',
+            btnText:'Social Media Marketing & Analytics',
             desc:'Goals are set, audiences are understood, and effective strategies take shape to increase the reach',
         },
     ]

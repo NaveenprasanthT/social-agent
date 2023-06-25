@@ -33,7 +33,7 @@
 }
 
 .BlogLeftContent h3{
-    width: max-content;
+    /* width: max-content; */
     font-size: 22px;
     font-weight: 500;
     border-bottom: 3px solid var(--P500);
@@ -116,7 +116,7 @@
 
 @media (max-width: 768px){
     .BlogLeftContent{
-        gap: .7rem;
+        gap: .9rem;
     }
     .BlogLeftContent h3{
         font-size: 20px;
@@ -135,7 +135,6 @@
     .BlogRight h3{
         font-size: 18px;
         font-weight: 600;
-        width: 90%;
     }
     
     .BlogRight p{
@@ -159,7 +158,7 @@
         margin-top: 10px;
     }
     .BlogLeftContent{
-        gap: .5rem;
+        gap: .7rem;
     }
     .BlogLeftContent h3{
         font-size: 16px;

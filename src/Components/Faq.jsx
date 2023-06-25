@@ -24,10 +24,10 @@ const AccordionItem = styled.div`
   cursor: pointer;
 
   @media screen and (max-width: 768px) {
-        font-size: 20px !important;
+        font-size: 18px !important;
 }
 @media screen and (max-width: 500px) {
-    font-size: 18px !important;
+    font-size: 16px !important;
 }
 `;
 
@@ -41,10 +41,12 @@ const AccordionContent = styled.div`
   padding: 10px;
   padding-bottom : ${({ isOpen }) => (isOpen ? '10px' : '0')};
   @media screen and (max-width: 768px) {
-    font-size: 18px !important;
+    font-size: 16px !important;
+    line-height:  ${({ isOpen }) => (isOpen ? '26px' : '0px')};
 }
 @media screen and (max-width: 500px) {
-    font-size: 16px !important;
+    font-size: 14px !important;
+    line-height:  ${({ isOpen }) => (isOpen ? '20px' : '0px')};
 }
   `;
 

@@ -33,6 +33,7 @@
     margin-top: 15px;
     text-align: justify;
     @media (max-width :600px){
+        font-size: 14.5px;
         width: 100%;
         text-align: center;
     }
@@ -91,6 +92,7 @@
     position: relative;
     @media (max-width: 600px){
         width: 90%;
+        align-self: center;
     }
 }
 

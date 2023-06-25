@@ -17,6 +17,7 @@ import styled from 'styled-components'
     transition: all 1s ease-in-out;
     @media (max-width: 650px){
       transition: all 2s ease-in-out;
+      gap : .7rem;
     }
   `
   const InputWrapper2 = styled.div`
@@ -70,7 +71,7 @@ const DownloadSection = () => {
     if(formData.name === '' || formData.phone === '') {
       setErrorMsg('All the fields are required');
     }
-    else if(formData.name.length < 3){
+    else if(formData.name.length <= 2){
       setErrorMsg("Name Should be atleast 2 characters")
     }
     else if(isValidPhoneNumber(formData.phone) === false){

@@ -14,7 +14,7 @@
 
 .sectionWrap h1 {
     font-weight: 600;
-    font-size: 5vw;
+    font-size: 6.6vw;
     line-height: 160px;
     @media (max-width: 1000px) {
         line-height: 100px;
@@ -294,14 +294,14 @@
     align-items: center;
     position: relative;
     width: 100%;
-    @media (min-width:600px) {
+    @media (min-width:500px) {
         width: max-content;
     }   
 }
 
 .ButtonContainer Button{
     position: relative;
-    @media (max-width: 600px){
+    @media (max-width: 500px){
         width: 90%;
     }
 }
@@ -315,7 +315,7 @@
     background-image: linear-gradient(to right,var(--P500),var(--P300));
     z-index: 1;
     transition: all 0.4s ease-in-out;
-    @media (max-width: 600px){
+    @media (max-width: 500px){
         width: 90%;
     }
 }

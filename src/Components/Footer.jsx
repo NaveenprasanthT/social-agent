@@ -7,11 +7,11 @@ import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai'
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa'
 import { HiArrowLongRight } from 'react-icons/hi2'
 import styled from 'styled-components'
-import { AiOutlinePlus,AiOutlineClose } from 'react-icons/ai';
+import { AiOutlinePlus } from 'react-icons/ai';
 
 const PhoneMenu = styled.div`
-@media screen and (max-width:500px){
- height: ${({open}) => (open ? '15.5rem' : '3rem')};
+@media screen and (max-width:1000px){
+ height: ${({open}) => (open ? '15.5rem' : '2.5rem')};
  border-bottom: ${({open}) => (open ? 'none' : '1px solid #ffffff')};
  overflow: hidden;
  transition: all 1s ease-in-out;    
@@ -19,16 +19,16 @@ const PhoneMenu = styled.div`
 `
 
 const PhoneMenu1 = styled.div`
-@media screen and (max-width:500px){
-    height: ${({open}) => (open ? '22rem' : '3rem')};
+@media screen and (max-width:1000px){
+    height: ${({open}) => (open ? '22rem' : '2.5rem')};
     border-bottom: ${({open}) => (open ? 'none' : '1px solid #ffffff')};
     overflow: hidden;
     transition: all 1s ease-in-out;
    }`
 
 const PhoneMenu2 = styled.div`
-@media screen and (max-width:500px  ){
-    height: ${({open}) => (open ? '10rem' : '3rem')};
+@media screen and (max-width:1000px  ){
+    height: ${({open}) => (open ? '10rem' : '2.5rem')};
     border-bottom: ${({open}) => (open ? 'none' : '1px solid #ffffff')};
     overflow: hidden;
     transition: all 1s ease-in-out;   
@@ -36,10 +36,7 @@ const PhoneMenu2 = styled.div`
 
 const Icon = styled.div`
    background-color: #fff;
-   height: max-content;
-   weight: max-content;
-   padding: 0 5px;
-   padding-top: 4px;
+   height: 15px;
    font-size: 14px;
    border-radius: 50%;
    margin-right: 15px;
@@ -47,7 +44,7 @@ const Icon = styled.div`
    transform: ${({open}) => (open ? 'rotate(45deg)' : 'rotate(0deg)')};
    transition: all .7s ease-in-out;
    cursor: pointer;
-   @media screen and (min-width:500px){
+   @media screen and (min-width:1000px){
     display: none;
    }
 `
@@ -62,6 +59,10 @@ const Footer = () => {
             <div className={styles.contentWrap}>
                 <div className={styles.left}>
                     <Image className={styles.logo} src={logo} alt='logo' />
+                    <div className={styles.PoweredBy}>
+                    <p>Powered By</p>
+                    <Image src='/assets/Bricstal_Group.png' width={500} height={500} className={styles.BricstalImagePhne}/>
+                    </div>
                     <div className={styles.desc}>
                         Get exclusives<span style={{ fontWeight: '400' }}> digital marketing</span> updates straight to your inbox
                     </div>
@@ -113,10 +114,6 @@ const Footer = () => {
                         <Link className={styles.link} href='/policy/cookiesPolicy' >Website Cookies Policy</Link>
                     </PhoneMenu2>
             </div>
-            <div className={styles.PoweredBy}>
-                    <p>Powered By</p>
-                    <Image src='/assets/Bricstal_Group.png' width={500} height={500} className={styles.BricstalImagePhne}/>
-                </div>
             <div className={styles.rights}>
                 <div>
                     <p>Powered By</p>

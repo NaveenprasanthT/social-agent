@@ -32,21 +32,21 @@
   }
   
   .left h3 {
-    font-weight: 300;
+    font-weight: 500;
     font-size: 50px;
     line-height: 60px;
     @media (max-width:768px){
-      font-size: 36px;
+      font-size: 34px;
       line-height: 40px;
     }
     @media (max-width:500px){
-      font-size: 26px;
+      font-size: 22.5px;
       line-height: 30px;
     }
   }
   
   .left p {
-    font-weight: 200;
+    font-weight: 300;
     font-size: 18px;
     line-height: 28px;
     margin-top: 4%;
@@ -86,12 +86,17 @@
     margin-bottom: 10px;
     cursor: pointer;
     border: 1px solid #827f7f;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.4s ease;
+    @media (max-width:768px){
+      font-size: 12px;
+      padding: 10px 10px;
+    }
   }
   
-  /* .buttons button:hover {
-    border: 1.8px solid #7f7f7f;
-  } */
+  .buttons button:hover {
+    color: var(--P500);
+    border: 1px solid var(--P500);
+  }
  
   .selectedButton {
     background-color: #38405F !important;

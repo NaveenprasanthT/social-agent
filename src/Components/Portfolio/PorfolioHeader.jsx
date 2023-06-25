@@ -16,8 +16,8 @@ const PortfolioHeader = () => {
                         to take a specific action like making a purchase or visiting a website.
                     </p>
                 </div>
-                <Link href='/Start-A-Project' style={{ textDecoration: 'none', width: '100%' }}>
-                    <div className={styles.ButtonContainer}>
+                <Link href='/Start-A-Project' style={{ textDecoration: 'none', width: '100%',display:'felx',justifyContent:'center',alignItems:'center' }}>
+                    <div className={styles.ButtonContainer}  style={{ textDecoration: 'none',display:'felx',justifyContent:'center',alignItems:'center' }}>
                         <div className={styles.absoluteContainer}></div>
                         <Button
                             color='var(--P700)'

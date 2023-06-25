@@ -18,7 +18,7 @@ const ImageWrap = styled.div`
             width: 450px;
             height: 50vh;
         }
-        @media (max-width: 620px){
+        @media (max-width: 768px){
             width: 400px;
             height: 40vh;
         }

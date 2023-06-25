@@ -18,7 +18,7 @@
     }
 }
 
-.sectionWrap div{
+.sectionContent{
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -93,7 +93,6 @@
 .ButtonContainer Button{
     @media (max-width: 600px) {
         width: 90%;
-        padding: 12px 100px;
     }
 }
 

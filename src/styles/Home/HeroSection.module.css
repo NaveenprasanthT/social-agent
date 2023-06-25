@@ -9,7 +9,7 @@
     padding-bottom: 4%;
     padding-top: 4%;
     @media (max-width:786px) {
-        height: 40vh;
+        height: 80vh;
         padding-bottom: 2%;
     }
     @media (max-width:675px) {

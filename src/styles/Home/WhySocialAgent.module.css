@@ -3,7 +3,7 @@
 
 
 .sectionWrap {
-    padding: 6% 1%;
+    padding: 4% 1%;
 }
 
 .praise {
@@ -18,8 +18,8 @@
 .cardsWrap {
     margin: 2%;
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(360px, 1fr));    
-    gap:2rem;
+    grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));    
+    gap:4rem;
     justify-content: space-between;
 }
 
@@ -46,15 +46,18 @@
 
 .title {
     font-weight: 500;
-    font-size: 38px;
+    font-size: 28px;
     border-bottom: 3px solid var(--P500);
     width: max-content;
+    @media (max-width: 700px) {
+        font-size: 26px;
+    }
 }
 
 .content {
     width: 100%;
     font-weight: 350;
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 5%;
 }
 
@@ -78,13 +81,13 @@
         gap: 1rem;
     }
     .title{
-        font-size: 28px !important;
+        font-size: 24px !important;
         text-align: center !important;
         /* border-bottom: 2px solid var(--P500);
         width: max-content; */
     }  
     .content{
-        font-size: 16px;
+        font-size: 14px;
         text-align: center;
     }
 }
@@ -95,12 +98,8 @@
         gap: 1rem;
     }
     .title{
-        font-size: 24px !important;
+        font-size: 18px !important;
         text-align: center !important;
-    }  
-    .content{
-        font-size: 14px;
-        text-align: center;
-    }
+    } 
 }
 

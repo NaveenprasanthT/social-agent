@@ -7,28 +7,38 @@
     font-weight: 300;
     font-family: 'Poppins';
     /* justify-content: space-around; */
-    @media (max-width: 550px) {
+    @media (max-width: 630px) {
       display: flex;
       flex-direction: column;
       gap: 2rem;
       padding: 10px;
+      margin: 10px;
     }
   }
   
   .leftSection {
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
     font-weight: 400;
-      @media (max-width: 550px){
-        max-width: 100%;
+      @media (max-width: 630px){
+        width: 100%;
+        text-align: center;
+        align-items: center;
       }
   }
 
   .locateUsDiv h3{
-    font-size: 28px;
+    font-size: 34px;
+    font-weight: 400;
+    @media (max-width: 630px){
+      font-size: 28px;
+      width: max-content;
+      border-bottom: 3px solid var(--P500);
+      padding: 2px 5px;
+    }
   }
 
   .rightSection {
@@ -39,8 +49,9 @@
     overflow: hidden;
     height: 270px;
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.3);   
-    @media (max-width:550px){
+    @media (max-width:630px){
       height: 240px;
+      box-shadow: none !important;
     }
   }
 

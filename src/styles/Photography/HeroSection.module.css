@@ -22,6 +22,7 @@
       }
       @media screen and (max-width: 500px){
         margin-bottom: 0px;
+        font-size: 6.5vw;
       }
 }
 
@@ -34,7 +35,7 @@
     margin-bottom: 2%;
     margin-top: 1%;
     z-index: 1;
-    @media screen and (max-width: 7000px){
+    @media screen and (max-width: 700px){
         width: 80%;
         margin-bottom: 35px;
       }
@@ -49,14 +50,14 @@
     align-items: center;
     position: relative;
     width: 100%;
-    @media (min-width:600px) {
+    @media (min-width:500px) {
         width: max-content;
     }   
 }
 
 .ButtonContainer Button{
     position: relative;
-    @media (max-width: 600px){
+    @media (max-width: 500px){
         width: 90%;
     }
 }
@@ -70,7 +71,7 @@
     background-image: linear-gradient(to right,var(--P500),var(--P300));
     z-index: 1;
     transition: all 0.4s ease-in-out;
-    @media (max-width: 600px){
+    @media (max-width: 500px){
         width: 90%;
     }
 }
