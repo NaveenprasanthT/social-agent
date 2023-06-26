@@ -93,4 +93,4 @@ const Faq = ({items}) => {
     )
 }
 
-export default Faq;
+export default Faq

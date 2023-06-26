@@ -1,4 +1,4 @@
-import StartProject from '@/Components/StartProject'
+import StartProject from '@/Components/Start-a-project-page/StartProject'
 import Head from 'next/head'
 import React from 'react'
 
