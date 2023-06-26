@@ -5,7 +5,6 @@ import { FiArrowUpRight } from 'react-icons/fi'
 import hashLogo from '../../public/assets/hashLogo.webp'
 import styled from 'styled-components';
 
-
   const InputWrapper1 = styled.div`
     display: flex;
     gap: 4%;
@@ -80,7 +79,7 @@ const DownloadSection = () => {
     })
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async(event) => {
     event.preventDefault();
     if(formData.name === '' || formData.phone === '') {
       setErrorMsg('All the fields are required');
@@ -100,7 +99,7 @@ const DownloadSection = () => {
       setErrorMsg("Enter a valid email address")
     }
     else{
-      console.log(formData)  
+      console.log(formData)
       handleDownload()
       setFormData({
             name: '',

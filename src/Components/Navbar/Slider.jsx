@@ -79,7 +79,7 @@ const Slider = () => {
                         </div>
                         <Link href='/Services/SearchEngineOptimization' onClick={() => setSliderActive(false)} className={styles.ServiceLink}>Search Engine Optimization</Link>
                         <Link href='/Services/SocialMediaMarketing' onClick={() => setSliderActive(false)} className={styles.ServiceLink}>Social Media Marketing</Link>
-                        <Link href='/' onClick={() => setSliderActive(false)} className={styles.ServiceLink}>UI/UX Designing</Link>
+                        <Link href='/Services/InfluencerMarketing' onClick={() => setSliderActive(false)} className={styles.ServiceLink}>Influencer Marketing</Link>
                         <Link href='/Services/WebsiteDevelopment' onClick={() => setSliderActive(false)} className={styles.ServiceLink}>Website Development</Link>
                         <Link href='/Portfolio' onClick={() => setSliderActive(false)} className={styles.ServiceLink}>Case Studies</Link>
                     </PhoneMenu1>
