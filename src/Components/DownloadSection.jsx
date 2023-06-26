@@ -17,7 +17,8 @@ import { sendEmail } from '@/pages/api/info'
     transition: all 1s ease-in-out;
     @media (max-width: 650px){
       transition: all 2s ease-in-out;
-      gap : .7rem;
+      gap : .7rem;'
+      
     }
   `
   const InputWrapper2 = styled.div`
