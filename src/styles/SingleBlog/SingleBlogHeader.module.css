@@ -14,3 +14,22 @@
     width: 150px;
     height: 35px;
 }
+
+.SingleBlogHeaderContainer>Button{
+    margin-right: 20px;
+}
+
+@media (max-width:600px){
+    .SingleBlogHeaderImage{
+        width: 110px;
+        height: 30px;
+    }
+    .SingleBlogHeaderContainer{
+        padding: 15px 10px;
+    }
+    .SingleBlogHeaderContainer>Button{
+        margin-right: 10px;
+        padding: 10px 20px ;
+        font-size: 13px;
+    }
+}

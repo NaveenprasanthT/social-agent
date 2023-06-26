@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import styles from '@/styles/FAQ.module.css'
-import Image from 'next/image'
+import styles,{css} from '@/styles/FAQ.module.css'
 import { AiOutlineDown } from 'react-icons/ai'
 import Button from './Button';
+import Link from 'next/link';
 
 
 const AccordionContainer = styled.div`
@@ -22,7 +22,13 @@ const AccordionItem = styled.div`
   font-size: 22px;
   padding: 10px;
   cursor: pointer;
- 
+
+  @media screen and (max-width: 768px) {
+        font-size: 18px !important;
+}
+@media screen and (max-width: 500px) {
+    font-size: 16px !important;
+}
 `;
 
 const AccordionContent = styled.div`
@@ -34,9 +40,17 @@ const AccordionContent = styled.div`
   font-size: 20px;
   padding: 10px;
   padding-bottom : ${({ isOpen }) => (isOpen ? '10px' : '0')};
- `;
+  @media screen and (max-width: 768px) {
+    font-size: 16px !important;
+    line-height:  ${({ isOpen }) => (isOpen ? '26px' : '0px')};
+}
+@media screen and (max-width: 500px) {
+    font-size: 14px !important;
+    line-height:  ${({ isOpen }) => (isOpen ? '20px' : '0px')};
+}
+  `;
 
-const Faq = () => {
+const Faq = ({items}) => {
     const [activeIndices, setActiveIndices] = useState([]);
 
     const handleItemClick = (index) => {
@@ -46,36 +60,10 @@ const Faq = () => {
             setActiveIndices([...activeIndices, index]);
         }
     }
-    const items = [
-        {
-            title: 'Why do businesses need digital marketing services in Bangalore?',
-            content: 'Lorem ipsum dolor sit amet consectetur. Ultricies lectus tempor risus est scelerisque risus sit. Quis suspendisse porta eleifend ac ultricies donec mauris vestibulum.'
-        },
-        {
-            title: 'Lorem ipsum dolor sit amet consectetur.',
-            content: 'Lorem ipsum dolor sit amet consectetur. Ultricies lectus tempor risus est scelerisque risus sit. Quis suspendisse porta eleifend ac ultricies donec mauris vestibulum.'
-        },
-        {
-            title: 'Lorem ipsum dolor sit amet consectetur.',
-            content: 'Lorem ipsum dolor sit amet consectetur. Ultricies lectus tempor risus est scelerisque risus sit. Quis suspendisse porta eleifend ac ultricies donec mauris vestibulum.'
-        },
-        {
-            title: 'Lorem ipsum dolor sit amet consectetur.',
-            content: 'Lorem ipsum dolor sit amet consectetur. Ultricies lectus tempor risus est scelerisque risus sit. Quis suspendisse porta eleifend ac ultricies donec mauris vestibulum.'
-        },
-        {
-            title: 'Lorem ipsum dolor sit amet consectetur.',
-            content: 'Lorem ipsum dolor sit amet consectetur. Ultricies lectus tempor risus est scelerisque risus sit. Quis suspendisse porta eleifend ac ultricies donec mauris vestibulum.'
-        },
-        {
-            title: 'Lorem ipsum dolor sit amet consectetur.',
-            content: 'Lorem ipsum dolor sit amet consectetur. Ultricies lectus tempor risus est scelerisque risus sit. Quis suspendisse porta eleifend ac ultricies donec mauris vestibulum.'
-        },
-    ];
 
     return (
 
-        <div className={styles.FaqFormWrap} >
+        <div className={styles.FaqFormWrap}>
             <div className={styles.header}>
                 <h1>Curious? <span style={{ color: 'var(--P500)' }} >We've Got the Answers!</span></h1>
             </div>
@@ -97,7 +85,9 @@ const Faq = () => {
                 </div>
             </div>
             <div className="btnWrap">
-                <Button value='Discover' bg='var(--P700)' color='#fff' />
+                <Link href="/Services">
+                    <Button value='Discover' bg='var(--P700)' color='#fff' />
+                </Link>
             </div>
         </div>
     )

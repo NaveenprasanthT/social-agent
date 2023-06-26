@@ -1,0 +1,114 @@
+.sectionWrap {
+    display: grid;
+    grid-template-columns: 60% 30%;
+    height: 100vh;
+    background-image: url('../../../public/assets/heroBg.webp');
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1%;
+    color: #fff;
+    overflow: hidden;
+    @media screen and (max-width: 768px) {
+        height: 80vh;
+    }
+    @media screen and (max-width: 500px) {
+        height: 100vh;
+        grid-template-columns: 1fr;
+    }
+}
+
+.sectionContent{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 1%;
+    @media screen and (max-width: 500px) {
+        align-items: center;
+        justify-content: center;
+        margin-top: 60px;
+    }
+}
+
+.ORMImage{
+    width: 95%;
+    height: 50%;
+    object-fit: contain;
+    @media screen and (max-width: 768px) {
+        bottom: 30%;
+    }
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
+}
+
+.ORMImagePhne{
+    width: 50%;
+    height: 10%;
+    object-fit: contain;
+    @media screen and (min-width: 501px) {
+        display: none;
+    }
+}
+
+.sectionWrap h1 {
+    font-weight: 600;
+    font-size: 5vw;
+    line-height: 80px;
+    @media screen and (max-width: 768px) {
+        line-height: 60px;
+    }
+    @media screen and (max-width: 768px) {
+        line-height: 50px;
+        text-align: center;
+    }
+}
+
+.sectionWrap p {
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: justify;
+    width: 55vw;
+    margin-bottom: 2%;
+    margin-top: 1%;
+    @media screen and (max-width: 500px) {
+        width: 90%;
+        text-align: center;
+    }
+}
+
+.ButtonContainer{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: 600px){
+        width: max-content;
+    }
+}
+
+.ButtonContainer Button{
+    @media (max-width: 600px) {
+        width: 90%;
+    }
+}
+
+
+.absoluteContainer{
+    background-image: linear-gradient(to right, var(--P500) ,var(--P300));
+    width: 97%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    border-radius: 50px;
+    transition: all .4s ease-in-out;
+    @media (max-width: 600px) {
+        width: 87%;
+    }
+}
+
+.ButtonContainer:hover .absoluteContainer{
+    top: 6px;
+}

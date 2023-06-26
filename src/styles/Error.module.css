@@ -1,0 +1,39 @@
+.ErrContainer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    background-image: url('../../public/assets/ErrBg.png');
+    background-size: cover;
+    color: #ffffff;
+}
+
+.ErrContainer h1{
+    font-size: 64px;
+    font-weight: 900;
+}
+
+.ErrContainer p {
+    font-size: 18px;
+    width: 60%;
+    align-self:center;
+    margin-bottom: 15px;
+}
+
+.ErrButton{
+    width: max-content;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 50px;
+    padding: 10px 65px;
+    color: var(--P700);
+    outline: none;
+    border: none;
+    background-color: #ffffff;
+    align-self: center;
+    cursor: pointer;
+}
+

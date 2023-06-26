@@ -1,48 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from '../Button'
 import Link from 'next/link'
 import Work from './OurWork'
 import HashBanner from '../HashBanner'
 import styled from 'styled-components'
+import ServiceBanner from './ServiceBanner'
+import Carousel from '../Home/PortfolioBlog/Carousel'
 
-const HeroSection = styled.div`
-    height: 90vh;
-    background-image: url('/assets/heroBg.webp');
-    background-size: cover;
-    display: flex;
-    gap:1rem;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 4%;
-    color: #fff;
-    position: relative;
-`
-
-const BannerHeader = styled.h1`
-    font-weight: 500;
-    font-size: 56px;
-`
-const BannerDesc = styled.p`
-    font-weight: 200;
-    font-size: 20px;
-    width: 55%;
-    margin-bottom: 4%;
-`
-
-const Image = styled.img`
-    position: absolute;
-    top: 10%;
-    right: 5%;
-    height: 80vh;
-    width: 45%;
-    object-fit: contain;
-`
 const Cards = styled.div`
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 3%;
     justify-content: center;
     gap: 10px;
+    @media screen and (max-width: 1100px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media screen and (max-width: 800px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (max-width: 500px) {
+        grid-template-columns: 1fr;
+    }
 `
 
 const BorderWrapper = styled.div`
@@ -55,7 +34,8 @@ const Title = styled.div`
     font-weight: 600;
     font-size: 16px;
     transition: all 0.5s ease-in-out;
-    
+    @media screen and (max-width: 768px) {
+    }
 `
 
 const HoverOverlay = styled.div`
@@ -67,7 +47,7 @@ const HoverOverlay = styled.div`
     background-image: url('/assets/heroBg.webp');
     background-size: cover;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 1.5s ease;
     pointer-events: none;
 `
 
@@ -82,7 +62,6 @@ const Desc = styled.p`
     font-size: 9px;
     margin-top: 6%;
     transition: all 0.5s ease-in-out;
-
 `
 
 const BottomWrap = styled.div`
@@ -115,7 +94,7 @@ const BackgroundContainer = styled.div`
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.7s ease-in-out;
     z-index: 6;
 `
 
@@ -147,9 +126,42 @@ const Card = styled.div`
         transform: scale(1.3);
         background-image: url(${props => props.ImgHover})
     }
+    @media screen and (max-width: 500px) {
+        height: 200px;
+    }
+`
+
+const ButtonContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
 `
 
 const MainServicePage = () => {
+
+    const [mobileView, setMobileView] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      if(window.innerWidth<=500){
+        setMobileView(true)
+      }else{
+        setMobileView(false)
+      }
+    };
+
+    // Initial screen size
+    handleResize();
+
+    // Add event listener for resize
+    window.addEventListener('resize', handleResize);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
     const data = [
         {
@@ -163,10 +175,10 @@ const MainServicePage = () => {
         {
             id: '02',
             title: 'Search Engine Optimization & Marketing  ',
-            desc: 'rom keyword research to ranking, entrust your SEO & SEM marketing journey to our specialists.',
+            desc: "From keyword research to ranking, entrust your SEO & SEM marketing journey to our specialists.",
             imgHover:'/assets/Services/serviceHover2.png',
             img:'/assets/Services/service2.png',
-            url: '/',
+            url: '/Services/SearchEngineOptimization',
         },
         {
             id: '03',
@@ -174,15 +186,15 @@ const MainServicePage = () => {
             desc: 'From identifying influencers to crafting collaborations, we handle everything.',
             imgHover:'/assets/Services/serviceHover3.png',
             img:'/assets/Services/service3.png',
-            url: '/',
+            url: '/Services/InfluencerMarketing',
         },
         {
             id: '04',
             title: 'Website Development',
-            desc: 'Lorem ipsum dolor sit amet consectetur. Amet lectus blandit tempus ac aliquam.',
+            desc:"From design to deployment, we ensure seamless execution of all aspects of your brand's website.",
             imgHover:'/assets/Services/serviceHover4.png',
             img:'/assets/Services/service4.png',
-            url: '/',
+            url: '/Services/WebsiteDevelopment',
         },
         {
             id: '05',
@@ -190,31 +202,23 @@ const MainServicePage = () => {
             desc: ' From consistent visuals to aesthetic product highlights , we capture the essence of your Brand.',
             imgHover:'/assets/Services/serviceHover5.png',
             img:'/assets/Services/service5.png',
-            url: '/',
+            url: '/Services/Photography',
         },
         {
             id: '06',
             title: 'Online reputation Management',
-            desc: 'From reputation monitoring to proactive management, we expertly handle every aspect of your digital brand presence',
+            desc: 'From reputation monitoring to proactive management, we expertly handle every aspect of your digital brand presence.',
             imgHover:'/assets/Services/serviceHover6.png',
             img:'/assets/Services/service6.png',
-            url: '/',
-        },
-        {
-            id: '07',
-            title: 'Digital Strategy & Consulting',
-            desc: 'Lorem ipsum dolor sit amet consectetur. Varius egestas phasellus fusce tempus ut.',
-            imgHover:'/assets/Services/serviceHover7.png',
-            img:'/assets/Services/service7.png',
-            url: '/',
+            url: '/Services/OnlineReputationManagement',
         },
         {
             id: '08',
             title: 'Brand & Print Solutions',
-            desc: "From Ideation to Execution,We Craft Your Brand's Story with Artistry and Precision.",
+            desc: "From Reach to Metrics we got you covered in all aspects of performance marketing.",
             imgHover:'/assets/Services/serviceHover8.png',
             img:'/assets/Services/service8.png',
-            url: '/',
+            url: '/Services/Brand',
         },
         {
             id: '09',
@@ -222,7 +226,7 @@ const MainServicePage = () => {
             desc: 'From creating engaging email content to drive click-through rates, we ensure an effective email marketing campaign.',
             imgHover:'/assets/Services/serviceHover9.png',
             img:'/assets/Services/service9.png',
-            url: '/',
+            url: '/Services/EmailMarketing',
         },
         {
             id: '10',
@@ -230,31 +234,23 @@ const MainServicePage = () => {
             desc: 'From writing tailored messages to reaching out to individual recipients, we manage SMS marketing.',
             imgHover:'/assets/Services/serviceHover10.png',
             img:'/assets/Services/service10.png',
-            url: '/',
+            url: '/Services/SMSMarketing',
         },
         {
             id: '11',
             title: 'Video marketing',
-            desc: 'From writing tailored messages to reaching out to individual recipients, we manage SMS marketing.',
+            desc: 'From Concept to Conversion, We Master Your Video Marketing Journey.',
             imgHover:'/assets/Services/serviceHover11.png',
             img:'/assets/Services/service11.png',
-            url: '/',
+            url: '/Services/VideoMarketing',
         },
         {
             id: '12',
-            title: 'Content & Creatives',
+            title: 'WhatsApp Marketing',
             desc: 'From writing tailored messages to reaching out to individual recipients, we manage SMS marketing.',
-            imgHover:'/assets/Services/serviceHover12.png',
-            img:'/assets/Services/service12.png',
-            url: '/',
-        },
-        {
-            id: '13',
-            title: 'Analytics & Reports',
-            desc: 'From writing tailored messages to reaching out to individual recipients, we manage SMS marketing.',
-            imgHover:'/assets/Services/serviceHover13.png',
-            img:'/assets/Services/service13.png',
-            url: '/',
+            imgHover:'/assets/Whatsapp/WMHeader.png',
+            img:'/assets/Whatsapp/WMHeader.png',
+            url: '/Services/WhatsappMarketing',
         },
         {
             id: '14',
@@ -262,34 +258,21 @@ const MainServicePage = () => {
             desc: 'From writing tailored messages to reaching out to individual recipients, we manage SMS marketing.',
             imgHover:'/assets/Services/serviceHover14.png',
             img:'/assets/Services/service14.png',
-            url: '/',
+            url: '/Services/Performance',
         },
     ];
 
     return(
         <>
-            <HeroSection>
-                <BannerHeader>Our Services</BannerHeader>
-                <BannerDesc>Lorem ipsum dolor sit amet consectetur.
-                    Consectetur feugiat bibendum mattis sed vel maecenas gravida faucibus.</BannerDesc  >
-                <Button 
-                    color='var(--P700)' 
-                    bg='#fff' 
-                    value="GET STARTED" 
-                    fontSize="13px"
-                    borderRadius='50px'
-                    padding='14px 50px'
-                    fontWeight='600'
-                />
-                <Image src='/assets/serviceBg.png' alt='hash image' />
-            </HeroSection>
+            <ServiceBanner/>
             <Cards>
                 {
                     data.map((item, key) => (
                         <BorderWrapper  key={key}>
+                        <Link href={item.url} style={{textDecoration:'none'}}>
                         <Card ImgHover={item.imgHover}>
                             <TopWrap>
-                                <Title>{item.title}test</Title>
+                                <Title>{item.title}</Title>
                                 <Desc>{item.desc}</Desc>
                             </TopWrap>
                             <BottomWrap>
@@ -300,12 +283,21 @@ const MainServicePage = () => {
                             <BackgroundContainer Img={item.img}></BackgroundContainer>
                             <HoverOverlay></HoverOverlay>
                         </Card>
+                        </Link>
                         </BorderWrapper>
                     ))
                 }
             </Cards>
-            <HashBanner p='Let Us Be Your' h1=' SOCIAL AGENT' H1fontSize='80px' pfontSize='32px'/>
+            <HashBanner p='Let Us Be Your' h1='SOCIAL AGENT'/>
             <Work/>
+            <Carousel mobile={mobileView}/>
+            <ButtonContainer>
+                <Button
+                    value="View More"
+                    color="#ffffff"
+                    bg='var(--P700)'
+                />
+            </ButtonContainer>
         </>
     )
 }

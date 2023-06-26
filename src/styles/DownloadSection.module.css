@@ -21,6 +21,7 @@
 }
 
 .center {
+    position: relative;
     width: 60%;
     display: flex;
     flex-direction: column;
@@ -28,9 +29,17 @@
     align-items: center;
 }
 
+.absoluteWrapper{
+    overflow: hidden;
+    width: 100%;
+    height: 150px;
+    position: relative;
+}
+
 .center h2 {
     font-weight: 600;
     font-size: 32px;
+    width: 80%;
 }
 
 .inputWrapper {
@@ -57,6 +66,11 @@
     padding: 4%;
     margin-top: 5%;
     border-radius: 6px;
+    outline: none;
+}
+
+.input:focus {
+    outline: 1px solid var(--P500);
 }
 
 .buttonWrap {
@@ -91,4 +105,134 @@
     font-size: 60px;
     color: var(--P700);
     transition: .4s ease-in-out;
+}
+
+.ErrorMsg{
+    position: absolute;
+    bottom: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: red;
+}
+
+@media (max-width: 1100px){
+    .center h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 960px){
+    .center h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 850px){
+    .center h2 {
+        font-size: 20px;
+        width: 80%;
+    }
+    .lable{
+        font-size: 16px;
+    }
+    .logo{
+        display: none;
+    }
+    .btn {
+        background: var(--P500);
+        height: 150px;
+        width: 150px;
+    }
+    .center{
+        width: 90%;
+    }
+}
+
+@media (min-width: 650px){
+    .btn1{
+        display: none;
+    }
+    .ForMobile{
+        display: none;
+    }
+}
+
+@media (max-width: 650px){
+    .btn{
+        display: none;
+    }
+    .formWrap{
+        flex-direction: column;
+        margin: 3% 0%;
+    }
+    .inputWrapper{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .formWrap{
+        padding: 1%;
+        height: max-content;
+        border-radius: 15px;
+    }
+    .buttonWrap{
+        width: 75%;
+        margin-bottom: 50px;
+        cursor: pointer;
+    }
+    .btn1{
+        margin-top:25px;
+        width: 100%;
+        cursor: pointer;
+    }
+    .btn1 button{
+        width: 100%;
+        outline: none;
+        border:none;
+        color: #fff;
+        background-color: var(--P500);
+        padding: 10px 0px;
+        border-radius: 50px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .center{
+        margin-top: 25px;
+        position: relative;
+    }
+    .center h2{
+        text-align: center;
+    }
+    .ForLargeScreen{
+        display: none;
+    }
+    .ForMobile{
+        color: var(--P500);
+    }
+    .absoluteWrapper{
+        height: 260px;
+    }
+}
+
+@media (max-width: 600px){
+    .absoluteWrapper{
+        height: 240px;
+    }
+}
+
+@media (max-width: 550px){
+    .absoluteWrapper{
+        height: 235px;
+    }
+}
+
+@media (max-width: 450px){
+    .absoluteWrapper{
+        height: 220px;
+    }
+}
+
+@media (max-width: 400px){
+    .absoluteWrapper{
+        height: 210px;
+    }
 }

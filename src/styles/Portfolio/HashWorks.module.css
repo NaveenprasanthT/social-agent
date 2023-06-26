@@ -4,10 +4,17 @@
     gap: 5rem;
     height: 350px;
     padding: 2%;
+    @media (max-width: 600px){
+        display: flex;
+        height: max-content;
+    }
 }
 
 .HashWorksLeft{
     position: relative;
+    @media (max-width: 600px){
+        display: none;
+    }
 }
 
 .HashWorksImage{
@@ -20,15 +27,51 @@
     font-size: 50px;
     font-weight: 500;
     top: 40%;
-    right: 3%;;
+    right: 3%;
+    @media (max-width: 820px){
+        font-size: 30px;
+        top: 47%;
+    }
 }
 
 .HashWorksRight{
     width: 90%;
+    @media (max-width: 600px){
+        width: 95%;
+    }
+}
+
+.HashWorksRightHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.HashWorksRight h1{
+    padding: 1%;
+    font-size: 38px;
+    width: max-content;
+    border-bottom: 3px solid var(--P500);
+    @media (max-width: 600px){
+        font-size: 18px;
+    }
+    @media (min-width: 601px) {
+        display: none;
+    }
 }
 
 .HashWorksRight p{
     font-size: 20px;
     padding: 10%;
-    text-align: justify;    
+    text-align: justify;
+    @media (max-width: 820px){
+        font-size: 18px;
+        padding: 2%;
+    }    
+    @media (max-width: 600px){
+        font-size: 16px;
+        margin-top: 2%;
+        padding: 1%;
+    }
 }

@@ -14,7 +14,18 @@ const ImageWrap = styled.div`
         object-fit: cover;
         transform: ${({ inView }) => (inView ? 'translateX(0vw)' : 'translateX(80vw)')} ;
         transition: 1.3s ease-out;
-       
+        @media (max-width: 900px){
+            width: 450px;
+            height: 50vh;
+        }
+        @media (max-width: 768px){
+            width: 400px;
+            height: 40vh;
+        }
+        @media (max-width: 478px){
+            width: 300px;
+            height: 30vh;
+        }
     `;
 
 const HashBanner = ({ p, h1, H1fontSize, pfontSize}) => {

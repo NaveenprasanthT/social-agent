@@ -1,6 +1,7 @@
 import styles from '@/styles/SingleBlog/ScrollBlog.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import { FiArrowDownRight } from 'react-icons/fi';
 
 const ScrollBlog = ({blogData}) => {
@@ -73,9 +74,32 @@ const ScrollBlog = ({blogData}) => {
         },
     ];
 
+    const [screenSize, setScreenSize] = useState({
+        width: undefined,
+      });
+    
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenSize({
+        width: window.innerWidth,
+      });
+    };
+
+    // Initial screen size
+    handleResize();
+
+    // Add event listener for resize
+    window.addEventListener('resize', handleResize);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
     const slicedValues = AddtionalData.filter(value => value.key !== data.key)
     const shuffledList = slicedValues.sort(() => 0.5 - Math.random());
-    const selectedItems = shuffledList.slice(0, 3);
+    const selectedItems = shuffledList.slice(0, screenSize.width > 978 ? 3 : 4);
 
 
     return (
@@ -99,9 +123,9 @@ const ScrollBlog = ({blogData}) => {
                 </h3>
                 <p>{item.desc}</p>
                 <div>
+                <Link href={`/blog/${item.key}`} style={{color:"black", fontSize:'16px', textDecoration:'none'}}>
                     <span>Read</span>
-                    <Link href={`/${item.key}`} style={{padding:'0 0 0 5px',color: 'var(--P500)', fontSize:'16px'}}>
-                        <span><FiArrowDownRight/></span>
+                        <span style={{padding:'0 0 0 5px',color: 'var(--P500)'}}><FiArrowDownRight/></span>
                     </Link>
                 </div>
             </div>

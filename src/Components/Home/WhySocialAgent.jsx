@@ -13,6 +13,15 @@ const Title = styled.h1`
         transform: translateY(100px);
         transform: ${({ inView }) => (inView ? 'translateY(0px)' : 'translateY(100px)')} ;
         transition: 0.6s ease-out;
+        @media screen and (max-width: 1000px) {
+            font-size:${({ inView }) => (inView ? '80px' : '120px')} !important;
+        }
+        @media screen and (max-width: 878px) {
+            font-size:${({ inView }) => (inView ? '60px' : '100px')} !important;
+        }
+        @media screen and (max-width: 640px) {
+            font-size:${({ inView }) => (inView ? '30px' : '70px')} !important;
+        }
     `;
 
 const WhySocialAgent = () => {
@@ -43,7 +52,7 @@ const WhySocialAgent = () => {
 
 
     return (
-        <div className={styles.sectionWrap}  >
+        <div className={styles.sectionWrap}>
             <Title ref={ref} inView={inView} ><span style={{}} className={styles.praise}>Why </span>Social Agent <span className={styles.praise}>?</span></Title>
             <div className={styles.cardsWrap}>
                 {

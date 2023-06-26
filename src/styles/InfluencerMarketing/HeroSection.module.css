@@ -1,0 +1,325 @@
+.sectionWrap {
+    position: relative;
+    height: 100vh;
+    background-image: url('../../../public/assets/heroBg.webp');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0%;
+    color: #fff;
+    overflow: hidden;
+}
+
+.sectionWrap h1 {
+    font-weight: 600;
+    font-size: 6.6vw;
+    line-height: 160px;
+    @media (max-width: 1000px) {
+        line-height: 100px;
+    }
+    @media (max-width: 500px) {
+        line-height: 50px;
+    }
+}
+
+.sectionWrap p {
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    width: 55vw;
+    margin-bottom: 2%;
+    margin-top: 1%;
+    @media screen and (max-width: 500px){
+        width: 80%;
+        margin-bottom: 20px;
+      }
+}
+
+.MsgContainer1{
+    position: absolute;
+    gap: 5px; 
+    overflow: none;
+    left: 3%;
+    top: 30%;
+    height: 25%;
+    width: 15%;
+    @media (max-width:500px){
+        display: none;
+    }
+}
+
+.MsgContainer1 img{
+    height: 100%;
+    width: 100%;
+    margin-left:20px ;
+    object-fit: contain;
+}
+
+/* .MsgContainer1Content{
+    width: 100%;
+    height: 70%;
+    position: relative;
+    border: 1px solid var(--P300);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.MsgContainer1Content h6{
+    font-size: 120%;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+
+.MsgContainer1Shape{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border: 1px solid var(--P300);
+    transform: rotate(45deg);
+    left: 30px;
+    top: -8px;
+    border-right:none;
+    border-bottom: none;
+    background-image: url('../../../public/assets/heroBg.webp');
+} */
+
+.MsgContainer2{
+    position: absolute;
+    /* display: grid;
+    grid-template-rows: 40% 60%;  */
+    gap: 1px; 
+    overflow: none;
+    right: 5%;
+    top: 40%;
+    height: 20%;
+    width: 10%;
+    @media (max-width:500px){
+        display: none;
+    }
+}
+
+.MsgContainer2 img{
+    height: 100%;
+    width: 100%;
+    margin-left:20px ;
+    object-fit: contain;
+}
+
+/* .MsgContainer2Content{
+    width: 90px;
+    height: 50px;
+    position: relative;
+    border: 1px solid var(--P300);
+    border-radius: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.MsgContainer2Content h6{
+    font-size: 19px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+
+.MsgContainer2Shape{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border: 1px solid var(--P300);
+    transform: rotate(45deg);
+    left: 20px;
+    bottom: -8px;
+    border-left:none;
+    border-top: none;
+    background-color: #ffffff;
+}
+*/
+
+.MsgContainer3{
+    position: absolute;
+    height: 20%;
+    width: 20%;
+    /* display: grid;
+    grid-template-rows: 25% 50%;  */
+    gap: 1px; 
+    overflow: none;
+    left: 20%;
+    bottom: 8%;
+    @media (max-width:500px){
+        display: none;
+    }
+}
+
+.MsgContainer3 img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    margin-left:20px ;
+}
+
+/* .MsgContainer3Content{
+    width: 170px;
+    height: 40px;
+    position: relative;
+    border: 1px solid var(--P300);
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 40px;
+}
+
+.MsgContainer3Content h6{
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+
+.MsgContainer3Shape{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border: 1px solid var(--P300);
+    transform: rotate(45deg);
+    left: 30px;
+    bottom: -8px;
+    border-left:none;
+    border-top: none;
+    background-image: url('../../../public/assets/heroBg.webp');
+} */
+
+.MsgContainer4{
+    position: absolute;
+    height:30%;
+    width: 30%;
+    display: grid;
+    grid-template-rows: 40% 60%; 
+    gap: 1px; 
+    overflow: none;
+    right: 15%;
+    bottom: 0%;
+    @media (max-width: 768px){
+        right: 5%;
+        bottom: -10%;
+    }
+    @media (max-width:500px){
+        display: none;
+    }
+}
+
+.MsgContainer4 img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    margin-left:20px ;
+}
+
+/* .MsgContainer4Content{
+    width: 200px;
+    height: 50px;
+    position: relative;
+    border: 1px solid var(--P300);
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 40px;
+    background-color: #fff;
+    color: #000;
+}
+
+.MsgContainer4Content h6{
+    font-size: 19px;
+    font-weight: 500;
+    padding: 10px 0px;
+}
+
+.MsgContainer4Content h6 span{
+    color: var(--P300);
+}
+
+.MsgContainer4Shape{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border: 1px solid var(--P300);
+    transform: rotate(45deg);
+    left: 30px;
+    top: -8px;
+    border-right:none;
+    border-bottom: none;
+    background-color: #fff;
+} */
+
+.ImageContainer {
+    position: relative;
+    height: 38vh;
+    width: 90%;
+    overflow: hidden;
+    @media (min-width: 501px){ 
+        display: none;
+    }
+}
+
+.Image1Phne{
+    position: absolute;
+    width: 30%;
+    object-fit: contain;
+    bottom: 10%;
+}
+.Image2Phne{
+    position: absolute;
+    width: 25%;
+    object-fit: contain;
+    right: 0;
+}
+.Image3Phne{
+    position: absolute;
+    width: 40%;
+    object-fit: contain;
+    left: 20%;
+    top: 7%;
+}
+.Image4Phne{
+    position: absolute;
+    width: 30%;
+    object-fit: contain;
+    right: 15%;
+    bottom: 20%;
+}
+
+.ButtonContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    @media (min-width:500px) {
+        width: max-content;
+    }   
+}
+
+.ButtonContainer Button{
+    position: relative;
+    @media (max-width: 500px){
+        width: 90%;
+    }
+}
+
+.absoluteContainer{
+    position: absolute;
+    top: 0;
+    border-radius: 50px;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right,var(--P500),var(--P300));
+    z-index: 1;
+    transition: all 0.4s ease-in-out;
+    @media (max-width: 500px){
+        width: 90%;
+    }
+}
+
+.ButtonContainer:hover .absoluteContainer{
+    top: 5px;
+}

@@ -1,5 +1,5 @@
 .SingleBlogContainer{
-    padding: 9% 4% 4%;
+    padding: 95px 4% 4%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -45,6 +45,8 @@
     position: absolute;
     left: 30px;
     bottom: 30px;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
 .SingleBlogContainer h6{
@@ -52,4 +54,91 @@
     padding-left: 13.5%;
     color: #D9D9D9;
     font-weight: 300;
+}
+
+.SingleBlogContainer Button{
+}
+
+
+@media (max-width: 768px){
+    .SingleBlogContainer{
+        padding: 95px 3% 3%;
+    }
+    .SingleBlogContainer h4{
+        font-size: 13px;
+        font-weight: 400;
+    }
+    
+    .SingleBlogContainer h1{
+        font-size: 40px;
+    }
+        
+    .SingleBlogContainer p {
+        font-size: 16px;
+        margin-top: 12px;
+    }
+    .SingleBlogImageContainer{
+        height: 300px;
+    }
+    .SingleBlogContainer Button{
+        font-size: 20px;
+    }
+    .SingleBlogImage{
+        left: 25px;
+        bottom: 25px;
+    }
+}
+
+@media (max-width: 650px){
+    .SingleBlogContainer{
+        padding: 95px 2% 2%;
+    }
+    .SingleBlogContainer h4{
+        font-size: 10px;
+        font-weight: 400;
+    }
+    
+    .SingleBlogContainer h1{
+        font-size: 35px;
+    }
+        
+    .SingleBlogContainer p {
+        font-size: 14px;
+        margin-top: 8px;
+    }
+    .SingleBlogImageContainer{
+        height: 260px;
+    }
+    .SingleBlogContainer Button{
+        font-size: 16px;
+    }
+    .SingleBlogImage{
+        left: 20px;
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 500px){
+    .SingleBlogContainer h4{
+        font-size: 8px;
+        font-weight: 400;
+    }
+    
+    .SingleBlogContainer h1{
+        font-size: 24px;
+    }
+        
+    .SingleBlogContainer p {
+        margin-top: 8px;
+    }
+    .SingleBlogImageContainer{
+        height: 180px;
+    }
+    .SingleBlogContainer Button{
+        font-size: 14px;
+    }
+    .SingleBlogImage{
+        left: 15px;
+        bottom: 15px;
+    }
 }
