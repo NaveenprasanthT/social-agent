@@ -9,7 +9,6 @@ import { useEffect, useState } from 'react'
 import Faq from '../Components/Faq'
 import AllServices from '@/Components/Home/AllServices'
 import Consultation from '@/Components/Consultation'
-import CookieAlert from '@/Components/CookieAlert'
 
 export default function Home() {
 
