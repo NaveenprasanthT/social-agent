@@ -99,7 +99,7 @@ const Footer = () => {
                         <Link className={styles.link} href='/Services/WebsiteDevelopment' >Website development</Link>
                         <Link className={styles.link} href='/Services/Photography' >Photography / Videography</Link>
                         <Link className={styles.link} href='/Services/OnlineReputationManagement' >Online reputation management</Link>
-                        <Link className={styles.link} href='/Services/DigitalStrategy' >Digital strategy & consulting</Link>
+                        <Link className={styles.link} href='/Services/SearchEngineOptimization' >Search Engine Optimisation</Link>
                         <Link className={styles.link} href='/Services/Brand' >Branding & print solution</Link>
                         <Link className={styles.link} href='/Services/EmailMarketing' >Email marketing</Link>
                         <Link className={styles.link} href='/Services/SMSMarketing' >SMS Marketing</Link>

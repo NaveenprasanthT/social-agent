@@ -4,7 +4,7 @@ import styles from '@/styles/DownloadSection.module.css'
 import { FiArrowUpRight } from 'react-icons/fi'
 import hashLogo from '../../public/assets/hashLogo.webp'
 import styled from 'styled-components';
-
+// import { sendEmail } from '@/pages/api/info'
 
   const InputWrapper1 = styled.div`
     display: flex;
@@ -80,7 +80,7 @@ const DownloadSection = () => {
     })
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async(event) => {
     event.preventDefault();
     if(formData.name === '' || formData.phone === '') {
       setErrorMsg('All the fields are required');
@@ -100,7 +100,8 @@ const DownloadSection = () => {
       setErrorMsg("Enter a valid email address")
     }
     else{
-      console.log(formData)  
+      console.log(formData)
+      await sendEmail();
       handleDownload()
       setFormData({
             name: '',
