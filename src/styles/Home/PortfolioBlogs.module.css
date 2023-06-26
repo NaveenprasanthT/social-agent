@@ -1,17 +1,27 @@
 .sectionWrap {
-    padding: 6% 4%;
+    position: relative;
+    padding: 2% 4%;
     display: flex;
 }
 
 .hashSection {
-    width: 50%;
+    position: absolute;
+    height: max-content;
+    height: 460px;
+    pointer-events: none !important;
 }
 
 .RightContent {
-    width: 50%;
+    padding-left:470px ;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    row-gap: 80px;
+    row-gap: 50px;
+    height: 480px;
+    overflow-y: scroll;
+    @media (max-width: 1024px){
+        padding-left: 400px;
+    }
 }
 
 .RightContent h2 {
@@ -20,4 +30,70 @@
 }
 .RightContent p{
     padding: 6% 0;
+}
+
+.blogWrap{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.blogWrap>h2{
+    font-size: 46px;
+    font-weight: 700;
+}
+
+.blogWrap>h2>span{
+    color: var(--P500);
+}
+
+.ButtonContainer{
+    @media (max-width:720px){
+        align-self: center;
+    }
+}
+
+@media (max-width:1000px){
+    .hashSection {
+        height: 400px;
+    }
+    .RightContent{
+        height: 420px;
+        padding-left: 410px;
+        row-gap: 45px;
+    }
+    .blogWrap{
+        gap: .35rem;
+    }
+}
+
+@media (max-width:800px){
+    .hashSection {
+        height: 350px;
+    }
+    .RightContent{
+        height: 370px;
+        padding-left: 360px;
+        row-gap: 30px;
+    }
+    .blogWrap{
+        gap: .2rem;
+    }
+}
+
+@media (max-width:720px){
+    .hashSection {
+        display: none;
+    }
+    .RightContent{
+        height: max-content;
+        padding-left: 0px;
+        row-gap: 50px;
+        margin-top: 30px;
+    }
+    .blogWrap>h2{
+        font-size: 28px;
+        font-weight: 700;
+        align-self: center;
+    }
 }

@@ -1,42 +1,58 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from '@/styles/Home/PortfolioBlogs.module.css'
-import Image from 'next/image'
 import Button from '../../Button'
 import Carousel from './Carousel'
 import Carousell from './Carousell'
 import Link from 'next/link'
 
 const PortfolioBlogs = () => {
+    const [mobileView, setMobileView] = useState(false)
 
-    const rightDivRef = useRef(null);
+    useEffect(() => {
+      const handleResize = () => {
+        if(window.innerWidth<=500){
+          setMobileView(true)
+        }else{
+          setMobileView(false)
+        }
+      };
+  
+      // Initial screen size
+      handleResize();
+  
+      // Add event listener for resize
+      window.addEventListener('resize', handleResize);
+  
+      // Clean up event listener on component unmount
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
 
-    const handleLeftDivScroll = (e) => {
-      const scrollPosition = e.target.scrollTop;
-      rightDivRef.current.scrollTop = scrollPosition;
-    };
 
     return (
         <div className={styles.sectionWrap}>
                 <video src={require('../../../../public/vdo/Logo_Animation_1.mp4')} 
                     type="mp4" 
                     loop 
-                    controls    
+                    autoPlay
+                    muted
+                    playsInline    
                     className={styles.hashSection}
-                    onScroll={handleLeftDivScroll}
                 />
-            <div className={styles.RightContent} ref={rightDivRef}>
+            <div className={styles.RightContent} >
                 <div className={styles.blogWrap}>
-                    <h2>Our Projects</h2>
-                    <Carousel/>
-                    <Link href='/Portfolio'>
-                        <Button color='#fff' bg='var(--P700)' value='Know more' />
+                    <h2><span>Our</span> Projects</h2>
+                    <Carousel mobile={true}/>
+                    <Link href='/Portfolio' className={styles.ButtonContainer}>
+                        <Button color='#fff' bg='var(--P700)' value='View all'/>
                     </Link>
                 </div>
                 <div className={styles.blogWrap}>
-                    <h2>Our Blog</h2>
-                    <Carousell/>
-                    <Link href='/blog'>
-                        <Button color='#fff' bg='var(--P700)' value='Know more' />
+                    <h2><span>Our</span> Blog</h2>
+                    <Carousell mobile={mobileView}/>
+                    <Link href='/blog' className={styles.ButtonContainer}>
+                        <Button color='#fff' bg='var(--P700)' value='View all' align='center'/>
                     </Link>
                 </div>
             </div>

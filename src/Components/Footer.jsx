@@ -1,20 +1,68 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from '@/styles/Footer.module.css'
 import Image from 'next/image'
-import logo from '../../public/assets/logo.png'
+import logo from '../../public/assets/footerLogo.png'
 import Link from 'next/link'
 import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai'
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa'
 import { HiArrowLongRight } from 'react-icons/hi2'
+import styled from 'styled-components'
+import { AiOutlinePlus } from 'react-icons/ai';
+
+const PhoneMenu = styled.div`
+@media screen and (max-width:1000px){
+ height: ${({open}) => (open ? '15.5rem' : '2.5rem')};
+ border-bottom: ${({open}) => (open ? 'none' : '1px solid #ffffff')};
+ overflow: hidden;
+ transition: all 1s ease-in-out;    
+}
+`
+
+const PhoneMenu1 = styled.div`
+@media screen and (max-width:1000px){
+    height: ${({open}) => (open ? '22rem' : '2.5rem')};
+    border-bottom: ${({open}) => (open ? 'none' : '1px solid #ffffff')};
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+   }`
+
+const PhoneMenu2 = styled.div`
+@media screen and (max-width:1000px  ){
+    height: ${({open}) => (open ? '10rem' : '2.5rem')};
+    border-bottom: ${({open}) => (open ? 'none' : '1px solid #ffffff')};
+    overflow: hidden;
+    transition: all 1s ease-in-out;   
+   }`
+
+const Icon = styled.div`
+   background-color: #fff;
+   height: 15px;
+   font-size: 14px;
+   border-radius: 50%;
+   margin-right: 15px;
+   color: var(--P700);
+   transform: ${({open}) => (open ? 'rotate(45deg)' : 'rotate(0deg)')};
+   transition: all .7s ease-in-out;
+   cursor: pointer;
+   @media screen and (min-width:1000px){
+    display: none;
+   }
+`
 
 
 const Footer = () => {
+    const [open1,setOpen1] = useState(false);
+    const [open2,setOpen2] = useState(false);
+    const [open3,setOpen3] = useState(false);
     return (
-
         <div className={styles.footerWrap}>
             <div className={styles.contentWrap}>
                 <div className={styles.left}>
                     <Image className={styles.logo} src={logo} alt='logo' />
+                    <div className={styles.PoweredBy}>
+                    <p>Powered By</p>
+                    <Image src='/assets/Bricstal_Group.png' width={500} height={500} className={styles.BricstalImagePhne}/>
+                    </div>
                     <div className={styles.desc}>
                         Get exclusives<span style={{ fontWeight: '400' }}> digital marketing</span> updates straight to your inbox
                     </div>
@@ -23,43 +71,54 @@ const Footer = () => {
                         <button className={styles.submitBtn} type='submit' ><HiArrowLongRight /> </button>
                     </form>
                     <div className={styles.iconWrap}>
-                        <AiOutlineInstagram className={styles.icon} />
-                        <FaFacebookF className={styles.icon} />
-                        <AiOutlineTwitter className={styles.icon} />
-                        <FaLinkedinIn className={styles.icon} />
+                        <Link href='https://www.instagram.com/socialagent_official/' target='_blank'><AiOutlineInstagram className={styles.icon} /></Link>
+                        <Link href='https://www.facebook.com/socialagent.in' target='_blank'><FaFacebookF className={styles.icon} /></Link>
+                        <Link href='https://twitter.com/social__agent' target='_blank'><AiOutlineTwitter className={styles.icon} /></Link>
+                        <Link href='https://www.linkedin.com/company/socialagent' target='_blank'><FaLinkedinIn className={styles.icon} /></Link>
                     </div>
                 </div>
-                <div className={styles.right}>
-                    <div className={styles.linkLeft}>
-                        <div className={styles.heading}>Social Agent</div>
+                    <PhoneMenu className={styles.linkLeft} open={open1}>
+                        <div className={styles.iconContainer}  onClick={() => setOpen1(!open1)}>
+                            <div className={styles.heading}># Company</div>
+                            <Icon open={open1}><AiOutlinePlus/></Icon>
+                        </div>
                         <Link className={styles.link} href='/' >Home</Link>
                         <Link className={styles.link} href='/AboutUs' >About Us</Link>
                         <Link className={styles.link} href='/Portfolio' >Our Works</Link>
                         <Link className={styles.link} href='/blog' >Blogs</Link>
                         <Link className={styles.link} href='/' >Careers</Link>
                         <Link className={styles.link} href='/ContactUs' >Contact Us</Link>
-                    </div>
-                    <div className={styles.linkLeft}>
-                        <div className={styles.heading}>Services</div>
-                        <Link className={styles.link} href='/' >Social media marketing</Link>
-                        <Link className={styles.link} href='/' >Influencer marketing</Link>
-                        <Link className={styles.link} href='/' >Website development</Link>
-                        <Link className={styles.link} href='/' >Photography / Videography</Link>
-                        <Link className={styles.link} href='/' >Online reputation management</Link>
-                        <Link className={styles.link} href='/' >Digital strategy & consulting</Link>
-                        <Link className={styles.link} href='/' >Branding & print solution</Link>
-                        <Link className={styles.link} href='/' >Email marketing</Link>
-                        <Link className={styles.link} href='/' >SMS Marketing</Link>
-                    </div>
-                    <div className={styles.linkRight}>
-                        <div className={styles.heading}>Policies</div>
+                    </PhoneMenu>
+                    <PhoneMenu1 className={styles.linkLeft} open={open2}>
+                    <div className={styles.iconContainer}  onClick={() => setOpen2(!open2)}>
+                        <div className={styles.heading}># Services</div>
+                        <Icon open={open2}><AiOutlinePlus/></Icon>
+                        </div>
+                        <Link className={styles.link} href='/Services/SocialMediaMarketing' >Social media marketing</Link>
+                        <Link className={styles.link} href='/Services/InfluencerMarketing' >Influencer marketing</Link>
+                        <Link className={styles.link} href='/Services/WebsiteDevelopment' >Website development</Link>
+                        <Link className={styles.link} href='/Services/Photography' >Photography / Videography</Link>
+                        <Link className={styles.link} href='/Services/OnlineReputationManagement' >Online reputation management</Link>
+                        <Link className={styles.link} href='/Services/DigitalStrategy' >Digital strategy & consulting</Link>
+                        <Link className={styles.link} href='/Services/Brand' >Branding & print solution</Link>
+                        <Link className={styles.link} href='/Services/EmailMarketing' >Email marketing</Link>
+                        <Link className={styles.link} href='/Services/SMSMarketing' >SMS Marketing</Link>
+                    </PhoneMenu1>
+                    <PhoneMenu2 className={styles.linkRight} open={open3}>
+                        <div className={styles.iconContainer}  onClick={() => setOpen3(!open3)}>
+                            <div className={styles.heading}># Policies</div>
+                            <Icon open={open3}><AiOutlinePlus/></Icon>
+                        </div>
                         <Link className={styles.link} href='/policy/refundPolicy' >Refund Policy</Link>
                         <Link className={styles.link} href='/policy/termsConditions' >Terms & Conditions</Link>
                         <Link className={styles.link} href='/policy/cookiesPolicy' >Website Cookies Policy</Link>
-                    </div>
-                </div>
+                    </PhoneMenu2>
             </div>
             <div className={styles.rights}>
+                <div>
+                    <p>Powered By</p>
+                    <Image src='/assets/Bricstal_Group.png' width={500} height={500} className={styles.BricstalImage}/>
+                </div>
                 ©2023, Social Agent, all rights reserved
             </div>
         </div>

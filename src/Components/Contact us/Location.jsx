@@ -8,14 +8,9 @@ const LocateUs = () => {
         <div className={styles.locateUsDiv}>
           <h3>Locate Us</h3>
         </div>
-        <div className={styles.emailDiv}>
-          <h5>Email us</h5>
-          <p>info@socialagent.in</p>
-        </div>
-        <div className={styles.callDiv}>
-          <h5>Call us</h5>
-          <p>+91 8971719955</p>
-        </div>
+        <p>
+        2724, 1st Floor, 31st Main Road, 16th Cross Rd, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102
+        </p>
       </div>
       <div className={`${styles.rightSection}`}>
         <div className={styles.mapWrapper}>

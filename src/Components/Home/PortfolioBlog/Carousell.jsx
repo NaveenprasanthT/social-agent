@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Carousell = () => {
+const Carousell = ({mobile}) => {
   const [activeItem, setActiveItem] = useState('item-1');
 
   const handleClick = (itemId) => {
@@ -9,7 +9,7 @@ const Carousell = () => {
 
   return (
     <div>
-      <div className="container__slider">
+      <div className="container__slider" style={{maxWidth: mobile ? "370px" : "900px"}}>
         <div className="container">
           <input type="radio" name="slider" id="item-1" checked={activeItem === 'item-1'} />
           <input type="radio" name="slider" id="item-2" checked={activeItem === 'item-2'} />
@@ -30,13 +30,13 @@ const Carousell = () => {
 
       <style jsx>{`
         .container__slider {
-          max-width: 1000px;
           height: 250px;
           margin: auto;
           display: flex;
           align-items: center;
           justify-content: center;
           padding: 10px 10px;
+          overflow: hidden;
         }
 
         input[type='radio'] {

@@ -7,6 +7,9 @@
     text-align: center;
     gap: 2rem;
     align-items: center;
+    @media screen and (max-width: 500px){
+      gap: 0;
+    }
   }
 
   .container{
@@ -15,6 +18,9 @@
     justify-content: center;
     height: 340px;
     transition: all 1s ease-in-out;
+    @media screen and (max-width: 500px){
+      display: none;
+    }
   }
 
   .mainContent h1{
@@ -38,7 +44,7 @@
     height: 160px;
     margin-top: 160px;
     margin-right: -80px;
-    z-index: 996;
+    z-index: 6;
   }
 
   .container div:nth-child(2){
@@ -46,12 +52,12 @@
     height: 200px;
     margin-top: 80px;
     margin-right: -50px;
-    z-index: 997;
+    z-index: 7;
   }
 
   .container div:nth-child(3){
     width: 25%;
-    z-index: 998;
+    z-index: 8;
   }
   
 
@@ -60,7 +66,7 @@
     height: 200px;
     margin-top: 80px;
     margin-left: -50px;
-    z-index: 997;
+    z-index: 7;
   }
 
   .container div:nth-child(5){
@@ -68,7 +74,7 @@
     height: 180px;
     margin-top: 160px;
     margin-left: -80px;
-    z-index: 996;
+    z-index: 6;
   }
 
   .container div img{
@@ -77,3 +83,56 @@
     cursor: pointer;
   }
 
+  @media (max-width: 850px){
+    .container{
+      height: 250px;
+    }
+    .container div:nth-child(1){
+      display: none;
+    }
+    .container div:nth-child(5){
+      display: none;
+    }
+
+    .container div:nth-child(3){
+      width: 30%;
+      z-index: 8;
+    }
+
+    .container div:nth-child(2){
+      width: 30%;
+      height: 200px;
+      margin-top: 80px;
+      margin-right: -1  0px;
+      z-index: 7;
+    }
+    .container div:nth-child(4){
+      width: 30%;
+      height: 200px;
+      margin-top: 80px;
+      margin-left: -10px;
+      z-index: 7;
+    }
+  }
+
+  @media (max-width: 600px){
+    .container div{
+      position: relative;
+      height: 180px;
+      transition: all 0.5s ease-in-out;
+    }
+    .container div:nth-child(2){
+      width: 30%;
+      height: 150px;
+      margin-top: 80px;
+      margin-right: -1 0px;
+      z-index: 7;
+    }
+    .container div:nth-child(4){
+      width: 30%;
+      height: 150px;
+      margin-top: 80px;
+      margin-left: -10px;
+      z-index: 7;
+    }
+  }

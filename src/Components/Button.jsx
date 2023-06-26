@@ -7,10 +7,11 @@ const Btn = styled.button`
         border: none;
         width: max-content;
         height: max-content;
-        padding: 15px 30px;
-        border-radius: 40px;
-        font-weight: 500;
-        font-size: 16px;
+        padding: ${({padding}) => (padding ? padding : '15px 30px')};
+        border-radius: ${({borderRadius}) => (borderRadius ? borderRadius : '40px')};
+        font-weight: ${({fontWeight}) => (fontWeight ? fontWeight : 500)};
+        font-size: ${({fontSize}) => (fontSize ? fontSize : '16px')};
+        z-index: 1;
 
         &:hover{
             cursor: pointer;

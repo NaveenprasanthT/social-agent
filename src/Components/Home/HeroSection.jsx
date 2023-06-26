@@ -26,21 +26,21 @@ const HeroSection = () => {
         return () => clearTimeout(intervalId);
     }, []);
 
-
-
-
     return (
         <div className={styles.sectionWrap}>
             <div className={styles.main}>
                 <div className={styles.left}>
+                    <div className={styles.ContainerPhne}>
+                        <Image className={styles.imgPhne} src={img} alt='image' />
+                    </div>
                     <h1>A marketing agency</h1>
                     <h1>that aims in <span style={{ display: 'flex', color: 'var(--P300)', marginLeft: '10px' }}> i <TextTransition springConfig={presets.gentle}>{TEXTS[index % TEXTS.length]}</TextTransition></span></h1>
                     <h1>digital marketing strategies.</h1>
                     <p>Our aim is to be the trusted partner of choice for businesses and brands looking to stay ahead of the curve in the digital world.</p>
                     <div
-                        style={{ width: 'max-content' }}
                         onMouseEnter={() => setHoverActive(true)}
-                        onMouseLeave={() => setHoverActive(false)} >
+                        onMouseLeave={() => setHoverActive(false)} 
+                        className={styles.ButtonContainer}>
                         <Button   value={<>Book <span style={{ color: 'var(--P500)' }}>Free</span> Consultation</>} color='var(--P700)' bg='#fff' />
                     </div>
                 </div>
@@ -53,4 +53,4 @@ const HeroSection = () => {
     )
 }
 
-export default HeroSection
+export default HeroSection;

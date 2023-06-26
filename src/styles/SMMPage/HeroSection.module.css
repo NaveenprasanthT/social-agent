@@ -9,13 +9,20 @@
     align-items: center;
     padding-top: 1%;
     color: #fff;
-    overflow: hidden;
+    overflow: hidden; 
 }
 
 .sectionWrap h1 {
     font-weight: 600;
     font-size: 6vw;
     line-height: 160px;
+    @media screen and (max-width: 700px){
+        line-height: 80px;
+        font-size: 7.5vw;
+      }
+      @media screen and (max-width: 500px){
+        margin-bottom: 0px;
+      }
 }
 
 .sectionWrap p {
@@ -26,6 +33,49 @@
     width: 55vw;
     margin-bottom: 2%;
     margin-top: 1%;
+    @media screen and (max-width: 7000px){
+        width: 80%;
+        margin-bottom: 35px;
+      }
+    @media screen and (max-width: 500px){
+        width: 95%;
+      }
+}
+
+.ButtonContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    @media (min-width:600px) {
+        width: max-content;
+    }   
+}
+
+.ButtonContainer Button{
+    position: relative;
+    @media (max-width: 600px){
+        width: 90%;
+    }
+}
+
+.absoluteContainer{
+    position: absolute;
+    top: 0;
+    border-radius: 50px;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right,var(--P500),var(--P300));
+    z-index: 1;
+    transition: all 0.4s ease-in-out;
+    @media (max-width: 600px){
+        width: 90%;
+    }
+}
+
+.ButtonContainer:hover .absoluteContainer{
+    top: 5px;
 }
 
 .MessageIcon{
@@ -33,6 +83,9 @@
     bottom: -10%;
     right: 15%;
     animation: MessageIcon 7s infinite;
+    @media screen and (max-width: 500px){
+        opacity: .5;
+      }
 }
 
 @keyframes MessageIcon {
@@ -63,6 +116,9 @@
     right: 35%;
     transform: scale(.4);
     animation: HeartBeat 6.5s infinite;
+    @media screen and (max-width: 500px){
+        opacity: .5;
+      }
 }
 
 @keyframes HeartBeat {
@@ -70,7 +126,7 @@
         bottom: 15%;
         right: 35%;
     }
-    35% {
+    25% {
         bottom:35%;
         right: 5%;
         transform: scale(.6);
@@ -93,6 +149,9 @@
     right: 47%;
     transform: scale(.4);
     animation: Twitter 9s infinite;
+    @media screen and (max-width: 500px){
+        opacity: .5;
+      }
 }
 
 @keyframes Twitter {
@@ -123,6 +182,9 @@
     left: 20%;
     transform: scale(1);
     animation: Youtube 7s infinite;
+    @media screen and (max-width: 500px){
+        opacity: .5;
+      }
 }
 
 @keyframes Youtube {
@@ -153,6 +215,9 @@
     left: 0%;
     transform: scale(.6);
     animation: LinkedIn 7s infinite;
+    @media screen and (max-width: 500px){
+        opacity: .5;
+      }
 }
 
 @keyframes LinkedIn {
@@ -183,6 +248,9 @@
     left:5%;
     transform: scale(1);
     animation: Share 10s infinite;
+    @media screen and (max-width: 500px){
+        opacity: .5;
+      }
 }
 
 @keyframes Share {
@@ -213,6 +281,9 @@
     right: -2%;
     transform: scale(.6);
     animation: Instagram 7s infinite;
+    @media screen and (max-width: 500px){
+        opacity: .5;
+      }
 }
 
 @keyframes Instagram {

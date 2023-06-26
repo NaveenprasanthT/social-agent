@@ -2,49 +2,93 @@
     padding: 4% 6%;
     align-items: center;
     text-align: center;
+    justify-content: center;
 }
 
 .WhatWeDoWrap h3{
     font-size: 30px;
     font-weight: 500;
+    @media (max-width:800px) {
+        font-weight: 600;
+    }
+    @media (max-width:500px) {
+        font-size: 22px;
+    }
 }
 
-.cards {
+.WhatDoWrapSpan{
+    @media (max-width:800px) {
+        color: var(--P500);
+    }
+}
+
+.PhoneCards{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    column-gap: 40px;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top:3rem;
+    @media (min-width: 801px) {
+        display: none;
+    }
 }
 
-.card {
-    width: 400px;
-    height: 500px;
-    border-radius: 15px;
+.PhoneCard{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.PhoneCard h2{
+    align-self: flex-start;
+    font-size: 30px;
+    border-bottom: 3px solid var(--P500);
+    padding-bottom: 10px;
+    @media (max-width:650px) {
+        font-size: 24px;
+    }
+    @media (max-width:500px) {
+        font-size: 18px;
+    }
+}
+
+.PhoneCardImageContent{
+    display: grid;
+    grid-template-columns: 45% auto;
+    gap: 1.5rem;
+}
+
+.PhoneCardImageContainer{
     position: relative;
-
+    width: 100%;
+    height: 250px;
+    background-color: var(--P500);
+    border-radius: 10px;
+    @media (max-width:650px) {
+        height: 220px;
+    }
+    @media (max-width:500px) {
+        height: 160px;
+    }
 }
 
-
-
-.content h5 {
-    font-size: 25px;
-    font-weight: 500;
-    margin-bottom: 30px;
+.PhoneCardImage{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    position: absolute;
+    left: 3%;
+    bottom: 3%;
 }
 
-.content p {
+.PhoneCardImageContent p{
+    text-align: left;
     font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.knowMore {
-    font-weight: 500;
-    font-size: 18px;
-    text-decoration: none;
-
-}
-
-.knowMore:hover {
-    cursor: pointer;
-    color: var(--P300);
+    font-weight: 400;
+    @media (max-width:650px) {
+        font-size: 16px;
+    }
+    @media (max-width:500px) {
+        font-size: 15px;
+    }
 }
