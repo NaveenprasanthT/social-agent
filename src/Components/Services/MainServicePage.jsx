@@ -248,8 +248,8 @@ const MainServicePage = () => {
             id: '12',
             title: 'WhatsApp Marketing',
             desc: 'From writing tailored messages to reaching out to individual recipients, we manage SMS marketing.',
-            imgHover:'/assets/Services/serviceHover12.png',
-            img:'/assets/Services/service12.png',
+            imgHover:'/assets/Whatsapp/WMHeader.png',
+            img:'/assets/Whatsapp/WMHeader.png',
             url: '/Services/WhatsappMarketing',
         },
         {

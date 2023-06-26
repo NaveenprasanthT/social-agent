@@ -45,6 +45,12 @@
     background-color: #F5F5F5;
     border: 1.33px solid #bbbbbb;
     padding: 10px 25px;
+    transition: all 0.4s ease-in-out;
+}
+
+.navContentWrap Button:hover{
+    color: var(--P500);
+    border: 1.33px solid var(--P500);
 }
 
 

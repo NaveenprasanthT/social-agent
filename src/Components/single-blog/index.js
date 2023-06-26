@@ -6,7 +6,7 @@ import ScrollBlog from "./ScrollBlog";
 const SingleBlog = ({blogData}) => {
     return(
         <div>
-            <BlogHeader/>
+            {/*<BlogHeader/>*/}
             <SingleBlogContent blogData={blogData}/>
             <BlogDescription blogData={blogData}/>
             <ScrollBlog blogData={blogData} />

@@ -30,9 +30,23 @@
     object-fit: contain;
 }
 
-.navContentWrap button {
+.navContentWrap Button {
     backdrop-filter: blur(10px);
+    padding: 10px 25px;
+    border: 1.33px solid #ffffff4e;
+    background-color: #ffffff4e;
+}
 
+.coloredButton Button{
+    backdrop-filter: blur(10px);
+    padding: 10px 25px;
+    border: 1.33px solid #ffffff;
+    background-color: #ffffff;
+}
+
+.navContentWrap Button:hover{
+    color: var(--P700);
+    border: 1.33px solid var(--P500);
 }
 
 .navLinks {
@@ -100,11 +114,15 @@
     font-size: 20px;
 }
 
+.iconContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 @media (max-width: 1000px){
     .menuWrap {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
+        grid-template-columns: 1fr;
     }
 }
 

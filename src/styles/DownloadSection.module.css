@@ -121,7 +121,7 @@
     }
 }
 
-@media (max-width: 950px){
+@media (max-width: 960px){
     .center h2 {
         font-size: 24px;
     }
@@ -137,6 +137,11 @@
     }
     .logo{
         display: none;
+    }
+    .btn {
+        background: var(--P500);
+        height: 150px;
+        width: 150px;
     }
     .center{
         width: 90%;
