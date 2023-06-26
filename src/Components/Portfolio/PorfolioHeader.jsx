@@ -11,13 +11,11 @@ const PortfolioHeader = () => {
                     <h1>Portfolio </h1>
                     <Image src='/assets/portfolio/PortfolioHeader.png' alt='' width={1000} height={1000} className={styles.portfolioImagePhne} />
                     <p>
-                        creating and publishing content, such as text,
-                        images and videos that is designed to engage the target audience and encourage them
-                        to take a specific action like making a purchase or visiting a website.
+                        Explore our portfolio, a showcase of creativity, expertise, and dedication. From captivating designs to successful campaigns, experience our commitment to excellence in every project. Discover the culmination of our skills and achievements in one place.
                     </p>
                 </div>
-                <Link href='/Start-A-Project' style={{ textDecoration: 'none', width: '100%',display:'felx',justifyContent:'center',alignItems:'center' }}>
-                    <div className={styles.ButtonContainer}  style={{ textDecoration: 'none',display:'felx',justifyContent:'center',alignItems:'center' }}>
+                <Link href='/Start-A-Project' style={{ textDecoration: 'none', width: '100%', display: 'felx', justifyContent: 'center', alignItems: 'center' }}>
+                    <div className={styles.ButtonContainer} style={{ textDecoration: 'none', display: 'felx', justifyContent: 'center', alignItems: 'center' }}>
                         <div className={styles.absoluteContainer}></div>
                         <Button
                             color='var(--P700)'

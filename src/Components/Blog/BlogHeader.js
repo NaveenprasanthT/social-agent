@@ -11,9 +11,7 @@ const BlogHeader = () => {
                 <div>
                     <h1>Blogs </h1>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur.
-                        Amet accumsan eu ut vitae lacus. Ac ornare mollis ut pulvinar amet sed sit blandit at.
-                        Ornare pretium sit augue enim imperdiet malesuada egestas in quisque. Id et netus lorem morbi.                    </p>
+                    Explore our insightful blog posts to stay updated on the latest trends, strategies, and tips in digital marketing. Enhance your online presence, drive traffic, and boost conversions with expert guidance.                    </p>
                 </div>
                 <Link href='/Start-A-Project' style={{ textDecoration: 'none',width:'100%' }}>
                     <div className={styles.ButtonContainer}>
