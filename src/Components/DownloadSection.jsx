@@ -4,7 +4,7 @@ import styles from '@/styles/DownloadSection.module.css'
 import { FiArrowUpRight } from 'react-icons/fi'
 import hashLogo from '../../public/assets/hashLogo.webp'
 import styled from 'styled-components';
-import { sendEmail } from '@/pages/api/info'
+// import { sendEmail } from '@/pages/api/info'
 
   const InputWrapper1 = styled.div`
     display: flex;
