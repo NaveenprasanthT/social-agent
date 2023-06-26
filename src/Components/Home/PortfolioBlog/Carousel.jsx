@@ -29,6 +29,10 @@ const Carousel = ({ mobile }) => {
   const handleClick = (itemId) => {
     setActiveItemOne(itemId);
   };
+  useEffect(() => {
+    setOffsetRadius(props.offset);
+    setShowArrows(props.showArrows);
+  }, [props.offset, props.showArrows]);
 
   return (
     <div>

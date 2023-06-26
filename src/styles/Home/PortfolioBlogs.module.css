@@ -2,7 +2,6 @@
     position: relative;
     padding: 2% 4%;
     display: flex;
-    gap: 3rem;
 }
 
 .hashSection {
@@ -11,7 +10,6 @@
     height: 460px;
     pointer-events: none !important;
 }
-
 
 .RightContent {
     padding-left:470px ;
@@ -26,14 +24,9 @@
     }
 }
 
-.RightContent::-webkit-scrollbar {
-    display: none;
-  }
-
 .RightContent h2 {
     font-weight: 700;
     font-size: 60px;
-    margin: 0%;
 }
 .RightContent p{
     padding: 6% 0;
