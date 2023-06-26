@@ -1,6 +1,7 @@
 import styles from '@/styles/Policy/termsConditions.module.css';
 import HeaderTag from '../../../public/assets/tag.png';
 import Image from "next/image";
+import Link from 'next/link';
 
 const HeroBanner = ({data}) => {
     return(
@@ -15,7 +16,7 @@ const HeroBanner = ({data}) => {
                 <div className={styles.information}>
                     <p>If you could not find any information, please contact us at</p>
                     <span>
-                        <a href="mailto:info@socialagent.in">info@socialagent.in</a>
+                        <Link href="mailto:info@socialagent.in">info@socialagent.in</Link>
                     </span>
                 </div>
             </div>

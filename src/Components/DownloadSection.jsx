@@ -5,6 +5,7 @@ import { FiArrowUpRight } from 'react-icons/fi'
 import hashLogo from '../../public/assets/hashLogo.webp'
 import styled from 'styled-components';
 
+
   const InputWrapper1 = styled.div`
     display: flex;
     gap: 4%;
@@ -65,6 +66,20 @@ const DownloadSection = () => {
     return phonePattern.test(phoneNumber);
   };
 
+  const handleDownload = () => {
+    fetch('demo.pdf').then(response => {
+      response.blob().then(blob => {
+        // Creating new object of PDF file
+        const fileURL = window.URL.createObjectURL(blob);
+        // Setting various property values
+        let alink = document.createElement('a');
+        alink.href = fileURL;
+        alink.download = 'SamplePDF.pdf';
+        alink.click();
+      })
+    })
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault();
     if(formData.name === '' || formData.phone === '') {
@@ -85,7 +100,8 @@ const DownloadSection = () => {
       setErrorMsg("Enter a valid email address")
     }
     else{
-      console.log(formData)   
+      console.log(formData)  
+      handleDownload()
       setFormData({
             name: '',
             phone:'',
@@ -93,6 +109,7 @@ const DownloadSection = () => {
           });
           setFormChange(false);
           setErrorMsg("")
+
         }
   };
 
