@@ -136,8 +136,8 @@ const StartProject = () => {
           <div className={styles.flexButtons}>
           <div className={styles.nextButtonWrap}>
               {selectedCategories.length > 0 ? (
-                <Link href="/Start-A-ProjectInfo" legacyBehavior >
-                  <a className={styles.nextButton} style={{textDecoration:'none'}}>Next</a>
+                <Link href="/Start-A-ProjectInfo" legacyBehavior className={styles.nextButton} style={{textDecoration:'none'}}>
+                  <button className={styles.nextButton} style={{textDecoration:'none'}}>Next</button>
                 </Link>
               ) : (
                 <button className={styles.nextButton} disabled>
