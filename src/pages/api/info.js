@@ -2,9 +2,9 @@ const mailgun = require('mailgun-js');
 
 const mg = mailgun({ apiKey: 'YOUR_MAILGUN_API_KEY', domain: 'YOUR_MAILGUN_DOMAIN' });
 
-const sendEmail = async (to, subject, text) => {
+const sendEmail = async (from, subject, text) => {
   const data = {
-    from: 'Sender Name <sender@example.com>',
+    from,
     to:"naveenprasanth@socialagent.in",
     subject,
     text,
